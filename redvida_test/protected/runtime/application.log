@@ -1,0 +1,58 @@
+2014/09/17 06:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "donante".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('donante')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('donante')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/donante')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/index.php?r=site/donante
+---
+2014/09/17 06:06:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "donante".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('donante')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('donante')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/donante')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/index.php?r=site/donante
+---
+2014/09/17 06:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "donantes".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/index.php?r=donantes
+---
+2014/09/17 20:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donante/index.p...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/index.php/donante/index.php
+---
+2014/09/17 20:50:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "donantes".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/index.php/donantes
+---
+2014/09/17 21:07:26 [error] [exception.CException] exception 'CException' with message 'Property "CUrlManager.showScriptNate" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\YiiBase.php(220): CComponent->__set('showScriptNate', false)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(522): CModule->getComponent('urlManager')
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#6 {main}
+REQUEST_URI=/yii/redvida_test/index.php/site/index
+HTTP_REFERER=http://localhost/yii/redvida_test/donante
+---
