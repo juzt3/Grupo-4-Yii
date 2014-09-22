@@ -135,4 +135,11 @@ class Donantes extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getMenuSangre()
+	{
+		return array(
+      	'O+', 'O-', 'A-', 'A+', 'B-', 'B+', 'AB-', 'AB+'
+   		);
+	}
 }

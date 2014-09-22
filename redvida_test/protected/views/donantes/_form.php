@@ -51,7 +51,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tiposangre'); ?>
-		<?php echo $form->textField($model,'tiposangre',array('size'=>3,'maxlength'=>3)); ?>
+		<?php echo $form->dropDownList($model,'tiposangre', $model->getMenuSangre(), array("empty"=>"Seleccione")); ?>
 		<?php echo $form->error($model,'tiposangre'); ?>
 	</div>
 
@@ -69,7 +69,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'donanteorganos'); ?>
-		<?php echo $form->textField($model,'donanteorganos',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->dropDownList($model,'donanteorganos',array('No', 'Si')); ?>
 		<?php echo $form->error($model,'donanteorganos'); ?>
 	</div>
 
@@ -93,7 +93,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'habilitado'); ?>
-		<?php echo $form->textField($model,'habilitado',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->checkBox($model,'habilitado', array('value'=>'Si', 'uncheckValue'=>'No','checked'=>'checked')); ?>
 		<?php echo $form->error($model,'habilitado'); ?>
 	</div>
 
