@@ -1,6 +1,6 @@
 <?php
-/* @var $this DonanteController */
-/* @var $model Donante */
+/* @var $this DonantesController */
+/* @var $model Donantes */
 
 $this->breadcrumbs=array(
 	'Donantes'=>array('index'),
@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Donante', 'url'=>array('index')),
-	array('label'=>'Create Donante', 'url'=>array('create')),
+	array('label'=>'List Donantes', 'url'=>array('index')),
+	array('label'=>'Create Donantes', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#donante-grid').yiiGridView('update', {
+	$('#donantes-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -41,7 +41,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'donante-grid',
+	'id'=>'donantes-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(

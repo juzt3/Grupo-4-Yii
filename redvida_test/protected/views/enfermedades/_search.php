@@ -17,11 +17,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idhistorial'); ?>
-		<?php echo $form->textField($model,'idhistorial'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>50,'maxlength'=>50)); ?>
 	</div>

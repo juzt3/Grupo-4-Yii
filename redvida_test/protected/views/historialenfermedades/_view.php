@@ -13,12 +13,12 @@
 	<?php echo CHtml::encode($data->rut); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha')); ?>:</b>
-	<?php echo CHtml::encode($data->fecha); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idenfermedad')); ?>:</b>
 	<?php echo CHtml::encode($data->idenfermedad); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha); ?>
 	<br />
 
 

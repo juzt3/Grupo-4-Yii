@@ -9,10 +9,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->idenfermedad), array('view', 'id'=>$data->idenfermedad)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idhistorial')); ?>:</b>
-	<?php echo CHtml::encode($data->idhistorial); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
 	<?php echo CHtml::encode($data->nombre); ?>
 	<br />

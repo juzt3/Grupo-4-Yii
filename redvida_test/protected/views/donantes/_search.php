@@ -1,6 +1,6 @@
 <?php
-/* @var $this DonanteController */
-/* @var $model Donante */
+/* @var $this DonantesController */
+/* @var $model Donantes */
 /* @var $form CActiveForm */
 ?>
 
@@ -28,7 +28,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'direccion'); ?>
-		<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row">
@@ -53,12 +53,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'donanteorganos'); ?>
-		<?php echo $form->textField($model,'donanteorganos',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->textField($model,'donanteorganos',array('size'=>2,'maxlength'=>2)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textArea($model,'email',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row">
@@ -73,7 +73,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'habilitado'); ?>
-		<?php echo $form->textField($model,'habilitado',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->textField($model,'habilitado',array('size'=>2,'maxlength'=>2)); ?>
 	</div>
 
 	<div class="row buttons">

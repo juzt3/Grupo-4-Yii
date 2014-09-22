@@ -23,7 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'idhistorial',
 		'rut',
-		'fecha',
 		'idenfermedad',
+		'fecha',
 	),
 )); ?>

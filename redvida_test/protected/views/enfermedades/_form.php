@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idhistorial'); ?>
-		<?php echo $form->textField($model,'idhistorial'); ?>
-		<?php echo $form->error($model,'idhistorial'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nombre'); ?>

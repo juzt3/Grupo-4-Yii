@@ -1,6 +1,6 @@
 <?php
-/* @var $this DonanteController */
-/* @var $data Donante */
+/* @var $this DonantesController */
+/* @var $data Donantes */
 ?>
 
 <div class="view">

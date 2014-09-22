@@ -5,12 +5,11 @@
  *
  * The followings are the available columns in table 'enfermedades':
  * @property integer $idenfermedad
- * @property integer $idhistorial
  * @property string $nombre
  * @property string $descripcion
  *
  * The followings are the available model relations:
- * @property Historialenfermedades $idhistorial0
+ * @property Historialenfermedades[] $historialenfermedades
  */
 class Enfermedades extends CActiveRecord
 {
@@ -30,12 +29,11 @@ class Enfermedades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idhistorial, nombre, descripcion', 'required'),
-			array('idhistorial', 'numerical', 'integerOnly'=>true),
+			array('nombre, descripcion', 'required'),
 			array('nombre', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idenfermedad, idhistorial, nombre, descripcion', 'safe', 'on'=>'search'),
+			array('idenfermedad, nombre, descripcion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +45,7 @@ class Enfermedades extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idhistorial0' => array(self::BELONGS_TO, 'Historialenfermedades', 'idhistorial'),
+			'historialenfermedades' => array(self::HAS_MANY, 'Historialenfermedades', 'idenfermedad'),
 		);
 	}
 
@@ -58,7 +56,6 @@ class Enfermedades extends CActiveRecord
 	{
 		return array(
 			'idenfermedad' => 'Idenfermedad',
-			'idhistorial' => 'Idhistorial',
 			'nombre' => 'Nombre',
 			'descripcion' => 'Descripcion',
 		);
@@ -83,7 +80,6 @@ class Enfermedades extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idenfermedad',$this->idenfermedad);
-		$criteria->compare('idhistorial',$this->idhistorial);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 

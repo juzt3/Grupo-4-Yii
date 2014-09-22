@@ -1,13 +1,13 @@
 <?php
-/* @var $this DonanteController */
-/* @var $model Donante */
+/* @var $this DonantesController */
+/* @var $model Donantes */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'donante-form',
+	'id'=>'donantes-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -39,7 +39,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'direccion'); ?>
-		<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'direccion'); ?>
 	</div>
 
@@ -69,13 +69,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'donanteorganos'); ?>
-		<?php echo $form->textField($model,'donanteorganos',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->textField($model,'donanteorganos',array('size'=>2,'maxlength'=>2)); ?>
 		<?php echo $form->error($model,'donanteorganos'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textArea($model,'email',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
@@ -93,7 +93,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'habilitado'); ?>
-		<?php echo $form->textField($model,'habilitado',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->textField($model,'habilitado',array('size'=>2,'maxlength'=>2)); ?>
 		<?php echo $form->error($model,'habilitado'); ?>
 	</div>
 

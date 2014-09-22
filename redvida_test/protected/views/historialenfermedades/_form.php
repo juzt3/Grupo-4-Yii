@@ -26,15 +26,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
-		<?php echo $form->error($model,'fecha'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'idenfermedad'); ?>
 		<?php echo $form->textField($model,'idenfermedad'); ?>
 		<?php echo $form->error($model,'idenfermedad'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'fecha'); ?>
+		<?php echo $form->textField($model,'fecha'); ?>
+		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 
 	<div class="row buttons">

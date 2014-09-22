@@ -1,5 +1,5 @@
 <?php
-/* @var $this DonanteController */
+/* @var $this DonantesController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Donante', 'url'=>array('create')),
-	array('label'=>'Manage Donante', 'url'=>array('admin')),
+	array('label'=>'Create Donantes', 'url'=>array('create')),
+	array('label'=>'Manage Donantes', 'url'=>array('admin')),
 );
 ?>
 

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "donante".
+ * This is the model class for table "donantes".
  *
- * The followings are the available columns in table 'donante':
+ * The followings are the available columns in table 'donantes':
  * @property string $nombres
  * @property string $apellidos
  * @property string $rut
@@ -21,14 +21,14 @@
  * The followings are the available model relations:
  * @property Historialenfermedades[] $historialenfermedades
  */
-class Donante extends CActiveRecord
+class Donantes extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'donante';
+		return 'donantes';
 	}
 
 	/**
@@ -42,11 +42,12 @@ class Donante extends CActiveRecord
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, centromedico, celular', 'required'),
 			array('nombres, apellidos', 'length', 'max'=>100),
 			array('rut, telefono, celular', 'length', 'max'=>10),
+			array('direccion, email', 'length', 'max'=>300),
 			array('comuna', 'length', 'max'=>50),
 			array('tiposangre', 'length', 'max'=>3),
 			array('centromedico', 'length', 'max'=>5),
-			array('donanteorganos, habilitado', 'length', 'max'=>1),
-			array('alergias, email', 'safe'),
+			array('donanteorganos, habilitado', 'length', 'max'=>2),
+			array('alergias', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado', 'safe', 'on'=>'search'),
@@ -128,7 +129,7 @@ class Donante extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Donante the static model class
+	 * @return Donantes the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -22,7 +22,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idenfermedad',
-		'idhistorial',
 		'nombre',
 		'descripcion',
 	),

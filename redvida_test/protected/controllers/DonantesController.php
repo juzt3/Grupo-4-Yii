@@ -1,6 +1,6 @@
 <?php
 
-class DonanteController extends Controller
+class DonantesController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,16 +62,16 @@ class DonanteController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Donante;
+		$model=new Donantes;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Donante']))
+		if(isset($_POST['Donantes']))
 		{
-			$model->attributes=$_POST['Donante'];
+			$model->attributes=$_POST['Donantes'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->rut));
+				$this->redirect(array('historialenfermedades/create','id'=>$model->rut));
 		}
 
 		$this->render('create',array(
@@ -91,9 +91,9 @@ class DonanteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Donante']))
+		if(isset($_POST['Donantes']))
 		{
-			$model->attributes=$_POST['Donante'];
+			$model->attributes=$_POST['Donantes'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->rut));
 		}
@@ -122,7 +122,7 @@ class DonanteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Donante');
+		$dataProvider=new CActiveDataProvider('Donantes');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class DonanteController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Donante('search');
+		$model=new Donantes('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Donante']))
-			$model->attributes=$_GET['Donante'];
+		if(isset($_GET['Donantes']))
+			$model->attributes=$_GET['Donantes'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class DonanteController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Donante the loaded model
+	 * @return Donantes the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Donante::model()->findByPk($id);
+		$model=Donantes::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class DonanteController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Donante $model the model to be validated
+	 * @param Donantes $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='donante-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='donantes-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

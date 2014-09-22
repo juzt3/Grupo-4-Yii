@@ -6,12 +6,12 @@
  * The followings are the available columns in table 'historialenfermedades':
  * @property integer $idhistorial
  * @property string $rut
- * @property string $fecha
  * @property integer $idenfermedad
+ * @property string $fecha
  *
  * The followings are the available model relations:
- * @property Enfermedades[] $enfermedades
- * @property Donante $rut0
+ * @property Donantes $rut0
+ * @property Enfermedades $idenfermedad0
  */
 class Historialenfermedades extends CActiveRecord
 {
@@ -31,12 +31,12 @@ class Historialenfermedades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, fecha, idenfermedad', 'required'),
+			array('rut, fecha', 'required'),
 			array('idenfermedad', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idhistorial, rut, fecha, idenfermedad', 'safe', 'on'=>'search'),
+			array('idhistorial, rut, idenfermedad, fecha', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,8 +48,8 @@ class Historialenfermedades extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'enfermedades' => array(self::HAS_MANY, 'Enfermedades', 'idhistorial'),
-			'rut0' => array(self::BELONGS_TO, 'Donante', 'rut'),
+			'rut0' => array(self::BELONGS_TO, 'Donantes', 'rut'),
+			'idenfermedad0' => array(self::BELONGS_TO, 'Enfermedades', 'idenfermedad'),
 		);
 	}
 
@@ -61,8 +61,8 @@ class Historialenfermedades extends CActiveRecord
 		return array(
 			'idhistorial' => 'Idhistorial',
 			'rut' => 'Rut',
-			'fecha' => 'Fecha',
 			'idenfermedad' => 'Idenfermedad',
+			'fecha' => 'Fecha',
 		);
 	}
 
@@ -86,8 +86,8 @@ class Historialenfermedades extends CActiveRecord
 
 		$criteria->compare('idhistorial',$this->idhistorial);
 		$criteria->compare('rut',$this->rut,true);
-		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('idenfermedad',$this->idenfermedad);
+		$criteria->compare('fecha',$this->fecha,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
