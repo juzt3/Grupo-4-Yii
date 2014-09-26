@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Centros Medicoses',
+	'Centros Medicos',
 );
 
 $this->menu=array(
-	array('label'=>'Create CentrosMedicos', 'url'=>array('create')),
-	array('label'=>'Manage CentrosMedicos', 'url'=>array('admin')),
+	array('label'=>'Registrar Centro Medico', 'url'=>array('create')),
+	array('label'=>'Administrar Centros Medicos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Centros Medicoses</h1>
+<h1>Centros Medicos</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
