@@ -33,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+		<?php echo $form->dateField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 

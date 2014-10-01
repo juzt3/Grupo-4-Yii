@@ -891,3 +891,107 @@ Stack trace:
 REQUEST_URI=/yii/redvida_test/donantes/view/id/17510533-6
 HTTP_REFERER=http://localhost/yii/redvida_test/donantes
 ---
+2014/09/26 03:51:34 [error] [php] Undefined variable: ID (C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HistorialenfermedadesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HistorialenfermedadesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HistorialenfermedadesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (79)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/09/26 03:51:50 [error] [php] Undefined variable: id (C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HistorialenfermedadesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HistorialenfermedadesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HistorialenfermedadesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (79)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/09/26 03:51:52 [error] [php] Undefined variable: id (C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HistorialenfermedadesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HistorialenfermedadesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HistorialenfermedadesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (79)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/01 22:09:12 [error] [php] Undefined variable: select (C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\_form.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DonantesController->renderFile()
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\create.php(18): DonantesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DonantesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): DonantesController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): DonantesController->renderPartial()
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php(79): DonantesController->render()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DonantesController->actionCreate()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DonantesController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DonantesController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): DonantesController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DonantesController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/donantes/create
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\_form.php (54)
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\create.php (18)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php (79)
+2014/10/01 22:29:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "enfermedades".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('enfermedades')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('enfermedades')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/enfermedad...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/site/enfermedades
+---
+2014/10/01 22:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "enfermedade".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('enfermedade')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('enfermedade')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/enfermedad...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/site/enfermedade
+---
+2014/10/01 22:29:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "enfermedad".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('enfermedad')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('enfermedad')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/enfermedad')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/site/enfermedad
+---

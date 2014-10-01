@@ -139,7 +139,7 @@ class Donantes extends CActiveRecord
 	public function getMenuSangre()
 	{
 		return array(
-      	'O+', 'O-', 'A-', 'A+', 'B-', 'B+', 'AB-', 'AB+'
+      	'O+'=>'O+', 'O-'=>'O-', 'A-'=>'A-', 'A+'=>'A+', 'B-'=>'B-', 'B+'=>'B+', 'AB-'=>'AB-', 'AB+'=>'AB+'
    		);
 	}
 }
