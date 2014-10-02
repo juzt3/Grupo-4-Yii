@@ -995,3 +995,434 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/yii/redvida_test/site/enfermedad
 ---
+2014/10/02 02:11:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (75)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:11:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(75): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:11:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (75)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:11:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(75): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:12:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (75)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:12:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(75): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:13:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (75)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:13:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(75): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:13:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`rut`, `idenfermedad`, `fecha`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (75)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:13:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`rut`, `idenfermedad`, `fecha`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(75): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:15:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:15:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:20:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:20:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:20:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:20:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_3` FOREIGN KEY (`idenfermedad`) REFERENCES `enfermedades` (`idenfermedad`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:20:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:20:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-7
+---
+2014/10/02 02:21:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:21:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('18510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/18510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/18510533-7
+---
+2014/10/02 02:22:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:22:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('18510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/18510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/18510533-7
+---
+2014/10/02 02:26:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:26:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-7
+---
+2014/10/02 02:26:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:26:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-7
+---
+2014/10/02 02:29:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/02 02:29:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`redvida_test`.`historialenfermedades`, CONSTRAINT `fk_reference_2` FOREIGN KEY (`rut`) REFERENCES `donantes` (`rut`)). The SQL statement executed was: INSERT INTO `historialenfermedades` (`idenfermedad`, `fecha`, `rut`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#3 [internal function]: HistorialenfermedadesController->actionCreate('17510533-7')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-7
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-7
+---
+2014/10/02 02:34:02 [error] [exception.CException] exception 'CException' with message 'Property "Historialenfermedades.id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id')
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(16): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(80): CController->render('create', Array)
+#7 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/02 02:34:13 [error] [exception.CException] exception 'CException' with message 'Property "HistorialenfermedadesController.rut" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(16): CComponent->__get('rut')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(80): CController->render('create', Array)
+#6 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---

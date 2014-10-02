@@ -19,11 +19,13 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'rut'); ?>
 		<?php echo $form->textField($model,'rut',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'rut'); ?>
 	</div>
+	-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'idenfermedad'); ?>

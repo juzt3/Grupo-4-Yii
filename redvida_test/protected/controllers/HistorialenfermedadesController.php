@@ -60,7 +60,7 @@ class HistorialenfermedadesController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new Historialenfermedades;
 
@@ -70,6 +70,7 @@ class HistorialenfermedadesController extends Controller
 		if(isset($_POST['Historialenfermedades']))
 		{
 			$model->attributes=$_POST['Historialenfermedades'];
+			$model->rut=$id;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idhistorial));
 		}
