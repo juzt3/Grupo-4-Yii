@@ -1426,3 +1426,25 @@ Stack trace:
 #21 {main}
 REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
 ---
+2014/10/02 03:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "donantes".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('donantes')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('donantes')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/donantes')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/site/donantes
+HTTP_REFERER=http://localhost/yii/redvida_test/site/index
+---
+2014/10/02 03:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "donantes".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('donantes')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('donantes')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/donantes')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/site/donantes
+HTTP_REFERER=http://localhost/yii/redvida_test/site/index
+---
