@@ -28,8 +28,10 @@
 	-->
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idenfermedad'); ?>
-		<?php echo $form->textField($model,'idenfermedad'); ?>
+		<?php echo $form->labelEx($model,'Enfermedadesnfermedad'); ?>
+		<?php $enfermedades = Enfermedades::model()->findAll(); ?>
+		<?php $list = CHtml::listData($enfermedades, 'idenfermedad', 'nombre'); ?>
+		<?php echo $form->dropDownlist($model, 'idenfermedad', $list); ?>
 		<?php echo $form->error($model,'idenfermedad'); ?>
 	</div>
 

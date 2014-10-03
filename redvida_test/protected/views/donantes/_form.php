@@ -69,7 +69,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'donanteorganos'); ?>
-		<?php echo $form->dropDownList($model,'donanteorganos',array('No'=>'NO', 'Si'=>'Si')); ?>
+		<?php echo $form->dropDownList($model,'donanteorganos',array('No'=>'No', 'Si'=>'Si')); ?>
 		<?php echo $form->error($model,'donanteorganos'); ?>
 	</div>
 

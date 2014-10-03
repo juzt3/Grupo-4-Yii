@@ -33,6 +33,7 @@
 				array('label'=>'Donantes', 'url'=>array('/donantes')),
 				array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
 				array('label'=>'Urgencias', 'url'=>array('/urgencia')),
+				array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
