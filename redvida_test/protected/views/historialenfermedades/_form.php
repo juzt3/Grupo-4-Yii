@@ -28,7 +28,7 @@
 	-->
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Enfermedadesnfermedad'); ?>
+		<?php echo $form->labelEx($model,'idenfermedad'); ?>
 		<?php $enfermedades = Enfermedades::model()->findAll(); ?>
 		<?php $list = CHtml::listData($enfermedades, 'idenfermedad', 'nombre'); ?>
 		<?php echo $form->dropDownlist($model, 'idenfermedad', $list); ?>

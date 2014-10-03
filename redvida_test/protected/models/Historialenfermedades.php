@@ -31,7 +31,7 @@ class Historialenfermedades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, fecha', 'required'),
+			array('rut, fecha, idenfermedad', 'required'),
 			array('idenfermedad', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			// The following rule is used by search().

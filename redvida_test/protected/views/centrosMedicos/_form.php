@@ -20,7 +20,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nombre Centro Medico'); ?>
+		<?php echo $form->labelEx($model,'nombre_cm'); ?>
 		<?php echo $form->textField($model,'nombre_cm',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nombre_cm'); ?>
 	</div>

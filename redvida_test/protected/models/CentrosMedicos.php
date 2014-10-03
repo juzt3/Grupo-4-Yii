@@ -58,7 +58,7 @@ class Centrosmedicos extends CActiveRecord
 	{
 		return array(
 			'cod_cm' => 'Cod Cm',
-			'nombre_cm' => 'Nombre Cm',
+			'nombre_cm' => 'Nombre Centro Medico',
 			'direccion_cm' => 'Direccion Cm',
 			'contacto_cm' => 'Contacto Cm',
 			'director_cm' => 'Director Cm',
