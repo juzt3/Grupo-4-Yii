@@ -1,13 +1,13 @@
 <?php
-/* @var $this CentrosMedicosController */
-/* @var $model CentrosMedicos */
+/* @var $this CentrosmedicosController */
+/* @var $model Centrosmedicos */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'centros-medicos-form',
+	'id'=>'centrosmedicos-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -15,48 +15,48 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre_centro_medico'); ?>
-		<?php echo $form->textField($model,'nombre_centro_medico',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'nombre_centro_medico'); ?>
+		<?php echo $form->labelEx($model,'Nombre Centro Medico'); ?>
+		<?php echo $form->textField($model,'nombre_cm',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'nombre_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'direccion'); ?>
-		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'direccion'); ?>
+		<?php echo $form->labelEx($model,'Direccion'); ?>
+		<?php echo $form->textField($model,'direccion_cm',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'direccion_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'contacto'); ?>
-		<?php echo $form->textField($model,'contacto'); ?>
-		<?php echo $form->error($model,'contacto'); ?>
+		<?php echo $form->labelEx($model,'Nro Contacto'); ?>
+		<?php echo $form->textField($model,'contacto_cm'); ?>
+		<?php echo $form->error($model,'contacto_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'director'); ?>
-		<?php echo $form->textField($model,'director',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'director'); ?>
+		<?php echo $form->labelEx($model,'Director'); ?>
+		<?php echo $form->textField($model,'director_cm',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'director_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'especialidad'); ?>
-		<?php echo $form->textField($model,'especialidad',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'especialidad'); ?>
+		<?php echo $form->labelEx($model,'Especialidad'); ?>
+		<?php echo $form->textField($model,'especialidad_cm',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'especialidad_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'gubernamental'); ?>
-		<?php echo $form->textField($model,'gubernamental',array('size'=>2,'maxlength'=>2)); ?>
-		<?php echo $form->error($model,'gubernamental'); ?>
+		<?php echo $form->labelEx($model,'Gubernamental'); ?>
+		<?php echo $form->dropDownLIst($model,'gubernamental_cm',array("Si"=>"Si","No"=>"No")); ?>
+		<?php echo $form->error($model,'gubernamental_cm'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

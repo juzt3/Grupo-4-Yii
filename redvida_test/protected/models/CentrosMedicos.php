@@ -1,25 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "CentrosMedicos".
+ * This is the model class for table "centrosmedicos".
  *
- * The followings are the available columns in table 'CentrosMedicos':
- * @property integer $cod_centro_medico
- * @property string $nombre_centro_medico
- * @property string $direccion
- * @property integer $contacto
- * @property string $director
- * @property string $especialidad
- * @property string $gubernamental
+ * The followings are the available columns in table 'centrosmedicos':
+ * @property integer $cod_cm
+ * @property string $nombre_cm
+ * @property string $direccion_cm
+ * @property integer $contacto_cm
+ * @property string $director_cm
+ * @property string $especialidad_cm
+ * @property string $gubernamental_cm
  */
-class CentrosMedicos extends CActiveRecord
+class Centrosmedicos extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'CentrosMedicos';
+		return 'centrosmedicos';
 	}
 
 	/**
@@ -30,13 +30,13 @@ class CentrosMedicos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('contacto', 'numerical', 'integerOnly'=>true),
-			array('nombre_centro_medico, director, especialidad', 'length', 'max'=>50),
-			array('direccion', 'length', 'max'=>100),
-			array('gubernamental', 'length', 'max'=>2),
+			array('nombre_cm, direccion_cm, contacto_cm, director_cm, especialidad_cm, gubernamental_cm', 'required'),
+			array('contacto_cm', 'numerical', 'integerOnly'=>true),
+			array('nombre_cm, director_cm, especialidad_cm, gubernamental_cm', 'length', 'max'=>50),
+			array('direccion_cm', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('cod_centro_medico, nombre_centro_medico, direccion, contacto, director, especialidad, gubernamental', 'safe', 'on'=>'search'),
+			array('cod_cm, nombre_cm, direccion_cm, contacto_cm, director_cm, especialidad_cm, gubernamental_cm', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,13 +57,13 @@ class CentrosMedicos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'cod_centro_medico' => 'Cod Centro Medico',
-			'nombre_centro_medico' => 'Nombre Centro Medico',
-			'direccion' => 'Direccion',
-			'contacto' => 'Contacto',
-			'director' => 'Director',
-			'especialidad' => 'Especialidad',
-			'gubernamental' => 'Gubernamental',
+			'cod_cm' => 'Cod Cm',
+			'nombre_cm' => 'Nombre Cm',
+			'direccion_cm' => 'Direccion Cm',
+			'contacto_cm' => 'Contacto Cm',
+			'director_cm' => 'Director Cm',
+			'especialidad_cm' => 'Especialidad Cm',
+			'gubernamental_cm' => 'Gubernamental Cm',
 		);
 	}
 
@@ -85,13 +85,13 @@ class CentrosMedicos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('cod_centro_medico',$this->cod_centro_medico);
-		$criteria->compare('nombre_centro_medico',$this->nombre_centro_medico,true);
-		$criteria->compare('direccion',$this->direccion,true);
-		$criteria->compare('contacto',$this->contacto);
-		$criteria->compare('director',$this->director,true);
-		$criteria->compare('especialidad',$this->especialidad,true);
-		$criteria->compare('gubernamental',$this->gubernamental,true);
+		$criteria->compare('cod_cm',$this->cod_cm);
+		$criteria->compare('nombre_cm',$this->nombre_cm,true);
+		$criteria->compare('direccion_cm',$this->direccion_cm,true);
+		$criteria->compare('contacto_cm',$this->contacto_cm);
+		$criteria->compare('director_cm',$this->director_cm,true);
+		$criteria->compare('especialidad_cm',$this->especialidad_cm,true);
+		$criteria->compare('gubernamental_cm',$this->gubernamental_cm,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -102,7 +102,7 @@ class CentrosMedicos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return CentrosMedicos the static model class
+	 * @return Centrosmedicos the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
