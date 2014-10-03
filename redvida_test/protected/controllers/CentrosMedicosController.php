@@ -1,6 +1,6 @@
 <?php
 
-class CentrosMedicosController extends Controller
+class CentrosmedicosController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,16 +62,16 @@ class CentrosMedicosController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new CentrosMedicos;
+		$model=new Centrosmedicos;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['CentrosMedicos']))
+		if(isset($_POST['Centrosmedicos']))
 		{
-			$model->attributes=$_POST['CentrosMedicos'];
+			$model->attributes=$_POST['Centrosmedicos'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->cod_centro_medico));
+				$this->redirect(array('view','id'=>$model->cod_cm));
 		}
 
 		$this->render('create',array(
@@ -91,11 +91,11 @@ class CentrosMedicosController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['CentrosMedicos']))
+		if(isset($_POST['Centrosmedicos']))
 		{
-			$model->attributes=$_POST['CentrosMedicos'];
+			$model->attributes=$_POST['Centrosmedicos'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->cod_centro_medico));
+				$this->redirect(array('view','id'=>$model->cod_cm));
 		}
 
 		$this->render('update',array(
@@ -122,7 +122,7 @@ class CentrosMedicosController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('CentrosMedicos');
+		$dataProvider=new CActiveDataProvider('Centrosmedicos');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class CentrosMedicosController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new CentrosMedicos('search');
+		$model=new Centrosmedicos('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['CentrosMedicos']))
-			$model->attributes=$_GET['CentrosMedicos'];
+		if(isset($_GET['Centrosmedicos']))
+			$model->attributes=$_GET['Centrosmedicos'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class CentrosMedicosController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return CentrosMedicos the loaded model
+	 * @return Centrosmedicos the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=CentrosMedicos::model()->findByPk($id);
+		$model=Centrosmedicos::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class CentrosMedicosController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param CentrosMedicos $model the model to be validated
+	 * @param Centrosmedicos $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='centros-medicos-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='centrosmedicos-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

@@ -1,5 +1,5 @@
 <?php
-/* @var $this CentrosMedicosController */
+/* @var $this CentrosmedicosController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(

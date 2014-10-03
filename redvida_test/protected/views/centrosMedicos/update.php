@@ -1,21 +1,21 @@
 <?php
-/* @var $this CentrosMedicosController */
-/* @var $model CentrosMedicos */
+/* @var $this CentrosmedicosController */
+/* @var $model Centrosmedicos */
 
 $this->breadcrumbs=array(
 	'Centros Medicos'=>array('index'),
-	$model->cod_centro_medico=>array('view','id'=>$model->cod_centro_medico),
-	'Modificar',
+	$model->cod_cm=>array('view','id'=>$model->cod_cm),
+	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'Visualizar Centros Medicos', 'url'=>array('index')),
-	array('label'=>'Registrar Centro Medico', 'url'=>array('create')),
-	array('label'=>'Ver Centro Medico', 'url'=>array('view', 'id'=>$model->cod_centro_medico)),
-	array('label'=>'Administrar Centros Medicos', 'url'=>array('admin')),
+	array('label'=>'List Centrosmedicos', 'url'=>array('index')),
+	array('label'=>'Create Centrosmedicos', 'url'=>array('create')),
+	array('label'=>'View Centrosmedicos', 'url'=>array('view', 'id'=>$model->cod_cm)),
+	array('label'=>'Manage Centrosmedicos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update CentrosMedicos <?php echo $model->cod_centro_medico; ?></h1>
+<h1>Update Centrosmedicos <?php echo $model->cod_cm; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

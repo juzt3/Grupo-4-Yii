@@ -1,32 +1,32 @@
 <?php
-/* @var $this CentrosMedicosController */
-/* @var $model CentrosMedicos */
+/* @var $this CentrosmedicosController */
+/* @var $model Centrosmedicos */
 
 $this->breadcrumbs=array(
-	'Centros Medicos'=>array('index'),
-	$model->cod_centro_medico,
+	'Centrosmedicoses'=>array('index'),
+	$model->cod_cm,
 );
 
 $this->menu=array(
-	array('label'=>'Visualizar Centros Medicos', 'url'=>array('index')),
-	array('label'=>'Registrar Centro Medico', 'url'=>array('create')),
-	array('label'=>'Modificar Centro Medico', 'url'=>array('update', 'id'=>$model->cod_centro_medico)),
-	array('label'=>'Eliminar Centro Medico', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->cod_centro_medico),'confirm'=>'Esta seguro que desea eliminar este Centro Medico?')),
-	array('label'=>'Administrar Centros Medicos', 'url'=>array('admin')),
+	array('label'=>'List Centrosmedicos', 'url'=>array('index')),
+	array('label'=>'Create Centrosmedicos', 'url'=>array('create')),
+	array('label'=>'Update Centrosmedicos', 'url'=>array('update', 'id'=>$model->cod_cm)),
+	array('label'=>'Delete Centrosmedicos', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->cod_cm),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Centrosmedicos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Visualizar Centro Medico</h1>
+<h1>View Centrosmedicos #<?php echo $model->cod_cm; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		/*'cod_centro_medico',*/
-		'nombre_centro_medico',
-		'direccion',
-		'contacto',
-		'director',
-		'especialidad',
-		'gubernamental',
+		'cod_cm',
+		'nombre_cm',
+		'direccion_cm',
+		'contacto_cm',
+		'director_cm',
+		'especialidad_cm',
+		'gubernamental_cm',
 	),
 )); ?>
