@@ -26,31 +26,31 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Direccion'); ?>
+		<?php echo $form->labelEx($model,'direccion_cm'); ?>
 		<?php echo $form->textField($model,'direccion_cm',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'direccion_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nro Contacto'); ?>
+		<?php echo $form->labelEx($model,'contacto_cm'); ?>
 		<?php echo $form->textField($model,'contacto_cm'); ?>
 		<?php echo $form->error($model,'contacto_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Director'); ?>
+		<?php echo $form->labelEx($model,'director_cm'); ?>
 		<?php echo $form->textField($model,'director_cm',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'director_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Especialidad'); ?>
+		<?php echo $form->labelEx($model,'especialidad_cm'); ?>
 		<?php echo $form->textField($model,'especialidad_cm',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'especialidad_cm'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Gubernamental'); ?>
+		<?php echo $form->labelEx($model,'gubernamental_cm'); ?>
 		<?php echo $form->dropDownLIst($model,'gubernamental_cm',array("Si"=>"Si","No"=>"No")); ?>
 		<?php echo $form->error($model,'gubernamental_cm'); ?>
 	</div>

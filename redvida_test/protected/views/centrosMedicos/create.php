@@ -3,16 +3,16 @@
 /* @var $model Centrosmedicos */
 
 $this->breadcrumbs=array(
-	'Centrosmedicoses'=>array('index'),
-	'Create',
+	'Centros Medicos'=>array('index'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Centrosmedicos', 'url'=>array('index')),
-	array('label'=>'Manage Centrosmedicos', 'url'=>array('admin')),
+	array('label'=>'Mostrar Centros Medicos', 'url'=>array('index')),
+	array('label'=>'Administrar Centros Medicos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Centrosmedicos</h1>
+<h1>Registrar Centro Medico</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

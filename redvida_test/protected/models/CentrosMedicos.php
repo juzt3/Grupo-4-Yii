@@ -57,13 +57,13 @@ class Centrosmedicos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'cod_cm' => 'Cod Cm',
+			'cod_cm' => 'Codigo Centro Medico',
 			'nombre_cm' => 'Nombre Centro Medico',
-			'direccion_cm' => 'Direccion Cm',
-			'contacto_cm' => 'Contacto Cm',
-			'director_cm' => 'Director Cm',
-			'especialidad_cm' => 'Especialidad Cm',
-			'gubernamental_cm' => 'Gubernamental Cm',
+			'direccion_cm' => 'Direccion Centro Medico',
+			'contacto_cm' => 'Nro Contacto',
+			'director_cm' => 'Director',
+			'especialidad_cm' => 'Especialidad',
+			'gubernamental_cm' => 'Gubernamental',
 		);
 	}
 
