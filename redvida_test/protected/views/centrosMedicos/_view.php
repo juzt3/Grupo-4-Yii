@@ -5,7 +5,9 @@
 
 <div class="view">
 
-
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cod_centro_medico')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->cod_centro_medico), array('view', 'id'=>$data->cod_centro_medico)); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre_centro_medico')); ?>:</b>
 	<?php echo CHtml::encode($data->nombre_centro_medico); ?>

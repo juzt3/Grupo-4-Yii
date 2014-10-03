@@ -12,6 +12,11 @@
 )); ?>
 
 	<div class="row">
+		<?php echo $form->label($model,'cod_centro_medico'); ?>
+		<?php echo $form->textField($model,'cod_centro_medico'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'nombre_centro_medico'); ?>
 		<?php echo $form->textField($model,'nombre_centro_medico',array('size'=>50,'maxlength'=>50)); ?>
 	</div>

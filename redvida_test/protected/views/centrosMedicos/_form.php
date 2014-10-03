@@ -15,48 +15,48 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Todos Los Campos Son <span class="required">*</span> Obligatorios.</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre_centro_medico*'); ?>
+		<?php echo $form->labelEx($model,'nombre_centro_medico'); ?>
 		<?php echo $form->textField($model,'nombre_centro_medico',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nombre_centro_medico'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'direccion*'); ?>
+		<?php echo $form->labelEx($model,'direccion'); ?>
 		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'direccion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'contacto*'); ?>
+		<?php echo $form->labelEx($model,'contacto'); ?>
 		<?php echo $form->textField($model,'contacto'); ?>
 		<?php echo $form->error($model,'contacto'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'director*'); ?>
+		<?php echo $form->labelEx($model,'director'); ?>
 		<?php echo $form->textField($model,'director',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'director'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'especialidad*'); ?>
+		<?php echo $form->labelEx($model,'especialidad'); ?>
 		<?php echo $form->textField($model,'especialidad',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'especialidad'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'gubernamental*'); ?>
-		<?php echo $form->dropDownLIst($model,'gubernamental',array("1"=>"Si","2"=>"No")); ?>
+		<?php echo $form->labelEx($model,'gubernamental'); ?>
+		<?php echo $form->textField($model,'gubernamental',array('size'=>2,'maxlength'=>2)); ?>
 		<?php echo $form->error($model,'gubernamental'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
