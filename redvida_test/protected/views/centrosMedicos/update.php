@@ -3,16 +3,16 @@
 /* @var $model CentrosMedicos */
 
 $this->breadcrumbs=array(
-	'Centros Medicoses'=>array('index'),
+	'Centros Medicos'=>array('index'),
 	$model->cod_centro_medico=>array('view','id'=>$model->cod_centro_medico),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
-	array('label'=>'List CentrosMedicos', 'url'=>array('index')),
-	array('label'=>'Create CentrosMedicos', 'url'=>array('create')),
-	array('label'=>'View CentrosMedicos', 'url'=>array('view', 'id'=>$model->cod_centro_medico)),
-	array('label'=>'Manage CentrosMedicos', 'url'=>array('admin')),
+	array('label'=>'Visualizar Centros Medicos', 'url'=>array('index')),
+	array('label'=>'Registrar Centro Medico', 'url'=>array('create')),
+	array('label'=>'Ver Centro Medico', 'url'=>array('view', 'id'=>$model->cod_centro_medico)),
+	array('label'=>'Administrar Centros Medicos', 'url'=>array('admin')),
 );
 ?>
 
