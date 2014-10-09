@@ -32,8 +32,12 @@ class Centrosmedicos extends CActiveRecord
 		return array(
 			array('nombre_cm, direccion_cm, contacto_cm, director_cm, especialidad_cm, gubernamental_cm', 'required'),
 			array('contacto_cm', 'numerical', 'integerOnly'=>true),
-			array('nombre_cm, director_cm, especialidad_cm, gubernamental_cm', 'length', 'max'=>50),
-			array('direccion_cm', 'length', 'max'=>100),
+			array('nombre_cm, director_cm, especialidad_cm, gubernamental_cm', 'length', 'max'=>50, 'min'=>2),
+			array('direccion_cm', 'length', 'max'=>100, 'min'=>6),
+			array('contacto_cm', 'length', 'max'=>100, 'min'=>6),
+			array('nombre_cm', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('director_cm', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('especialidad_cm', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('cod_cm, nombre_cm, direccion_cm, contacto_cm, director_cm, especialidad_cm, gubernamental_cm', 'safe', 'on'=>'search'),
