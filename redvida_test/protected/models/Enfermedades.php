@@ -88,6 +88,21 @@ class Enfermedades extends CActiveRecord
 		));
 	}
 
+	public static function getEnfermedades($id) //Devuelve las enfermedades que el donante NO TIENE actualmente.
+	{
+		$arrayhistorial = CHtml::listData(Historialenfermedades::model()->findAll(array('select'=>'idenfermedad',
+																			'condition'=>'rut = :rut', 
+																			'params'=>array(':rut'=>$id),
+																			)), 'idenfermedad', 'idenfermedad');
+
+		$criteria = new CDbCriteria();
+		$criteria->addNotInCondition('idenfermedad', $arrayhistorial);
+		
+		$enfermedades = Enfermedades::model()->findAll($criteria);
+
+		return CHtml::listData($enfermedades, 'idenfermedad', 'nombre');
+	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

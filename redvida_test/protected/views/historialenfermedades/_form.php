@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -29,9 +29,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'idenfermedad'); ?>
-		<?php $enfermedades = Enfermedades::model()->findAll(); ?>
-		<?php $list = CHtml::listData($enfermedades, 'idenfermedad', 'nombre'); ?>
-		<?php echo $form->dropDownlist($model, 'idenfermedad', $list); ?>
+		<?php echo $form->dropDownlist($model, 'idenfermedad', Enfermedades::getEnfermedades($id)); ?>
 		<?php echo $form->error($model,'idenfermedad'); ?>
 	</div>
 
@@ -42,7 +40,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

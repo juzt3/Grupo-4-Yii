@@ -61,7 +61,7 @@ class Historialenfermedades extends CActiveRecord
 		return array(
 			'idhistorial' => 'Idhistorial',
 			'rut' => 'Rut',
-			'idenfermedad' => 'Idenfermedad',
+			'idenfermedad' => 'Enfermedad',
 			'fecha' => 'Fecha',
 		);
 	}

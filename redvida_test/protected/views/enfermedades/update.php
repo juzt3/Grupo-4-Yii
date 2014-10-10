@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Enfermedades', 'url'=>array('index')),
-	array('label'=>'Create Enfermedades', 'url'=>array('create')),
-	array('label'=>'View Enfermedades', 'url'=>array('view', 'id'=>$model->idenfermedad)),
-	array('label'=>'Manage Enfermedades', 'url'=>array('admin')),
+	array('label'=>'Listar Enfermedades', 'url'=>array('index')),
+	array('label'=>'Crear Enfermedades', 'url'=>array('create')),
+	array('label'=>'Ver Enfermedades', 'url'=>array('view', 'id'=>$model->idenfermedad)),
+	array('label'=>'Administrar Enfermedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Enfermedades <?php echo $model->idenfermedad; ?></h1>
+<h1>Actualizar Enfermedades <?php echo $model->idenfermedad; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

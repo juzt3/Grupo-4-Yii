@@ -16,11 +16,11 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('apellidos')); ?>:</b>
 	<?php echo CHtml::encode($data->apellidos); ?>
 	<br />
-
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('direccion')); ?>:</b>
 	<?php echo CHtml::encode($data->direccion); ?>
 	<br />
-
+	*/ ?>
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comuna')); ?>:</b>
 	<?php echo CHtml::encode($data->comuna); ?>
 	<br />
@@ -28,11 +28,11 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tiposangre')); ?>:</b>
 	<?php echo CHtml::encode($data->tiposangre); ?>
 	<br />
-
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('alergias')); ?>:</b>
 	<?php echo CHtml::encode($data->alergias); ?>
 	<br />
-
+	*/ ?>
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('centromedico')); ?>:</b>
 	<?php echo CHtml::encode($data->centromedico); ?>

@@ -41,11 +41,18 @@ class Donantes extends CActiveRecord
 		return array(
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, centromedico, celular', 'required'),
 			array('nombres, apellidos', 'length', 'max'=>100),
+			array('nombres, apellidos', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('rut, telefono, celular', 'length', 'max'=>10),
+			array('rut', 'ext.alpha', 'allowNumbers' => true, 'extra' => array('-'), 'minChars' => 9, 'maxChars' => 10),
+			array('rut', 'validateRut'),
+			array('telefono, celular', 'ext.alpha', 'allowNumbers' => true),
 			array('direccion, email', 'length', 'max'=>300),
+			array('email', 'email'),
 			array('comuna', 'length', 'max'=>50),
+			array('comuna', 'ext.alpha', 'allowNumbers' => false),
 			array('tiposangre', 'length', 'max'=>3),
 			array('centromedico', 'length', 'max'=>5),
+			array('centromedico', 'ext.alpha', 'allowNumbers' => true),
 			array('donanteorganos, habilitado', 'length', 'max'=>2),
 			array('alergias', 'safe'),
 			// The following rule is used by search().
@@ -87,6 +94,27 @@ class Donantes extends CActiveRecord
 			'habilitado' => 'Habilitado',
 		);
 	}
+
+	public function validateRut($attribute, $params) {
+        $data = explode('-', $this->rut);
+        $evaluate = strrev($data[0]);
+        $multiply = 2;
+        $store = 0;
+        for ($i = 0; $i < strlen($evaluate); $i++) {
+            $store += $evaluate[$i] * $multiply;
+            $multiply++;
+            if ($multiply > 7)
+                $multiply = 2;
+        }
+        isset($data[1]) ? $verifyCode = strtolower($data[1]) : $verifyCode = '';
+        $result = 11 - ($store % 11);
+        if ($result == 10)
+            $result = 'k';
+        if ($result == 11)
+            $result = 0;
+        if ($verifyCode != $result)
+            $this->addError('rut', 'Rut inválido.');
+    }
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

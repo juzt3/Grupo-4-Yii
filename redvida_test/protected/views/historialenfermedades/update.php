@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Historialenfermedades', 'url'=>array('index')),
-	array('label'=>'Create Historialenfermedades', 'url'=>array('create')),
-	array('label'=>'View Historialenfermedades', 'url'=>array('view', 'id'=>$model->idhistorial)),
-	array('label'=>'Manage Historialenfermedades', 'url'=>array('admin')),
+	array('label'=>'Listar Historial de Enfermedades', 'url'=>array('index')),
+	//array('label'=>'Crear Historial de Enfermedades', 'url'=>array('create')),
+	array('label'=>'Ver Historial de Enfermedades', 'url'=>array('view', 'id'=>$model->idhistorial)),
+	array('label'=>'Administrar Historial de Enfermedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Historialenfermedades <?php echo $model->idhistorial; ?></h1>
+<h1>Actualizar Historial de Enfermedades <?php echo $model->idhistorial; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

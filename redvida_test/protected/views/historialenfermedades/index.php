@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Historialenfermedades', 'url'=>array('create')),
-	array('label'=>'Manage Historialenfermedades', 'url'=>array('admin')),
+	//array('label'=>'Crear Historial de Enfermedades', 'url'=>array('create')),
+	array('label'=>'Administrar Historial de Enfermedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Historialenfermedades</h1>
+<h1>Historial de Enfermedades</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

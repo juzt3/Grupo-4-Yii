@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Donantes', 'url'=>array('index')),
-	array('label'=>'Manage Donantes', 'url'=>array('admin')),
+	array('label'=>'Listar Donantes', 'url'=>array('index')),
+	array('label'=>'Administrar Donantes', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Donantes</h1>
+<h1>Crear Donantes</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

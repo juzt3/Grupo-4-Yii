@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Enfermedades', 'url'=>array('index')),
-	array('label'=>'Manage Enfermedades', 'url'=>array('admin')),
+	array('label'=>'Listar Enfermedades', 'url'=>array('index')),
+	array('label'=>'Administrar Enfermedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Enfermedades</h1>
+<h1>Crear Enfermedades</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
