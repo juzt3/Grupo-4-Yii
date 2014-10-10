@@ -38,6 +38,12 @@ class Urgencia extends CActiveRecord
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad, necesidad_transplante, centro_medico', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>1),
+			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('enfermedad', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('necesidad_transplante', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, centro_medico', 'safe', 'on'=>'search'),
@@ -72,6 +78,28 @@ class Urgencia extends CActiveRecord
 			'centro_medico' => 'Centro Medico',
 		);
 	}
+
+	public function validateRut($attribute, $params) {
+        $data = explode('-', $this->rut);
+        $evaluate = strrev($data[0]);
+        $multiply = 2;
+        $store = 0;
+        for ($i = 0; $i < strlen($evaluate); $i++) {
+            $store += $evaluate[$i] * $multiply;
+           $multiply++;
+            if ($multiply > 7)
+                $multiply = 2;
+        }
+        isset($data[1]) ? $verifyCode = strtolower($data[1]) : $verifyCode = '';
+        $result = 11 - ($store % 11);
+        if ($result == 10)
+            $result = 'k';
+        if ($result == 11)
+            $result = 0;
+        if ($verifyCode != $result)
+            $this->addError('rut', 'Rut inválido.');
+    }
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -117,9 +145,10 @@ class Urgencia extends CActiveRecord
 		return parent::model($className);
 	}
 
+
 	public function getGradoUrgencia()
 	{
-		return array('1'=>'1', '2'=>'2', '3'=>'3', '4'=>'4', '5'=>'5');
+		return array('1'=>'Muy Bajo', '2'=>'Bajo', '3'=>'Normal', '4'=>'Alto', '5'=>'Muy Alto');
      	            
 	}
 

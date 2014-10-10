@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Urgencia', 'url'=>array('index')),
-	array('label'=>'Create Urgencia', 'url'=>array('create')),
-	array('label'=>'Update Urgencia', 'url'=>array('update', 'id'=>$model->rut)),
-	array('label'=>'Delete Urgencia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Urgencia', 'url'=>array('admin')),
+	array('label'=>'Lista de Urgencias', 'url'=>array('index')),
+	array('label'=>'Crear Urgencia', 'url'=>array('create')),
+	array('label'=>'Editar Urgencia', 'url'=>array('update', 'id'=>$model->rut)),
+	array('label'=>'Borrar Urgencia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'Está seguro que desea borrar la urgencia?')),
+	array('label'=>'Gestion de Urgencias', 'url'=>array('admin')),
 );
 ?>
 

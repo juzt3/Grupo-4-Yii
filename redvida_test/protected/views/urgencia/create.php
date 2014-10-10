@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Urgencia', 'url'=>array('index')),
-	array('label'=>'Manage Urgencia', 'url'=>array('admin')),
+	array('label'=>'Lista de Urgencias', 'url'=>array('index')),
+	array('label'=>'Gestion de Urgencias', 'url'=>array('admin')),
 );
 ?>
 
