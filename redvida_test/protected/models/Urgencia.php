@@ -34,6 +34,8 @@ class Urgencia extends CActiveRecord
 		return array(
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, centro_medico', 'required'),
 			array('rut', 'length', 'max'=>10),
+			array('rut', 'ext.alpha', 'allowNumbers' => true, 'extra' => array('-'), 'minChars' => 9, 'maxChars' => 10),
+			array('rut', 'validateRut'),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad, necesidad_transplante, centro_medico', 'length', 'max'=>100),
@@ -148,7 +150,7 @@ class Urgencia extends CActiveRecord
 
 	public function getGradoUrgencia()
 	{
-		return array('1'=>'Muy Bajo', '2'=>'Bajo', '3'=>'Normal', '4'=>'Alto', '5'=>'Muy Alto');
+		return array(1=>'Muy Bajo', 2=>'Bajo', 3=>'Normal', 4=>'Alto', 5=>'Muy Alto');
      	            
 	}
 
