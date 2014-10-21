@@ -34,6 +34,7 @@ class Historialenfermedades extends CActiveRecord
 			array('rut, fecha, idenfermedad', 'required'),
 			array('idenfermedad', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
+			array('fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idhistorial, rut, idenfermedad, fecha', 'safe', 'on'=>'search'),

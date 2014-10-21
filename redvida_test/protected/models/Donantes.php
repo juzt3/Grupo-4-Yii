@@ -62,6 +62,7 @@ class Donantes extends CActiveRecord
 			array('alergias', 'safe'),
 			array('sexo', 'length', 'max'=>9),
 			array('afiliacion', 'length', 'max'=>100),
+			array('fecha_nac','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha de necimiento es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado', 'safe', 'on'=>'search'),
