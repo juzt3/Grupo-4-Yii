@@ -20,80 +20,116 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombres'); ?>
-		<?php echo $form->textField($model,'nombres',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'nombres'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'apellidos'); ?>
-		<?php echo $form->textField($model,'apellidos',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'apellidos'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'rut'); ?>
-		<?php echo $form->textField($model,'rut',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'rut',array('size'=>30,'maxlength'=>10, 'placeholder'=>'Ej: 15876395-6')); ?>
 		<?php echo $form->error($model,'rut'); ?>
 	</div>
 
 	<div class="row">
+		<span class="span-6">
+			<?php echo $form->labelEx($model,'nombres'); ?>
+			<?php echo $form->textField($model,'nombres',array('size'=>30,'maxlength'=>100, 'placeholder'=>'Ej: Daniel Cristobal')); ?>
+			<?php echo $form->error($model,'nombres'); ?>
+		</span>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'apellidos'); ?>
+		<?php echo $form->textField($model,'apellidos',array('size'=>30,'maxlength'=>100, 'placeholder'=>'Ej: Valenzuela Salas')); ?>
+		<?php echo $form->error($model,'apellidos'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'fecha_nac'); ?>
+		<?php echo $form->dateField($model,'fecha_nac', array('style'=>'width:206px')); ?>
+		<?php echo $form->error($model,'fecha_nac'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'sexo'); ?>
+		<?php echo $form->dropDownList($model,'sexo',array('Masculino'=>'Masculino', 'Femenino'=>'Femenino'), array('empty'=>'Seleccione un Sexo', 'style'=>'width:206px')); ?>
+		<?php echo $form->error($model,'sexo'); ?>
+	</div>
+
+	<div class="row">
+		<span class="span-6">
 		<?php echo $form->labelEx($model,'direccion'); ?>
-		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'direccion',array('size'=>30,'maxlength'=>300, 'placeholder'=>'Ej: Tucapel 1968')); ?>
 		<?php echo $form->error($model,'direccion'); ?>
+		</span>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'comuna'); ?>
-		<?php echo $form->textField($model,'comuna',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'comuna',array('size'=>30,'maxlength'=>50, 'placeholder'=>'Ej: Concepcion')); ?>
 		<?php echo $form->error($model,'comuna'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'tiposangre'); ?>
-		<?php echo $form->dropDownList($model,'tiposangre', $model->getMenuSangre(), array("empty"=>"Seleccione")); ?>
-		<?php echo $form->error($model,'tiposangre'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'alergias'); ?>
-		<?php echo $form->textArea($model,'alergias',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'alergias'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'centromedico'); ?>
-		<?php echo $form->textField($model,'centromedico',array('size'=>5,'maxlength'=>5)); ?>
-		<?php echo $form->error($model,'centromedico'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'donanteorganos'); ?>
-		<?php echo $form->dropDownList($model,'donanteorganos',array('No'=>'No', 'Si'=>'Si')); ?>
-		<?php echo $form->error($model,'donanteorganos'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>300, 'placeholder'=>'Ej: mimail@sericio.com')); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
+		<span class="span-6">
 		<?php echo $form->labelEx($model,'telefono'); ?>
-		<?php echo $form->textField($model,'telefono',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'telefono',array('size'=>30,'maxlength'=>10, 'placeholder'=>'Ej: 412258763')); ?>
 		<?php echo $form->error($model,'telefono'); ?>
+		</span>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'celular'); ?>
-		<?php echo $form->textField($model,'celular',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'celular',array('size'=>30,'maxlength'=>10, 'placeholder'=>'985748553')); ?>
 		<?php echo $form->error($model,'celular'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'habilitado'); ?>
-		<?php echo $form->checkBox($model,'habilitado', array('value'=>'Si', 'uncheckValue'=>'No','checked'=>'checked')); ?>
+		<?php echo $form->labelEx($model,'alergias'); ?>
+		<?php echo $form->textArea($model,'alergias',array('rows'=>5, 'cols'=>61, 'placeholder'=>'Ej: Medicamentos, Alimentos, Sustancias')); ?>
+		<?php echo $form->error($model,'alergias'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'afiliacion'); ?>
+		<?php echo $form->textField($model,'afiliacion',array('size'=>30,'maxlength'=>100, 'placeholder'=>'Fonasa')); ?>
+		<?php echo $form->error($model,'afiliacion'); ?>
+	</div>
+
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'centromedico'); ?>
+		<?php echo $form->dropDownList($model,'centromedico', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccione un Centro Medico", 'style'=>'width:206px'));?>
+		<?php echo $form->error($model,'centromedico'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'tiposangre'); ?>
+		<?php echo $form->dropDownList($model,'tiposangre', $model->getMenuSangre(), array("empty"=>"Seleccione un Tipo de Sangre", 'style'=>'width:206px')); ?>
+		<?php echo $form->error($model,'tiposangre'); ?>
+	</div>
+
+	<div>
+		<br>
+		<h4>Donante adicional:</h4>
+	</div>
+
+	<div class="row">
+		<span class="span-6">
+			<?php echo $form->labelEx($model,'donanteorganos', array('style'=>'display:inline')); ?>
+			<?php echo $form->checkBox($model,'donanteorganos',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
+			<?php echo $form->error($model,'donanteorganos'); ?>
+		</span>
+
+			<?php echo $form->labelEx($model,'donantemedula', array('style'=>'display:inline')); ?>
+			<?php echo $form->checkBox($model,'donantemedula',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
+			<?php echo $form->error($model,'donantemedula'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'habilitado', array('style'=>'display:inline')); ?>
+		<?php echo $form->checkBox($model,'habilitado', array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>'checked')); ?>
 		<?php echo $form->error($model,'habilitado'); ?>
 	</div>
 

@@ -11,14 +11,19 @@
  * @property string $comuna
  * @property string $tiposangre
  * @property string $alergias
- * @property string $centromedico
+ * @property integer $centromedico
  * @property string $donanteorganos
  * @property string $email
  * @property string $telefono
  * @property string $celular
  * @property string $habilitado
+ * @property string $sexo
+ * @property string $fecha_nac
+ * @property string $afiliacion
+ * @property string $donantemedula
  *
  * The followings are the available model relations:
+ * @property Centrosmedicos $centromedico0
  * @property Historialenfermedades[] $historialenfermedades
  */
 class Donantes extends CActiveRecord
@@ -39,22 +44,24 @@ class Donantes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombres, apellidos, rut, direccion, comuna, tiposangre, centromedico, celular', 'required'),
+			array('nombres, apellidos, rut, direccion, comuna, tiposangre, centromedico, celular, sexo, fecha_nac, afiliacion, donantemedula, donanteorganos', 'required'),
 			array('nombres, apellidos', 'length', 'max'=>100),
 			array('nombres, apellidos', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('rut, telefono, celular', 'length', 'max'=>10),
 			array('rut', 'ext.alpha', 'allowNumbers' => true, 'extra' => array('-'), 'minChars' => 9, 'maxChars' => 10),
 			array('rut', 'validateRut'),
-			array('telefono, celular', 'ext.alpha', 'allowNumbers' => true),
+			array('telefono, celular', 'ext.alpha', 'allowNumbers' => true, 'minChars' => 0),
 			array('direccion, email', 'length', 'max'=>300),
 			array('email', 'email'),
 			array('comuna', 'length', 'max'=>50),
 			array('comuna', 'ext.alpha', 'allowNumbers' => false),
 			array('tiposangre', 'length', 'max'=>3),
-			array('centromedico', 'length', 'max'=>5),
+			array('centromedico', 'length', 'max'=>11),
 			array('centromedico', 'ext.alpha', 'allowNumbers' => true),
-			array('donanteorganos, habilitado', 'length', 'max'=>2),
+			array('donanteorganos, habilitado, donantemedula', 'length', 'max'=>2),
 			array('alergias', 'safe'),
+			array('sexo', 'length', 'max'=>9),
+			array('afiliacion', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado', 'safe', 'on'=>'search'),
@@ -70,6 +77,7 @@ class Donantes extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'historialenfermedades' => array(self::HAS_MANY, 'Historialenfermedades', 'rut'),
+			'centromedico0' => array(self::BELONGS_TO, 'Centrosmedicos', 'centromedico'),
 		);
 	}
 
@@ -84,14 +92,18 @@ class Donantes extends CActiveRecord
 			'rut' => 'Rut',
 			'direccion' => 'Direccion',
 			'comuna' => 'Comuna',
-			'tiposangre' => 'Tiposangre',
+			'tiposangre' => 'Tipo de sangre',
 			'alergias' => 'Alergias',
-			'centromedico' => 'Centromedico',
-			'donanteorganos' => 'Donanteorganos',
+			'centromedico' => 'Centro Medico',
+			'donanteorganos' => 'Donante de Organos',
 			'email' => 'Email',
 			'telefono' => 'Telefono',
 			'celular' => 'Celular',
 			'habilitado' => 'Habilitado',
+			'sexo' => 'Sexo',
+			'fecha_nac' => 'Fecha de Nacimiento',
+			'afiliacion' => 'Afiliacion',
+			'donantemedula' => 'Donante de Medula',
 		);
 	}
 
@@ -141,12 +153,16 @@ class Donantes extends CActiveRecord
 		$criteria->compare('comuna',$this->comuna,true);
 		$criteria->compare('tiposangre',$this->tiposangre,true);
 		$criteria->compare('alergias',$this->alergias,true);
-		$criteria->compare('centromedico',$this->centromedico,true);
+		$criteria->compare('centromedico',$this->centromedico);
 		$criteria->compare('donanteorganos',$this->donanteorganos,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('celular',$this->celular,true);
 		$criteria->compare('habilitado',$this->habilitado,true);
+		$criteria->compare('sexo',$this->sexo,true);
+		$criteria->compare('fecha_nac',$this->fecha_nac,true);
+		$criteria->compare('afiliacion',$this->afiliacion,true);
+		$criteria->compare('donantemedula',$this->donantemedula,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

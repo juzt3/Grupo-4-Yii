@@ -159,7 +159,7 @@ class DonantesController extends Controller
 	{
 		$model=Donantes::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'El Donante que busca no existe.');
 		return $model;
 	}
 

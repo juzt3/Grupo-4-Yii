@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'Listar Donantes', 'url'=>array('index')),
 	array('label'=>'Crear Donantes', 'url'=>array('create')),
 	array('label'=>'Actualizar Donantes', 'url'=>array('update', 'id'=>$model->rut)),
-	array('label'=>'Desactivar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Desactivar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Estas seguro de que quieres desactivar a este donante?')),
 	array('label'=>'Administrar Donantes', 'url'=>array('admin')),
 	array('label'=>'Ver Enfermedades', 'url'=>array('historialenfermedades/admin', 'id'=>$model->rut)),
 	array('label'=>'Asignar Enfermedad', 'url'=>array('historialenfermedades/create', 'id'=>$model->rut)),
@@ -36,5 +36,9 @@ $this->menu=array(
 		'telefono',
 		'celular',
 		'habilitado',
+		'sexo',
+		'fecha_nac',
+		'afiliacion',
+		'donantemedula'
 	),
 )); ?>

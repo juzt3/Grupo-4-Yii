@@ -12,7 +12,10 @@
  * @property string $enfermedad
  * @property string $grado_urgencia
  * @property string $necesidad_transplante
- * @property string $centro_medico
+ * @property integer $centro_medico
+ *
+ * The followings are the available model relations:
+ * @property Centrosmedicos $centroMedico
  */
 class Urgencia extends CActiveRecord
 {
@@ -34,11 +37,12 @@ class Urgencia extends CActiveRecord
 		return array(
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, centro_medico', 'required'),
 			array('rut', 'length', 'max'=>10),
+			array('centro_medico', 'numerical', 'integerOnly'=>true),
 			array('rut', 'ext.alpha', 'allowNumbers' => true, 'extra' => array('-'), 'minChars' => 9, 'maxChars' => 10),
 			array('rut', 'validateRut'),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
-			array('enfermedad, necesidad_transplante, centro_medico', 'length', 'max'=>100),
+			array('enfermedad, necesidad_transplante', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>1),
 			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
@@ -60,6 +64,7 @@ class Urgencia extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'centroMedico' => array(self::BELONGS_TO, 'Centrosmedicos', 'centro_medico'),
 		);
 	}
 
@@ -129,7 +134,7 @@ class Urgencia extends CActiveRecord
 		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('necesidad_transplante',$this->necesidad_transplante,true);
-		$criteria->compare('centro_medico',$this->centro_medico,true);
+		$criteria->compare('centro_medico',$this->centro_medico);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

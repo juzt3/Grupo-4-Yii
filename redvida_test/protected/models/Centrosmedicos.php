@@ -11,6 +11,10 @@
  * @property string $director_cm
  * @property string $especialidad_cm
  * @property string $gubernamental_cm
+ *
+ * The followings are the available model relations:
+ * @property Donantes[] $donantes
+ * @property Urgenciasnacionales[] $urgenciasnacionales
  */
 class Centrosmedicos extends CActiveRecord
 {
@@ -52,6 +56,8 @@ class Centrosmedicos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'donantes' => array(self::HAS_MANY, 'Donantes', 'centromedico'),
+			'urgenciasnacionales' => array(self::HAS_MANY, 'Urgenciasnacionales', 'centro_medico'),
 		);
 	}
 
@@ -111,5 +117,11 @@ class Centrosmedicos extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public static function getCentrosmedicos()
+	{
+		$centros = Centrosmedicos::model()->findAll();
+		return CHtml::listData($centros, 'cod_cm', 'nombre_cm');
 	}
 }
