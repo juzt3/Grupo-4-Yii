@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="row">
-		<span class="span-6">
+		<span class="span-7">
 			<?php echo $form->labelEx($model,'nombres'); ?>
 			<?php echo $form->textField($model,'nombres',array('size'=>30,'maxlength'=>100, 'placeholder'=>'Ej: Daniel Cristobal')); ?>
 			<?php echo $form->error($model,'nombres'); ?>
@@ -61,12 +61,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'sexo'); ?>
-		<?php echo $form->dropDownList($model,'sexo',array('Masculino'=>'Masculino', 'Femenino'=>'Femenino'), array('empty'=>'Seleccione un Sexo', 'style'=>'width:206px')); ?>
+		<?php echo $form->dropDownList($model,'sexo',array('Masculino'=>'Masculino', 'Femenino'=>'Femenino'), array('empty'=>'Seleccione un Sexo', 'style'=>'width:240px')); ?>
 		<?php echo $form->error($model,'sexo'); ?>
 	</div>
 
 	<div class="row">
-		<span class="span-6">
+		<span class="span-7">
 		<?php echo $form->labelEx($model,'direccion'); ?>
 		<?php echo $form->textField($model,'direccion',array('size'=>30,'maxlength'=>300, 'placeholder'=>'Ej: Tucapel 1968')); ?>
 		<?php echo $form->error($model,'direccion'); ?>
@@ -86,7 +86,7 @@
 	</div>
 
 	<div class="row">
-		<span class="span-6">
+		<span class="span-7">
 		<?php echo $form->labelEx($model,'telefono'); ?>
 		<?php echo $form->textField($model,'telefono',array('size'=>30,'maxlength'=>10, 'placeholder'=>'Ej: 412258763')); ?>
 		<?php echo $form->error($model,'telefono'); ?>
@@ -114,13 +114,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'centromedico'); ?>
-		<?php echo $form->dropDownList($model,'centromedico', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccione un Centro Medico", 'style'=>'width:206px'));?>
+		<?php echo $form->dropDownList($model,'centromedico', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccione un Centro Medico", 'style'=>'width:240px'));?>
 		<?php echo $form->error($model,'centromedico'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tiposangre'); ?>
-		<?php echo $form->dropDownList($model,'tiposangre', $model->getMenuSangre(), array("empty"=>"Seleccione un Tipo de Sangre", 'style'=>'width:206px')); ?>
+		<?php echo $form->dropDownList($model,'tiposangre', $model->getMenuSangre(), array("empty"=>"Seleccione un Tipo de Sangre", 'style'=>'width:240px')); ?>
 		<?php echo $form->error($model,'tiposangre'); ?>
 	</div>
 
@@ -130,7 +130,7 @@
 	</div>
 
 	<div class="row">
-		<span class="span-6">
+		<span class="span-7">
 			<?php echo $form->labelEx($model,'donanteorganos', array('style'=>'display:inline')); ?>
 			<?php echo $form->checkBox($model,'donanteorganos',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
 			<?php echo $form->error($model,'donanteorganos'); ?>

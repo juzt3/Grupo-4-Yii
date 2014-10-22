@@ -54,7 +54,7 @@ class Donantes extends CActiveRecord
 			array('direccion, email', 'length', 'max'=>300),
 			array('email', 'email'),
 			array('comuna', 'length', 'max'=>50),
-			array('comuna', 'ext.alpha', 'allowNumbers' => false),
+			array('comuna', 'ext.alpha', 'allowNumbers' => false, 'allowSpaces' => true),
 			array('tiposangre', 'length', 'max'=>3),
 			array('centromedico', 'length', 'max'=>11),
 			array('centromedico', 'ext.alpha', 'allowNumbers' => true),
