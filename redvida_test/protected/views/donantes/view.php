@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Listar Donantes', 'url'=>array('index')),
-	array('label'=>'Crear Donantes', 'url'=>array('create')),
+	array('label'=>'Registrar Donante', 'url'=>array('create')),
 	array('label'=>'Actualizar Donantes', 'url'=>array('update', 'id'=>$model->rut)),
 	array('label'=>'Desactivar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Estas seguro de que quieres desactivar a este donante?')),
 	array('label'=>'Administrar Donantes', 'url'=>array('admin')),

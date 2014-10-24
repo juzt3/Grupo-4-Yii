@@ -8,6 +8,13 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'REDVIDA',
+	'language'=>'es',
+
+	//path aliases
+	'aliases' => array(
+			'bootstrap' => realpath(__DIR__.'/../extensions/bootstrap'), //change this if necessary
+			'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels'), // change if necessary
+		),
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -16,6 +23,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'bootstrap.helpers.TbHtml',
 	),
 
 	'modules'=>array(
@@ -26,6 +34,7 @@ return array(
 			'password'=>'Res99',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths' => array('bootstrap.gii'),
 		),
 		
 	),
@@ -46,7 +55,17 @@ return array(
 				'<controller:\w+>/<action:\w+>/id/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+
 		),
+
+		// yiistrap configuration
+        'bootstrap' => array(
+            'class' => 'bootstrap.components.TbApi',
+        ),
+        // yiiwheels configuration
+        'yiiwheels' => array(
+            'class' => 'yiiwheels.YiiWheels',
+         ), 
 
 		/*
 		'db'=>array(
