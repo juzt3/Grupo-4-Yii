@@ -23,7 +23,10 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'bootstrap.helpers.TbHtml',
+		'bootstrap.components.*',
+   		'bootstrap.behaviors.*',
+   		'bootstrap.helpers.*',
+   		'bootstrap.widgets.*'
 	),
 
 	'modules'=>array(
