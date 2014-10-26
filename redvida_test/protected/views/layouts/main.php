@@ -23,6 +23,7 @@
 
 <body>
 
+
 <div class="container" id="page">
 
 	<div id="header">
@@ -32,7 +33,7 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
+				array('label'=>'Inicio', 'url'=>array('/site/index')),
 				array('label'=>'Donantes', 'url'=>array('/donantes')),
 				array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
 				array('label'=>'Urgencias', 'url'=>array('/urgencia')),

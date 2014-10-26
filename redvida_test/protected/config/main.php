@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'REDVIDA',
 	'language'=>'es',
+	'theme'=>'redvida',
 
 	//path aliases
 	'aliases' => array(
@@ -26,7 +27,7 @@ return array(
 		'bootstrap.components.*',
    		'bootstrap.behaviors.*',
    		'bootstrap.helpers.*',
-   		'bootstrap.widgets.*'
+   		'bootstrap.widgets.*',
 	),
 
 	'modules'=>array(

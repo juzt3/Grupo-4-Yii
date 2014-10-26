@@ -23,44 +23,36 @@
 		<?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6'));?>
 	</div>
 
-	<div class='row'>
-		<div class='span4'>
+	<div>
+		<div class='span3'>
 			<?php echo $form->textFieldControlGroup($model,'nombres',array('maxlength'=>100, 'placeholder'=>'Ej: Daniel Cristobal'));?>
 		</div>
-		<div class='span4 last'>
+		<div class='span9 last'>
 			<?php echo $form->textFieldControlGroup($model,'apellidos',array('maxlength'=>100, 'placeholder'=>'Ej: Valenzuela Salas'));?>
 		</div>
 	</div>
 
 	<div>
 		<?php echo $form->labelEx($model,'fecha_nac'); ?>
-		<!--
-		<?php $form->widget("zii.widgets.jui.CJuiDatePicker",array(
-				"attribute"=>"fecha_nac",
-				"model"=>$model,
-				"language"=>"es",
-				"options"=>array(
-					"dateFormat"=>"dd-mm-yy",
-					'showOn'=>'button',
-					//'buttonImage'=>'glyphicon glyphicon-calendar',
-					'buttonText'=>'Seleccionar',
-					'changeYear'=>true,
-					'autoSize'=>true,
-					'yearRange'=>'-130:-0',
-					'minDate'=>'-130Y',
-					'maxDate'=>'-0Y',
-				),
-				'htmlOptions'=>array('placeholder'=>'Seleccionala con el boton ->', 'readOnly'=>true,'style'=>'width:206px;')
-			)); 
-		?>
-		-->
-		<?php $form->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
-		        'name' => 'datepickertest',
-		        'pluginOptions' => array(
-		            'format' => 'dd/mm/yyyy',
-		        )
-    		));
-		?>
+		<br>
+		<div class="input-append date">
+			<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			        'attribute' => 'fecha_nac',
+			        "model"=>$model,
+			        'options' => array(
+			            'format' => 'dd/mm/yyyy',
+						'changeYear'=>true,
+						'changeYear'=>true,
+						'autoSize'=>true,
+						'yearRange'=>'-130:-0',
+						'minDate'=>'-130y',
+						'maxDate'=>'-0y',
+			        ),
+	    		));
+			?>
+			<span class="add-on"><i class="icon-calendar"></i></span>
+		</div>
+		<br>
 		<?php echo $form->error($model,'fecha_nac'); ?>
 	</div>
 
@@ -68,12 +60,12 @@
 		<?php echo $form->dropDownListControlGroup($model,'sexo',array('Masculino'=>'Masculino', 'Femenino'=>'Femenino'), array('empty'=>'Seleccione un Sexo'));?>
 	</div>
 
-	<div class='row'>
-		<div class="span4">
+	<div>
+		<div class="span3">
 			<?php echo $form->textFieldControlGroup($model,'direccion',array('maxlength'=>300, 'placeholder'=>'Ej: Tucapel 1968')); ?>
 		</div>
 
-		<div class='span4 last'>
+		<div class='span9 last'>
 			<?php echo $form->textFieldControlGroup($model,'comuna',array('maxlength'=>50, 'placeholder'=>'Ej: Concepcion')); ?>
 		</div>
 	</div>
@@ -82,12 +74,12 @@
 		<?php echo $form->textFieldControlGroup($model,'email',array('maxlength'=>300, 'placeholder'=>'Ej: mimail@sericio.com')); ?>
 	</div>
 
-	<div class='row'>
-		<div class="span4">
+	<div>
+		<div class="span3">
 			<?php echo $form->textFieldControlGroup($model,'telefono',array('maxlength'=>10, 'placeholder'=>'Ej: 412258763')); ?>
 		</div>
 
-		<div class='span4 last'>
+		<div class='span9 last'>
 			<?php echo $form->textFieldControlGroup($model,'celular',array('maxlength'=>10, 'placeholder'=>'985748553')); ?>
 		</div>
 	</div>
@@ -113,12 +105,12 @@
 		<h4>Donante adicional:</h4>
 	</div>
 
-	<div class='row'>
-		<div class="span4">
+	<div>
+		<div class="span3">
 			<?php echo $form->checkBoxControlGroup($model,'donanteorganos',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
 		</div>
 
-		<div class='span4 last'>
+		<div class='span9 last'>
 			<?php echo $form->checkBoxControlGroup($model,'donantemedula',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
 		</div>
 	</div>
