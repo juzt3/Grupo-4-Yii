@@ -110,16 +110,21 @@ class DonantesController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$model=$this->loadModel($id);
-		if($model->habilitado=='Si')
-			$model->habilitado='No';
-		else
-			$model->habilitado='Si';
-		$model->save();
+		if (Yii::app()->request->isPostRequest) {
+			// we only allow deletion via POST request
+			$model=$this->loadModel($id);
+			if($model->habilitado=='Si')
+				$model->habilitado='No';
+			else
+				$model->habilitado='Si';
+			$model->save();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(array('view','id'=>$model->rut));
+			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+			if(!isset($_GET['ajax']))
+				$this->redirect(Yii::app()->getRequest()->urlReferrer);
+		}
+		else
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
 	/**

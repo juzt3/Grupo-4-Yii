@@ -4,7 +4,8 @@
 			<div class="row">
 				<div class="col-sm-12 col-lg-12">
 					<div class="col-sm-12 col-lg-12">
-						<h1 class="">Responsive image project template</h1>
+						<h1 class="">Bienvenido a <i><?php echo CHtml::encode(Yii::app()->name); ?></h1>
+						<p>Este sistema ha sido construido con el proposito de facilitar el proceso de trasplantes de todo tipo y<br> asi ayudarnos a salvar vidas.</p>
 						
 					</div>
 				</div>

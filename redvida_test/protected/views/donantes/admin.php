@@ -53,8 +53,8 @@ o <b>=</b>) al principio de cada uno de tus valores de busqueda para especificar
 		'comuna',
 		'tiposangre',
 		'donantemedula',
-		'telefono',
 		/*
+		'telefono',
 		'direccion',
 		'alergias',
 		'centromedico',

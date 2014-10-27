@@ -151,7 +151,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 	<div class="row-fluid">
 		<div class="span12"><br>
 			<?php if(isset($this->breadcrumbs)):?>
-				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				<?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
 					'links'=>$this->breadcrumbs,
 				)); ?><!-- breadcrumbs -->
 			<?php endif?>
@@ -166,8 +166,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 <hr>
 <!-- FOOTER-->
 <!-- FOOTER-->
-<footer>
-<div class="container">
+<!--
 	<div class="row">
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
         <h4 class="line3 center standart-h4title"><span>Navigation</span></h4>
@@ -203,19 +202,24 @@ Read usage license on for this template on http://www.bootstraptor.com
     </div>
 	
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <h4 class="line3 center standart-h4title"><span>Our office</span></h4>
+        <h4 class="line3 center standart-h4title"><span>Nuestra Oficina</span></h4>
 		<address>
-			<strong>bootstraptor.com, LLC.</strong><br>
-			<i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
-			San Francisco, CA 94107<br>
-			<i class="icon-phone-sign"></i> + 4 (123) 456-7890
+			<strong>Grupo 4 UBB, LLC.</strong><br>
+			<i class="icon-map-marker"></i>  Av. Collao 1202, Casilla 5-C, Concepción 4051381,<br>
+		    Region del Bio-bio<br>
+			<i class="icon-phone-sign"></i> +56 (09) 71718239
 		
 		</address>
     </div>
   
 </div>
+-->
+<footer>
+<div class="container">
+	<!--
 	<hr>
-        <p>© bootstraptor.com Company 2013</p>
+	-->
+        <p>© Grupo 4 UBB Company 2014</p>
   </div><!-- CONTAINER FOOTER-->
 	  
 </footer>
@@ -224,7 +228,6 @@ Read usage license on for this template on http://www.bootstraptor.com
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/jquery.js" type="text/javascript"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/bootstrap.min.js"></script>
 
