@@ -75,9 +75,9 @@ class Urgencia extends CActiveRecord
 	{
 		return array(
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
 			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',

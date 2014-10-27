@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Urgencias</h1>
+<h1>Gestion de Urgencias</h1>
 
 <p>
 Opcionalmente puedes introducir operadores de comparacion (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,7 +40,7 @@ or <b>=</b>) al principio de cada uno de tus valores de busqueda para especifica
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'urgencia-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -57,7 +57,7 @@ or <b>=</b>) al principio de cada uno de tus valores de busqueda para especifica
 		'centro_medico',
 		*/
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 )); ?>

@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'Urgencias'=>array('index'),
 	$model->rut=>array('view','id'=>$model->rut),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Urgencia <?php echo $model->rut; ?></h1>
+<h1>Modificar Urgencia <?php echo $model->rut; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

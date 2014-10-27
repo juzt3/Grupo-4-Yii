@@ -6,7 +6,7 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'urgencia-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
@@ -19,62 +19,47 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'rut'); ?>
-		<?php echo $form->textField($model,'rut',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'rut'); ?>
+	<div> 
+		<?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nombre_paciente'); ?>
-		<?php echo $form->textField($model,'nombre_paciente',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'nombre_paciente'); ?>
+	<div >
+		<?php echo $form->textFieldControlGroup($model,'nombre_paciente',array('maxlength'=>30, 'placeholder'=>'Ej: Eduardo Roberto')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'apellido_pat'); ?>
-		<?php echo $form->textField($model,'apellido_pat',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'apellido_pat'); ?>
+    <div>
+		<div class="span3">	
+			<?php echo $form->textFieldControlGroup($model,'apellido_pat',array('maxlength'=>50, 'placeholder'=>'Ej: Rojas')); ?>
+		</div>
+
+		<div class='span9 last'>
+			<?php echo $form->textFieldControlGroup($model,'apellido_mat',array('maxlength'=>50, 'placeholder'=>'Ej: Beltran')); ?>
+		</div>
+    </div>
+
+	<div >
+		<?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>50, 'placeholder'=>'Ej: Fonasa')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'apellido_mat'); ?>
-		<?php echo $form->textField($model,'apellido_mat',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'apellido_mat'); ?>
+	<div >
+		<?php echo $form->textFieldControlGroup($model,'enfermedad',array('maxlength'=>100, 'placeholder'=>'Ej: Asma')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'afiliacion'); ?>
-		<?php echo $form->textField($model,'afiliacion',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'afiliacion'); ?>
+	<div >
+		<?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'enfermedad'); ?>
-		<?php echo $form->textField($model,'enfermedad',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'enfermedad'); ?>
+	<div >		
+		<?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('maxlength'=>100, 'placeholder'=>'Ej: Organo')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'grado_urgencia'); ?>
-		<?php echo $form->dropDownList($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione")); ?>
-		<?php echo $form->error($model,'grado_urgencia'); ?>
+	<div >
+		<?php echo $form->dropDownListControlGroup($model,'centro_medico', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'necesidad_transplante'); ?>
-		<?php echo $form->textField($model,'necesidad_transplante',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'necesidad_transplante'); ?>
+	<div class="buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'centro_medico'); ?>
-		<?php echo $form->textField($model,'centro_medico',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'centro_medico'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

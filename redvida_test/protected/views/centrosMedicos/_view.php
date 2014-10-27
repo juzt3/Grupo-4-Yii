@@ -28,7 +28,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('gubernamental_cm')); ?>:</b>
 	<?php echo CHtml::encode($data->gubernamental_cm); ?>
-	<br />
+	<br /><br /><br />
 
 
 </div>

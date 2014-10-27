@@ -11701,3 +11701,2184 @@ Stack trace:
 REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
 HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
 ---
+2014/10/27 17:14:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/
+---
+2014/10/27 17:14:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1595): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(147): CListView->init()
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\donantes\index.php(22): CBaseController->widget('bootstrap.widge...', Array)
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#19 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#20 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\DonantesController.php(138): CController->render('index', Array)
+#21 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): DonantesController->actionIndex()
+#22 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('')
+#31 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes')
+#32 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/donantes
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/
+---
+2014/10/27 17:14:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1595): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(147): CListView->init()
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\enfermedades\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#19 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#20 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\EnfermedadesController.php(128): CController->render('index', Array)
+#21 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): EnfermedadesController->actionIndex()
+#22 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('')
+#31 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('enfermedades')
+#32 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/enfermedades
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/
+---
+2014/10/27 17:21:21 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CModule.php(105): CComponent->__get('bootstrap')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\layouts\main.php(8): CModule->__get('bootstrap')
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\SiteController.php(32): CController->render('index')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/
+---
+2014/10/27 17:22:59 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CModule.php(105): CComponent->__get('bootstrap')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\layouts\main.php(8): CModule->__get('bootstrap')
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\SiteController.php(32): CController->render('index')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/
+---
+2014/10/27 17:26:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/
+---
+2014/10/27 17:28:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/
+---
+2014/10/27 17:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 17:28:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 17:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 17:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/site/login
+---
+2014/10/27 17:28:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:28:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 17:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 17:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 17:29:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:31:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:32:10 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). La sentencia SQL ejecutada fue: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php (73)
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php (13)
+2014/10/27 17:32:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). The SQL statement executed was: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/create')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/create
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:33:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:33:55 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). La sentencia SQL ejecutada fue: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php (73)
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php (13)
+2014/10/27 17:33:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). The SQL statement executed was: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/create')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/create
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 17:36:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 17:36:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 17:36:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 17:38:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:38:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:39:09 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). La sentencia SQL ejecutada fue: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php (73)
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php (13)
+2014/10/27 17:39:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). The SQL statement executed was: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/create')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/create
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:39:30 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). La sentencia SQL ejecutada fue: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php (73)
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php (13)
+2014/10/27 17:39:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). The SQL statement executed was: INSERT INTO `urgenciasnacionales` (`rut`, `nombre_paciente`, `apellido_pat`, `apellido_mat`, `afiliacion`, `enfermedad`, `grado_urgencia`, `necesidad_transplante`, `centro_medico`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/create')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/create
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 17:49:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 17:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/view/id/1
+---
+2014/10/27 17:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 17:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 17:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/site/index
+---
+2014/10/27 17:52:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 17:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 17:52:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 17:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/view/id/2
+---
+2014/10/27 17:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 17:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/view/id/3
+---
+2014/10/27 17:54:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/index
+---
+2014/10/27 17:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 17:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 17:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 17:56:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 17:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 17:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 17:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 17:56:23 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). La sentencia SQL ejecutada fue: UPDATE `urgenciasnacionales` SET `rut`=:yp0, `nombre_paciente`=:yp1, `apellido_pat`=:yp2, `apellido_mat`=:yp3, `afiliacion`=:yp4, `enfermedad`=:yp5, `grado_urgencia`=:yp6, `necesidad_transplante`=:yp7, `centro_medico`=:yp8 WHERE `urgenciasnacionales`.`rut`='17349196-4'.
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php (97)
+in C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php (13)
+2014/10/27 17:56:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`tisw`.`urgenciasnacionales`, CONSTRAINT `urgencias_references_centro` FOREIGN KEY (`centro_medico`) REFERENCES `centrosmedicos` (`cod_cm`)). The SQL statement executed was: UPDATE `urgenciasnacionales` SET `rut`=:yp0, `nombre_paciente`=:yp1, `apellido_pat`=:yp2, `apellido_mat`=:yp3, `afiliacion`=:yp4, `enfermedad`=:yp5, `grado_urgencia`=:yp6, `necesidad_transplante`=:yp7, `centro_medico`=:yp8 WHERE `urgenciasnacionales`.`rut`='17349196-4'' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1748): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk('17349196-4', Array)
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->update(NULL)
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(97): CActiveRecord->save()
+#4 [internal function]: UrgenciaController->actionUpdate('17349196-4')
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UrgenciaController), Array)
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UrgenciaController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('update')
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/update...')
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 18:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 18:00:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 18:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 18:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:13:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:27:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:27:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:27:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:34:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:34:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:43:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:44:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:44:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:44:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:46:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:46:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 18:48:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:48:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:48:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 18:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 18:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 18:49:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 18:51:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:05:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:10:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:11:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:13:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "Urgencia"."centromedico" no se encuentra definida.' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('centromedico')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('centromedico')
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Urgencia), 'centromedico')
+#3 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\extensions\bootstrap\helpers\TbHtml.php(1677): CHtml::activeDropDownList(Object(Urgencia), 'centromedico', Array, Array)
+#4 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\extensions\bootstrap\helpers\TbHtml.php(2163): TbHtml::activeDropDownList(Object(Urgencia), 'centromedico', Array, Array)
+#5 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\extensions\bootstrap\helpers\TbHtml.php(2097): TbHtml::createActiveInput('dropDownList', Object(Urgencia), 'centromedico', Array, Array)
+#6 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\extensions\bootstrap\widgets\TbActiveForm.php(704): TbHtml::activeControlGroup('dropDownList', Object(Urgencia), 'centromedico', Array, Array)
+#7 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\extensions\bootstrap\widgets\TbActiveForm.php(577): TbActiveForm->createControlGroup('dropDownList', Object(Urgencia), 'centromedico', Array, Array)
+#8 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\urgencia\_form.php(57): TbActiveForm->dropDownListControlGroup(Object(Urgencia), 'centromedico', Array, Array)
+#9 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\views\urgencia\create.php(18): CController->renderPartial('_form', Array)
+#13 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#14 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#17 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\protected\controllers\UrgenciaController.php(79): CController->render('create', Array)
+#18 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#19 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#28 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('urgencia/create')
+#29 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:14:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:40:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 19:41:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 19:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/create
+---
+2014/10/27 19:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 19:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 19:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 19:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:41:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 19:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/admin
+---
+2014/10/27 19:42:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 19:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 19:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 19:44:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 19:46:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 19:46:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 19:46:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 19:47:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 19:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 19:47:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 19:48:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 19:48:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 19:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 19:48:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 19:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 19:53:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 19:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 19:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 19:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 19:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:07:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:07:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:10:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/18413084-k
+---
+2014/10/27 20:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:19:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:19:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 20:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/admin
+---
+2014/10/27 20:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 20:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/admin
+---
+2014/10/27 20:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/index
+---
+2014/10/27 20:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes/admin
+---
+2014/10/27 20:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:23:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 20:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:24:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:24:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 20:24:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:25:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 20:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 20:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/27 20:25:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 20:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:25:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 20:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 20:25:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/site/index
+---
+2014/10/27 20:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/donantes
+---
+2014/10/27 20:25:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:27:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/enfermedades
+---
+2014/10/27 20:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/CentrosMedicos
+---
+2014/10/27 20:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/create
+---
+2014/10/27 20:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/centrosMedicos/admin
+---
+2014/10/27 20:27:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:27:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 20:27:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/27 20:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia
+---
+2014/10/27 20:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/create
+---
+2014/10/27 20:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/admin
+---
+2014/10/27 20:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/index
+---
+2014/10/27 20:28:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\Grupo-4-Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Grupo-4-Yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Grupo-4-Yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/Grupo-4-Yii/redvida_test/urgencia/view/id/17349196-4
+---

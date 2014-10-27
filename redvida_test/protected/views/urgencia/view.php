@@ -16,9 +16,12 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Urgencia #<?php echo $model->rut; ?></h1>
+<h1>Urgencia: Rut <?php echo $model->rut; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
+	'htmlOptions' => array(
+		'class' => 'table table-striped table-condensed table-hover',),
+
 	'data'=>$model,
 	'attributes'=>array(
 		'rut',

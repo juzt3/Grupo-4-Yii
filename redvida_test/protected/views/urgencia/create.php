@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Urgencias'=>array('index'),
-	'Create',
+	'Registrar',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Urgencia</h1>
+<h1>Crear Urgencia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
