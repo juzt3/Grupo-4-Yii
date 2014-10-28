@@ -6,45 +6,27 @@
 
 <div class="wide form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+    <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Nombre Centro Medico'); ?>
-		<?php echo $form->textField($model,'nombre_cm',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+                    <?php echo $form->textFieldControlGroup($model,'nombre_cm',array('span'=>5,'maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Direccion'); ?>
-		<?php echo $form->textField($model,'direccion_cm',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
+                    <?php echo $form->textFieldControlGroup($model,'direccion_cm',array('span'=>5,'maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Nro Contacto'); ?>
-		<?php echo $form->textField($model,'contacto_cm'); ?>
-	</div>
+                    <?php echo $form->textFieldControlGroup($model,'contacto_cm',array('span'=>5)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Director'); ?>
-		<?php echo $form->textField($model,'director_cm',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+                    <?php echo $form->textFieldControlGroup($model,'director_cm',array('span'=>5,'maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Especialidad'); ?>
-		<?php echo $form->textField($model,'especialidad_cm',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+                    <?php echo $form->textFieldControlGroup($model,'especialidad_cm',array('span'=>5,'maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Gubernamental'); ?>
-		<?php echo $form->textField($model,'gubernamental_cm',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+<!--                    <?php echo $form->textFieldControlGroup($model,'gubernamental_cm',array('span'=>5,'maxlength'=>50)); ?>-->
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
+        <div class="form-actions">
+        <?php echo TbHtml::submitButton('Search',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

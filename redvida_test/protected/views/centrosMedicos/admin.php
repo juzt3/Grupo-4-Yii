@@ -2,14 +2,15 @@
 /* @var $this CentrosmedicosController */
 /* @var $model Centrosmedicos */
 
+
 $this->breadcrumbs=array(
 	'Centros Medicos'=>array('index'),
 	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Mostrar Centros Medicos', 'url'=>array('index')),
-	array('label'=>'Registrar Centro Medico', 'url'=>array('create')),
+	array('label'=>'Mostrar Centro Medico', 'url'=>array('index')),
+	array('label'=>'Registrar Centros Medico', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -33,14 +34,14 @@ Puedes opcionalmente escribir un operador de comparacion(<b>&lt;</b>, <b>&lt;=</
 or <b>=</b>) al comienzo de cada uno de los valores de búsqueda para especificar cómo se debe hacer la comparación.
 </p>
 
-<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'centrosmedicos-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -50,9 +51,11 @@ or <b>=</b>) al comienzo de cada uno de los valores de búsqueda para especifica
 		'contacto_cm',
 		'director_cm',
 		'especialidad_cm',
+		/*
 		'gubernamental_cm',
+		*/
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 )); ?>

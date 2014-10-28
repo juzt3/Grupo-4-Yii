@@ -1,10 +1,12 @@
 <?php
 /* @var $this CentrosmedicosController */
 /* @var $model Centrosmedicos */
+?>
 
+<?php
 $this->breadcrumbs=array(
 	'Centros Medicos'=>array('index'),
-	'Registrar',
+	'Registrar Centro Medico',
 );
 
 $this->menu=array(
