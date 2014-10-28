@@ -32,6 +32,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('celular')); ?>:</b>
 	<?php echo CHtml::encode($data->celular); ?>
 	<br />
+	<br>
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('alergias')); ?>:</b>

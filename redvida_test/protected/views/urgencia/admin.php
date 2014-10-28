@@ -33,7 +33,7 @@ Opcionalmente puedes introducir operadores de comparacion (<b>&lt;</b>, <b>&lt;=
 or <b>=</b>) al principio de cada uno de tus valores de busqueda para especificar como debe efectuarse la comparacion.
 </p>
 
-<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
