@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->apellido_mat); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_ini')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha_ini); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('afiliacion')); ?>:</b>
 	<?php echo CHtml::encode($data->afiliacion); ?>
 	<br />
@@ -32,6 +36,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
 	<?php echo CHtml::encode($data->grado_urgencia); ?>
 	<br />
+	<br><br>
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('necesidad_transplante')); ?>:</b>

@@ -31,10 +31,10 @@ class Historialenfermedades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, fecha, idenfermedad', 'required'),
+			array('rut, idenfermedad', 'required'),
 			array('idenfermedad', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
-			array('fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha es invalida.'),
+			//array('fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idhistorial, rut, idenfermedad, fecha', 'safe', 'on'=>'search'),
@@ -63,7 +63,7 @@ class Historialenfermedades extends CActiveRecord
 			'idhistorial' => 'Idhistorial',
 			'rut' => 'Rut',
 			'idenfermedad' => 'Enfermedad',
-			'fecha' => 'Fecha',
+			'fecha' => 'Fecha de Creacion',
 		);
 	}
 
@@ -104,5 +104,13 @@ class Historialenfermedades extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+		public function beforeSave() 
+	{
+	    if ($this->isNewRecord)
+	        $this->fecha = new CDbExpression('NOW()');
+
+	    return parent::beforeSave();
 	}
 }

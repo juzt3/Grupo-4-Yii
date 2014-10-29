@@ -14752,3 +14752,863 @@ Stack trace:
 REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
 HTTP_REFERER=http://localhost/yii/redvida_test/site/index
 ---
+2014/10/29 03:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/10/29 03:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/10/29 03:56:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/
+---
+2014/10/29 04:00:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/
+---
+2014/10/29 04:00:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia
+---
+2014/10/29 04:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:15:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/
+---
+2014/10/29 04:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia
+---
+2014/10/29 04:15:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:15:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:15:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:18:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:18:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:20:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 04:29:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/admin
+---
+2014/10/29 04:29:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/index
+---
+2014/10/29 04:30:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/admin
+---
+2014/10/29 04:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:30:47 [error] [php] Use of undefined constant d - assumed 'd' (C:\xampp\htdocs\yii\redvida_test\protected\controllers\UrgenciaController.php:73)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UrgenciaController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UrgenciaController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UrgenciaController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UrgenciaController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/urgencia/create
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\UrgenciaController.php (73)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/29 04:31:05 [error] [php] Array to string conversion (C:\xampp\htdocs\yii\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): Urgencia->insert()
+#1 C:\xampp\htdocs\yii\redvida_test\protected\controllers\UrgenciaController.php(74): Urgencia->save()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UrgenciaController->actionCreate()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UrgenciaController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UrgenciaController->filterAccessControl()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): UrgenciaController->runActionWithFilters()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UrgenciaController->run()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/urgencia/create
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\UrgenciaController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/10/29 04:37:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/10/29 04:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:37:33 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades tiene una regla de validación inválida. La regla se debe especificar attributos para ser validados y el nombre de su validador.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2236): CModel->getValidators('idhistorial')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Historialenfermedades), 'idhistorial', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Historialenfermedades), 'idhistorial', Array)
+#4 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_search.php(16): CActiveForm->textField(Object(Historialenfermedades), 'idhistorial')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\admin.php(40): CController->renderPartial('_search', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#13 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(145): CController->render('admin', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HistorialenfermedadesController->actionAdmin()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/admin/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:38:13 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades tiene una regla de validación inválida. La regla se debe especificar attributos para ser validados y el nombre de su validador.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2236): CModel->getValidators('idhistorial')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Historialenfermedades), 'idhistorial', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Historialenfermedades), 'idhistorial', Array)
+#4 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_search.php(16): CActiveForm->textField(Object(Historialenfermedades), 'idhistorial')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\admin.php(40): CController->renderPartial('_search', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#13 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(145): CController->render('admin', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HistorialenfermedadesController->actionAdmin()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/admin
+---
+2014/10/29 04:38:58 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades tiene una regla de validación inválida. La regla se debe especificar attributos para ser validados y el nombre de su validador.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2236): CModel->getValidators('idhistorial')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Historialenfermedades), 'idhistorial', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Historialenfermedades), 'idhistorial', Array)
+#4 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_search.php(16): CActiveForm->textField(Object(Historialenfermedades), 'idhistorial')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\admin.php(40): CController->renderPartial('_search', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#13 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(145): CController->render('admin', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HistorialenfermedadesController->actionAdmin()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/admin/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:39:04 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades tiene una regla de validación inválida. La regla se debe especificar attributos para ser validados y el nombre de su validador.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(304): CModel->getValidators('rut')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('rut')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(Historialenfermedades), 'rut', Array)
+#4 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(24): CActiveForm->labelEx(Object(Historialenfermedades), 'rut')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#14 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#15 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#27 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/29 04:39:58 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades tiene una regla de validación inválida. La regla se debe especificar attributos para ser validados y el nombre de su validador.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(304): CModel->getValidators('rut')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('rut')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(Historialenfermedades), 'rut', Array)
+#4 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(24): CActiveForm->labelEx(Object(Historialenfermedades), 'rut')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#14 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#15 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#27 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/29 04:50:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia
+---
+2014/10/29 04:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/admin
+---
+2014/10/29 04:51:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17510533-6
+---
+2014/10/29 04:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/update/id/17510533-6
+---
+2014/10/29 04:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/create
+---
+2014/10/29 04:52:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 04:59:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/10/29 04:59:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:59:06 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "textFieldControlGroup".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CComponent->__call('textFieldContro...', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CActiveForm->textFieldControlGroup(Object(Historialenfermedades), 'fecha', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#11 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:59:33 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "textFieldControlGroup".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CComponent->__call('textFieldContro...', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CActiveForm->textFieldControlGroup(Object(Historialenfermedades), 'fecha', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#11 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 04:59:52 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "textFieldControlGroup".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CComponent->__call('textFieldContro...', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(31): CActiveForm->textFieldControlGroup(Object(Historialenfermedades), 'fecha', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#11 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 05:00:23 [error] [exception.CException] exception 'CException' with message 'TbActiveForm y sus behaviors no tienen un método o closure llamado "dropDownlistControGroup".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(35): CComponent->__call('dropDownlistCon...', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(35): TbActiveForm->dropDownlistControGroup(Object(Historialenfermedades), 'idenfermedad', Array, Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#11 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 05:00:37 [error] [exception.CException] exception 'CException' with message 'TbActiveForm y sus behaviors no tienen un método o closure llamado "dropDownControGroup".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(35): CComponent->__call('dropDownControG...', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php(35): TbActiveForm->dropDownControGroup(Object(Historialenfermedades), 'idenfermedad', Array, Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(81): CController->render('create', Array)
+#11 [internal function]: HistorialenfermedadesController->actionCreate('17510533-6')
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/10/29 05:01:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/17510533-6
+---
+2014/10/29 05:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/view/id/1
+---
+2014/10/29 05:01:37 [error] [php] Undefined variable: id (C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): HistorialenfermedadesController->renderFile()
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\update.php(21): HistorialenfermedadesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HistorialenfermedadesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): HistorialenfermedadesController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): HistorialenfermedadesController->renderPartial()
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(105): HistorialenfermedadesController->render()
+#7 unknown(0): HistorialenfermedadesController->actionUpdate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HistorialenfermedadesController->runAction()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterAccessControl()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): HistorialenfermedadesController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HistorialenfermedadesController->run()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/historialenfermedades/update/id/1
+in C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\_form.php (35)
+in C:\xampp\htdocs\yii\redvida_test\protected\views\historialenfermedades\update.php (21)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (105)
+2014/10/29 05:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/10/29 05:02:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia
+---
+2014/10/29 05:02:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 05:03:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia
+---
+2014/10/29 05:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 05:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 05:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 05:06:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/admin
+---
+2014/10/29 05:06:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---
+2014/10/29 05:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/update/id/17349196-4
+---
+2014/10/29 05:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/redvida/assets/js/jquery.fitvids.min.js"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/redvida/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/redvida_test/themes/redvida/assets/js/jquery.fitvids.min.js
+HTTP_REFERER=http://localhost/yii/redvida_test/urgencia/view/id/17349196-4
+---

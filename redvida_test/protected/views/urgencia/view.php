@@ -28,6 +28,7 @@ $this->menu=array(
 		'nombre_paciente',
 		'apellido_pat',
 		'apellido_mat',
+		'fecha_ini',
 		'afiliacion',
 		'enfermedad',
 		'grado_urgencia',
