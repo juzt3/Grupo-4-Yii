@@ -13,7 +13,8 @@
  * @property string $grado_urgencia
  * @property string $necesidad_transplante
  * @property integer $centro_medico
- *
+ * @property string $fecha_ini
+ * @property string $fecha_fin
  * The followings are the available model relations:
  * @property Centrosmedicos $centroMedico
  */
@@ -44,6 +45,7 @@ class Urgencia extends CActiveRecord
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad, necesidad_transplante', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>1),
+			array('fecha_fin', 'safe'),
 			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
@@ -52,7 +54,7 @@ class Urgencia extends CActiveRecord
 			array('necesidad_transplante', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, centro_medico', 'safe', 'on'=>'search'),
+			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, centro_medico, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,6 +85,8 @@ class Urgencia extends CActiveRecord
 			'grado_urgencia' => 'Grado Urgencia',
 			'necesidad_transplante' => 'Necesidad Transplante',
 			'centro_medico' => 'Centro Medico',
+			'fecha_ini' => 'Fecha Inicio',
+            'fecha_fin' => 'Fecha Fin',
 		);
 	}
 
@@ -135,6 +139,8 @@ class Urgencia extends CActiveRecord
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('necesidad_transplante',$this->necesidad_transplante,true);
 		$criteria->compare('centro_medico',$this->centro_medico);
+		$criteria->compare('fecha_ini',$this->fecha_ini,true);
+        $criteria->compare('fecha_fin',$this->fecha_fin,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -159,4 +165,12 @@ class Urgencia extends CActiveRecord
      	            
 	}
 
+
+	public function beforeSave() 
+	{
+	    if ($this->isNewRecord)
+	        $this->fecha_ini = new CDbExpression('NOW()');
+
+	    return parent::beforeSave();
+	}
 }

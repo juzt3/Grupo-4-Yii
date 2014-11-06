@@ -1,7 +1,7 @@
 <?php
 /* @var $this UrgenciaController */
 /* @var $model Urgencia */
-/* @var $form CActiveForm */
+/* @var $form TbActiveForm */
 ?>
 
 <div class="form">
@@ -35,6 +35,10 @@
 		<div class='span9 last'>
 			<?php echo $form->textFieldControlGroup($model,'apellido_mat',array('maxlength'=>50, 'placeholder'=>'Ej: Beltran')); ?>
 		</div>
+    </div>
+
+    <div>
+    		<?php echo $form->textFieldControlGroup($model,'fecha_ini',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
     </div>
 
 	<div >

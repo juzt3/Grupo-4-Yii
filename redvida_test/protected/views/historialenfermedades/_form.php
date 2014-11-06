@@ -1,12 +1,12 @@
 <?php
 /* @var $this HistorialenfermedadesController */
 /* @var $model Historialenfermedades */
-/* @var $form CActiveForm */
+/* @var $form TbActiveForm */
 ?>
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'historialenfermedades-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
@@ -27,33 +27,15 @@
 	</div>
 	-->
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'idenfermedad'); ?>
-		<?php echo $form->dropDownlist($model, 'idenfermedad', Enfermedades::getEnfermedades($id), array("empty"=>"Seleccione una enfermedad")); ?>
-		<?php echo $form->error($model,'idenfermedad'); ?>
+	<div>
+		<?php echo $form->textFieldControlGroup($model,'fecha',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php $form->widget("zii.widgets.jui.CJuiDatePicker",array(
-				"attribute"=>"fecha",
-				"model"=>$model,
-				"language"=>"es",
-				"options"=>array(
-					"dateFormat"=>"dd-mm-yy",
-					'showButtonPanel'=>true,
-					'changeYear'=>true,
-					'yearRange'=>'-130:-0',
-					'minDate'=>'-130Y',
-					'maxDate'=>'-0Y',
-				),
-				//'htmlOptions'=>array('style'=>'width:206px;')
-			));
-		?>
-		<?php echo $form->error($model,'fecha'); ?>
+	<div>
+		<?php echo $form->dropDownListControlGroup($model, 'idenfermedad', Enfermedades::getEnfermedades($id), array("empty"=>"Seleccione una enfermedad")); ?>
 	</div>
 
-	<div class="row buttons">
+	<div class="buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 

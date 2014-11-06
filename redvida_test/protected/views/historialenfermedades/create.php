@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Historial de Enfermedades</h1>
+<h1>Registrar Enfermedad de <?php echo $id ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model, 'id'=>$id)); ?>
