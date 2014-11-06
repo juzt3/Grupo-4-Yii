@@ -138,6 +138,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 				array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
 				array('label'=>'Urgencias', 'url'=>array('/urgencia')),
 				array('label'=>'Centros Medicos', 'url'=>array('/CentrosMedicos')),
+				array('label'=>'Donacion Sangre y Medula', 'url'=>array('/donacionsangremedula')),
 				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
