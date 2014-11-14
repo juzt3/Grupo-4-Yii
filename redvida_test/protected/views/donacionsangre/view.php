@@ -29,5 +29,6 @@ $this->menu=array(
 		'id_donacionsangre',
 		'cantidad_sangre',
 		'dsangre_observaciones',
+		'tipo_sangre',
 	),
 )); ?>

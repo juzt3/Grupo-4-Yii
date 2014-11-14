@@ -29,8 +29,8 @@ class Donacionmedula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_donacionmedula', 'required'),
-			array('id_donacionmedula, cantidad_medula', 'numerical', 'integerOnly'=>true),
+			array('cantidad_medula', 'required'),
+			array('cantidad_medula', 'numerical', 'integerOnly'=>true),
 			array('d_medula_observaciones', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

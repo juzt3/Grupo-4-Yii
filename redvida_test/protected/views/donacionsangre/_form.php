@@ -19,11 +19,11 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'id_donacionsangre',array('span'=>5)); ?>
-
             <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>5)); ?>
 
             <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>6,'span'=>8)); ?>
+
+            <?php echo $form->dropDownListControlGroup($model,'tipo_sangre', $model->getMenuSangre(), array("empty"=>"Seleccionar Tipo de Sangre")); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(

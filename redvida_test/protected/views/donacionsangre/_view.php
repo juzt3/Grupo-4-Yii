@@ -17,5 +17,9 @@
 	<?php echo CHtml::encode($data->dsangre_observaciones); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_sangre')); ?>:</b>
+	<?php echo CHtml::encode($data->tipo_sangre); ?>
+	<br />
+
 
 </div>

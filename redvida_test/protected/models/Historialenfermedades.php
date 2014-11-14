@@ -106,7 +106,7 @@ class Historialenfermedades extends CActiveRecord
 		return parent::model($className);
 	}
 
-		public function beforeSave() 
+	public function beforeSave() 
 	{
 	    if ($this->isNewRecord)
 	        $this->fecha = new CDbExpression('NOW()');

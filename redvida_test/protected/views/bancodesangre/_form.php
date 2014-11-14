@@ -1,13 +1,13 @@
 <?php
-/* @var $this HistorialdonacionsangreController */
-/* @var $model Historialdonacionsangre */
+/* @var $this BancodesangreController */
+/* @var $model Bancodesangre */
 /* @var $form TbActiveForm */
 ?>
 
 <div class="form">
 
     <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'historialdonacionsangre-form',
+	'id'=>'bancodesangre-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -19,13 +19,9 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'id_donacionsangre',array('span'=>5)); ?>
+            <?php echo $form->textFieldControlGroup($model,'tipo_sangre',array('span'=>5,'maxlength'=>3)); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
-
-            <?php echo $form->textFieldControlGroup($model,'fecha_donacionsangre',array('span'=>5)); ?>
-
-            <?php echo $form->textFieldControlGroup($model,'fecha_expiracion',array('span'=>5)); ?>
+            <?php echo $form->textFieldControlGroup($model,'cantidad',array('span'=>5)); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(

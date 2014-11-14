@@ -30,5 +30,6 @@ $this->menu=array(
 		'id_donacionsangre',
 		'rut',
 		'fecha_donacionsangre',
+		'fecha_expiracion',
 	),
 )); ?>

@@ -8,6 +8,7 @@
  * @property integer $id_donacionsangre
  * @property string $rut
  * @property string $fecha_donacionsangre
+ * @property string $fecha_expiracion
  *
  * The followings are the available model relations:
  * @property Donacionsangre $idDonacionsangre
@@ -31,13 +32,12 @@ class Historialdonacionsangre extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_historialsangre', 'required'),
-			array('id_historialsangre, id_donacionsangre', 'numerical', 'integerOnly'=>true),
+			array('id_donacionsangre, rut, fecha_donacionsangre, fecha_expiracion', 'required'),
+			array('id_donacionsangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
-			array('fecha_donacionsangre', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_historialsangre, id_donacionsangre, rut, fecha_donacionsangre', 'safe', 'on'=>'search'),
+			array('id_historialsangre, id_donacionsangre, rut, fecha_donacionsangre, fecha_expiracion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +64,7 @@ class Historialdonacionsangre extends CActiveRecord
 			'id_donacionsangre' => 'Id Donacionsangre',
 			'rut' => 'Rut',
 			'fecha_donacionsangre' => 'Fecha Donacionsangre',
+			'fecha_expiracion' => 'Fecha Expiracion',
 		);
 	}
 
@@ -89,6 +90,7 @@ class Historialdonacionsangre extends CActiveRecord
 		$criteria->compare('id_donacionsangre',$this->id_donacionsangre);
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('fecha_donacionsangre',$this->fecha_donacionsangre,true);
+		$criteria->compare('fecha_expiracion',$this->fecha_expiracion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

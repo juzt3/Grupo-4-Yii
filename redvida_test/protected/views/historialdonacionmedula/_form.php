@@ -19,8 +19,6 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'id_historialmedula',array('span'=>5)); ?>
-
             <?php echo $form->textFieldControlGroup($model,'id_donacionmedula',array('span'=>5)); ?>
 
             <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>

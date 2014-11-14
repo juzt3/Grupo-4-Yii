@@ -1,26 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "historialdonacionmedula".
+ * This is the model class for table "bancodesangre".
  *
- * The followings are the available columns in table 'historialdonacionmedula':
- * @property integer $id_historialmedula
- * @property integer $id_donacionmedula
- * @property string $rut
- * @property string $fecha_donacionmedula
- *
- * The followings are the available model relations:
- * @property Donacionmedula $idDonacionmedula
- * @property Donantes $rut0
+ * The followings are the available columns in table 'bancodesangre':
+ * @property integer $id
+ * @property string $tipo_sangre
+ * @property integer $cantidad
  */
-class Historialdonacionmedula extends CActiveRecord
+class Bancodesangre extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'historialdonacionmedula';
+		return 'bancodesangre';
 	}
 
 	/**
@@ -31,12 +26,12 @@ class Historialdonacionmedula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_donacionmedula, rut, fecha_donacionmedula', 'required'),
-			array('id_donacionmedula', 'numerical', 'integerOnly'=>true),
-			array('rut', 'length', 'max'=>10),
+			array('tipo_sangre, cantidad', 'required'),
+			array('cantidad', 'numerical', 'integerOnly'=>true),
+			array('tipo_sangre', 'length', 'max'=>3),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_historialmedula, id_donacionmedula, rut, fecha_donacionmedula', 'safe', 'on'=>'search'),
+			array('id, tipo_sangre, cantidad', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,8 +43,6 @@ class Historialdonacionmedula extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idDonacionmedula' => array(self::BELONGS_TO, 'Donacionmedula', 'id_donacionmedula'),
-			'rut0' => array(self::BELONGS_TO, 'Donantes', 'rut'),
 		);
 	}
 
@@ -59,10 +52,9 @@ class Historialdonacionmedula extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_historialmedula' => 'Id Historialmedula',
-			'id_donacionmedula' => 'Id Donacionmedula',
-			'rut' => 'Rut',
-			'fecha_donacionmedula' => 'Fecha Donacionmedula',
+			'id' => 'ID',
+			'tipo_sangre' => 'Tipo Sangre',
+			'cantidad' => 'Cantidad',
 		);
 	}
 
@@ -84,10 +76,9 @@ class Historialdonacionmedula extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_historialmedula',$this->id_historialmedula);
-		$criteria->compare('id_donacionmedula',$this->id_donacionmedula);
-		$criteria->compare('rut',$this->rut,true);
-		$criteria->compare('fecha_donacionmedula',$this->fecha_donacionmedula,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
+		$criteria->compare('cantidad',$this->cantidad);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +89,7 @@ class Historialdonacionmedula extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Historialdonacionmedula the static model class
+	 * @return Bancodesangre the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

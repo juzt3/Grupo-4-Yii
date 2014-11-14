@@ -19,6 +19,8 @@
 
                     <?php echo $form->textFieldControlGroup($model,'fecha_donacionsangre',array('span'=>5)); ?>
 
+                    <?php echo $form->textFieldControlGroup($model,'fecha_expiracion',array('span'=>5)); ?>
+
         <div class="form-actions">
         <?php echo TbHtml::submitButton('Search',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
     </div>

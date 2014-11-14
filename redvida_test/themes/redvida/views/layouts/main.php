@@ -132,23 +132,27 @@ Read usage license on for this template on http://www.bootstraptor.com
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'htmlOptions'=>array('class'=>'nav navbar-nav'),
+			'encodeLabel'=>false,
 			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
+				array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
 				array('label'=>'Donantes', 'url'=>array('/donantes')),
 				array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
 				array('label'=>'Urgencias', 'url'=>array('/urgencia')),
 				array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
 				array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre')),
 				array('label'=>'Donación Medula', 'url'=>array('/donacionmedula')),
+				array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
 				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'<i class="icon icon-log-out"></i><span> Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>
+<br>
+<br>
 <div class="container">
 	<div class="row-fluid">
 		<div class="span12"><br>

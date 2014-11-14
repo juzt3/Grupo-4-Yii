@@ -51,6 +51,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id_donacionsangre',
 		'rut',
 		'fecha_donacionsangre',
+		'fecha_expiracion',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

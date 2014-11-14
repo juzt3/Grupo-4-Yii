@@ -21,5 +21,9 @@
 	<?php echo CHtml::encode($data->fecha_donacionsangre); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_expiracion')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha_expiracion); ?>
+	<br />
+
 
 </div>
