@@ -12,7 +12,7 @@
 )); ?>
 
 	<div>
-		<?php echo $form->textFieldControlGroup($model,'rut',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textFieldControlGroup($model,'rut',array('size'=>10,'maxlength'=>10)); ?> 
 	</div>
 
 	<div>
@@ -20,11 +20,14 @@
 	</div>
 
 	<div>
-		<?php echo $form->textFieldControlGroup($model,'apellido_pat',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+		<div class="span3">
+		   <?php echo $form->textFieldControlGroup($model,'apellido_pat',array('size'=>50,'maxlength'=>50)); ?>
+	    </div>
+	
 
-	<div>
-		<?php echo $form->textFieldControlGroup($model,'apellido_mat',array('size'=>50,'maxlength'=>50)); ?>
+		<div class='span9 last'>
+		    <?php echo $form->textFieldControlGroup($model,'apellido_mat',array('size'=>50,'maxlength'=>50)); ?>
+		</div>
 	</div>
 
 	<div>
@@ -36,11 +39,13 @@
 	</div>
 
 	<div>
-		<?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('size'=>1,'maxlength'=>1)); ?>
-	</div>
+		<div class="span3">
+		     <?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('size'=>1,'maxlength'=>1)); ?>
+		</div>
 
-	<div>
-		<?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('size'=>60,'maxlength'=>100)); ?>
+	    <div class='span9 last'>
+		     <?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('size'=>60,'maxlength'=>100)); ?>
+		</div>     
 	</div>
 
 	<div>
