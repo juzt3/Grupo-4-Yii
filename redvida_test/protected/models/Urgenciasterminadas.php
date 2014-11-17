@@ -42,6 +42,12 @@ class Urgenciasterminadas extends CActiveRecord
 			array('enfermedad, necesidad_transplante', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>1),
 			array('fecha_fin', 'safe'),
+			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('enfermedad', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('necesidad_transplante', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, fecha_ini, fecha_fin, centro_medico', 'safe', 'on'=>'search'),
@@ -66,18 +72,40 @@ class Urgenciasterminadas extends CActiveRecord
 	{
 		return array(
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
 			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
 			'necesidad_transplante' => 'Necesidad Transplante',
-			'fecha_ini' => 'Fecha Ini',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 			'centro_medico' => 'Centro Medico',
 		);
 	}
+
+	public function validateRut($attribute, $params) {
+        $data = explode('-', $this->rut);
+        $evaluate = strrev($data[0]);
+        $multiply = 2;
+        $store = 0;
+        for ($i = 0; $i < strlen($evaluate); $i++) {
+            $store += $evaluate[$i] * $multiply;
+           $multiply++;
+            if ($multiply > 7)
+                $multiply = 2;
+        }
+        isset($data[1]) ? $verifyCode = strtolower($data[1]) : $verifyCode = '';
+        $result = 11 - ($store % 11);
+        if ($result == 10)
+            $result = 'k';
+        if ($result == 11)
+            $result = 0;
+        if ($verifyCode != $result)
+            $this->addError('rut', 'Rut inválido.');
+    }
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
