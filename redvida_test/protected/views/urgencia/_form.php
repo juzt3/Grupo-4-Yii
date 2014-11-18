@@ -54,7 +54,7 @@
 	</div>
 
 	<div >		
-		<?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('maxlength'=>100, 'placeholder'=>'Ej: Organo')); ?>
+		<?php echo $form->dropDownListControlGroup($model,'necesidad_transplante',array('Sangre'=>'Sangre', 'Medula'=>'Medula', 'Organo'=>'Organo'), array('empty'=>'Seleccione tipo Transplante'));?>
 	</div>
 
 	<div >
