@@ -21,6 +21,12 @@ class SiteController extends Controller
 		);
 	}
 
+	public function filters() {
+	    return array(
+	        array('booster.filters.BoosterFilter - delete')
+    	);
+	}
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.

@@ -10,12 +10,13 @@ Read usage license on for this template on http://www.bootstraptor.com
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <title>REDVIDA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-<?php Yii::app()->bootstrap->register(); ?>
+    
 <!-- Le styles -->
+<?php Yii::app()->bootstrap->register(); ?>
 <!-- Latest compiled and minified CSS BS 3.0. -->
 <link href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 <!--*<link href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/bootstrap-theme.css" rel="stylesheet">-->
@@ -117,38 +118,43 @@ Read usage license on for this template on http://www.bootstraptor.com
 
   <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
 		<div class="container">
-	  <!-- Brand and toggle get grouped for better mobile display -->
-	  <div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-		  <span class="sr-only">Toggle navigation</span>
-		  <span class="icon-bar"></span>
-		  <span class="icon-bar"></span>
-		  <span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" href="#">REDVIDA</a>
-	  </div>
-
-	  <!-- Collect the nav links, forms, and other content for toggling -->
-	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'htmlOptions'=>array('class'=>'nav navbar-nav'),
-			'encodeLabel'=>false,
-			'items'=>array(
-				array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
-				array('label'=>'Donantes', 'url'=>array('/donantes')),
-				array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
-				array('label'=>'Urgencias', 'url'=>array('/urgencia')),
-				array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
-				array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre')),
-				array('label'=>'Donación Medula', 'url'=>array('/donacionmedula')),
-				array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
-				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				//array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'<i class="icon icon-log-out"></i><span> Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- /.navbar-collapse --> 
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<?php $this->widget('booster.widgets.TbNavbar',array(
+				'type'=>'inverse',
+				'brand'=>'REDVIDA',
+				'collapse'=>false,
+				'items'=>array(
+	        		array(
+		            	'class'=>'booster.widgets.TbMenu',
+						'encodeLabel'=>false,
+						'items'=>array(
+							array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
+							array('label'=>'Donantes', 'url'=>array('/donantes')),
+							array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
+							array('label'=>'Urgencias', 'url'=>array('/urgencia')),
+							array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
+							array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre')),
+							array('label'=>'Donación Medula', 'url'=>array('/donacionmedula')),
+							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
+							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+							//array('label'=>'Contact', 'url'=>array('/site/contact')),
+							array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'<i class="icon icon-log-out"></i><span> Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+		        		),
+					),
+				),
+			)); ?>
+		</div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>
 <br>

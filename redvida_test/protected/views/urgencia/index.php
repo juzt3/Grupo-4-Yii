@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Crear Urgencia', 'url'=>array('create')),
 	array('label'=>'Gestion de Urgencias', 'url'=>array('admin')),
+	array('label'=>'Urgencias Terminadas', 'url'=>array('urgenciasterminadas/admin')),
 );
 ?>
 
