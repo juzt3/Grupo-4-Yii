@@ -72,6 +72,13 @@ class HistorialenfermedadesController extends Controller
 			$model->attributes=$_POST['Historialenfermedades'];
 			$model->rut=$id;
 			if($model->save())
+				/*$donante = Donantes::$model->find(array('condition'=>'rut = :rut', 
+														'params'=>array(':rut'=>$this->id),
+																));
+				$don_desactivado = new Don_desactivado;
+				$don_desactivado->attributes = $donante->attributes;
+				$don_desactivado->save();
+				$donante->actionDelete($donante->rut);*/
 				$this->redirect(array('view','id'=>$model->idhistorial));
 		}
 
@@ -80,7 +87,6 @@ class HistorialenfermedadesController extends Controller
 			'id'=>$id
 		));
 	}
-
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

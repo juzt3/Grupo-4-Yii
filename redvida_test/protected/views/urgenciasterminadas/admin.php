@@ -3,7 +3,7 @@
 /* @var $model Urgenciasterminadas */
 
 $this->breadcrumbs=array(
-	'Urgenciasterminadases'=>array('index'),
+	'Urgencias Terminadas'=>array('index'),
 	'Manage',
 );
 
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Urgenciasterminadases</h1>
+<h1>Administrar Urgencias Terminadas</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

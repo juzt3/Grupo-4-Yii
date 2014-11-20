@@ -116,44 +116,33 @@ Read usage license on for this template on http://www.bootstraptor.com
   <body>
 
 
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-		<div class="container">
-		  <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-		  </div>
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse navbar-ex1-collapse">
-			<?php $this->widget('booster.widgets.TbNavbar',array(
-				'type'=>'inverse',
-				'brand'=>'REDVIDA',
-				'collapse'=>false,
+  <nav class="mainmenu" role="navigation">
+			<?php $this->widget('bootstrap.widgets.TbNavbar',array(
+				//'htmlOptions'=>array('class'=>'nav'),
+				'color'=>'inverse',
+				'brandLabel'=>'REDVIDA',
+				//'collapse' => true,
 				'items'=>array(
-	        		array(
-		            	'class'=>'booster.widgets.TbMenu',
-						'encodeLabel'=>false,
+					array(
+						'class'=>'bootstrap.widgets.TbNav',
+						'encodeLabel' => false,
 						'items'=>array(
 							array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
-							array('label'=>'Donantes', 'url'=>array('/donantes')),
-							array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
-							array('label'=>'Urgencias', 'url'=>array('/urgencia')),
-							array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
-							array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre')),
-							array('label'=>'Donación Medula', 'url'=>array('/donacionmedula')),
-							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
+							array('label'=>'Donantes', 'url'=>array('/donantes'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Enfermedades', 'url'=>array('/enfermedades'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Urgencias', 'url'=>array('/urgencia'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Donación Medula', 'url'=>array('/donacionmedula'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre'), 'visible'=>!Yii::app()->user->isGuest),
 							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contact', 'url'=>array('/site/contact')),
 							array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-							array('label'=>'<i class="icon icon-log-out"></i><span> Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-		        		),
-					),
-				),
-			)); ?>
+							array('label'=>'Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+						),
+					)
+			),
+		)); ?>
 		</div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>

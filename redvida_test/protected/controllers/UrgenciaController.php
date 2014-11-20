@@ -110,6 +110,12 @@ class UrgenciaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		$urgencia = $this->loadModel($id);
+				$urgenia_t = new Urgenciasterminadas;
+				$urgenia_t->attributes = $urgencia->attributes;
+				$urgenia_t->fecha_fin = new CDbExpression('NOW()');
+				$urgenia_t->save();
+				
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
