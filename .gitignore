@@ -2055,3 +2055,4 @@ requirements/views/zh_tw/index.php
 UPGRADE
 .gitignore
 redvida_test - copia/
+redvida_test/protected/runtime/application.log
