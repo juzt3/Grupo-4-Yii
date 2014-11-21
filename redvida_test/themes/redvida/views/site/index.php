@@ -1,16 +1,9 @@
      <!-- Main Jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">     
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-lg-12">
-					<div class="col-sm-12 col-lg-12">
-						<h1 class="">Bienvenido a <i><?php echo CHtml::encode(Yii::app()->name); ?></h1>
-						<p>Este sistema ha sido construido con el proposito de facilitar el proceso de trasplantes de todo tipo y<br> asi ayudarnos a salvar vidas.</p>
-						
-					</div>
-				</div>
-			</div>
-		</div>
+	<div>     
+			<?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
+		    'heading' => 'Bienvenido a REDVIDA',
+		    'content' => '<p>Este sistema ha sido construido con el proposito de facilitar el proceso de trasplantes de todo tipo y asi ayudarnos a salvar vidas.</p>',
+			)); ?>     
 	</div>
 
 
@@ -20,7 +13,7 @@
     <div class="row">
 	  
 	<!-- CONTENT SIDE-->
-	<div class="col-sm-12 col-lg-7">
+	<div class="col-sm-12 col-lg-7 span7">
 	<!-- article-->
 		<div class="thumbnail">
 			<img class="img-responsive" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/thumb.jpg" alt="post image">
@@ -55,7 +48,7 @@
 <!-- /CONTENT SIDE-->
    
 <!-- RIGHT SIDE-->   
-	<div class="col-sm-12 col-lg-5">
+	<div class="col-sm-12 col-lg-5 span5 last">
           <h2>Project sub-title heading test</h2>
 		  <hr>
 		  

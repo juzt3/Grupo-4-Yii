@@ -43,6 +43,7 @@
 			            'format' => 'dd/mm/yyyy',
 						'changeYear'=>true,
 						'changeYear'=>true,
+						'changeMonth'=>true,
 						'autoSize'=>true,
 						'yearRange'=>'-130:-0',
 						'minDate'=>'-130y',
@@ -71,7 +72,7 @@
 	</div>
 
 	<div>
-		<?php echo $form->textFieldControlGroup($model,'email',array('maxlength'=>300, 'placeholder'=>'Ej: mimail@sericio.com')); ?>
+		<?php echo $form->textFieldControlGroup($model,'email',array('maxlength'=>300, 'placeholder'=>'Ej: mimail@servicio.com')); ?>
 	</div>
 
 	<div>
@@ -89,7 +90,7 @@
 	</div>
 
 	<div>
-		<?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>100, 'placeholder'=>'Fonasa')); ?>
+		<?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>100, 'placeholder'=>'Ej: Fonasa')); ?>
 	</div>
 
 	<div>
@@ -102,7 +103,8 @@
 
 	<div>
 		<br>
-		<h4>Donante adicional:</h4>
+		<h2>Donante adicional:</h2>
+		<p>Por defecto se registra como donante de sangre</p>
 	</div>
 
 	<div>
@@ -115,12 +117,8 @@
 		</div>
 	</div>
 	
-	<div>
-		<?php echo $form->checkBoxControlGroup($model,'habilitado', array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>'checked')); ?>
-	</div>
-
 	<div class="buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar', array('class'=>'btn btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

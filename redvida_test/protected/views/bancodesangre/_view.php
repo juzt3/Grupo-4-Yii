@@ -2,19 +2,24 @@
 /* @var $this BancodesangreController */
 /* @var $data Bancodesangre */
 ?>
-<div class="row">
-	<div class="span4">
+<style>
+.panel{
+	margin-bottom: 0px;
+}
+</style>
+
+<div class="row-fluid">
+	<div class="span3">
 		<div class="panel panel-info">
 			<div class="panel panel-heading">
-				<div class="panel panel-title">
 					<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_sangre')); ?>:</b>
 					<?php echo CHtml::encode($data->tipo_sangre); ?>
-				</div>
 			</div>	  
 			<div class="panel panel-body">
 				<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>
-				<?php echo CHtml::encode($data->cantidad); ?>
+				<?php echo CHtml::encode($data->cantidad); ?><span> ml</span>
 			</div>
 		</div>
 	</div>
 </div>
+<br>

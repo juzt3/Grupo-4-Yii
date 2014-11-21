@@ -16,9 +16,8 @@ Read usage license on for this template on http://www.bootstraptor.com
     <meta name="author" content="">
     
 <!-- Le styles -->
-<?php Yii::app()->bootstrap->register(); ?>
 <!-- Latest compiled and minified CSS BS 3.0. -->
-<link href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->baseUrl; ?>/css/custom.css" rel="stylesheet">
 <!--*<link href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/bootstrap-theme.css" rel="stylesheet">-->
 <!--*<link href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/bootstrap-navy-flat-theme.css" rel="stylesheet">-->
 <!-- GOOGLE FONT-->
@@ -36,7 +35,7 @@ Read usage license on for this template on http://www.bootstraptor.com
         padding-top: 50px;
         padding-bottom: 40px;
       }
-	.jumbotron{
+	.hero-unit{
 		background:#358cce;
 		color:#fff;
 	  }
@@ -56,48 +55,8 @@ Read usage license on for this template on http://www.bootstraptor.com
 	  .nav-tabs{
 		margin-bottom:15px;
 	}
-		/************* VIDEO *******************************/
-
-		.fluid-width-video-wrapper {
-			width: 100%;
-			position: relative;
-			padding: 0;
-		}
-		.vendor {
-			margin-bottom: 0px;
-		}
-
-		.container-video {
-			width: 100%;
-			min-width: 100%;
-			position: relative;
-			padding: 0;
-			height: 100%;
-		}
-
-		.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border:0px;
-		}
-
-		.video-well.well{
-			-webkit-border-radius:0px;
-				-moz-border-radius:0px;
-					border-radius:0px;
-		}
-		
-		@media (max-width: 768px) {
-
-		.nav-tabs.nav-justified > li{
-			float:left;
-		}
-	}
-	
     </style>
+<?php Yii::app()->bootstrap->register(); ?>
 
 
 
@@ -116,12 +75,11 @@ Read usage license on for this template on http://www.bootstraptor.com
   <body>
 
 
-  <nav class="mainmenu" role="navigation">
+  <nav class="mainmenu fixed-top" role="navigation">
 			<?php $this->widget('bootstrap.widgets.TbNavbar',array(
-				//'htmlOptions'=>array('class'=>'nav'),
 				'color'=>'inverse',
 				'brandLabel'=>'REDVIDA',
-				//'collapse' => true,
+				'collapse' => true,
 				'items'=>array(
 					array(
 						'class'=>'bootstrap.widgets.TbNav',
@@ -129,16 +87,20 @@ Read usage license on for this template on http://www.bootstraptor.com
 						'items'=>array(
 							array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
 							array('label'=>'Donantes', 'url'=>array('/donantes'), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Enfermedades', 'url'=>array('/enfermedades'), 'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Urgencias', 'url'=>array('/urgencia'), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos'), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Donación Sangre', 'url'=>array('/donacionsangre'), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Donación Medula', 'url'=>array('/donacionmedula'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label' => 'Donaciones', 'items' => array(
+								array('label' => 'Donación Sangre', 'url' => array('/donacionsangre')),
+								array('label' => 'Donación Medula', 'url' => array('/donacionmedula')),
+							),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre'), 'visible'=>!Yii::app()->user->isGuest),
 							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contact', 'url'=>array('/site/contact')),
+							array('label' => 'Administrar', 'items' => array(
+								array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
+								array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
+							),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-							array('label'=>'Salir ('.Yii::app()->user->name.')</span>', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),
 					)
 			),
@@ -146,8 +108,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 		</div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>
-<br>
-<br>
+
 <div class="container">
 	<div class="row-fluid">
 		<div class="span12"><br>
@@ -230,16 +191,16 @@ Read usage license on for this template on http://www.bootstraptor.com
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 <!-- Latest compiled and minified JavaScript -->
-<script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/bootstrap.min.js"></script>
+
 
 <!-- RESPONSIVE VIDEO PLUGIN -->
-<script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/jquery.fitvids.min.js" type="text/javascript"></script>
+<!-- <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/jquery.fitvids.min.js" type="text/javascript"></script>
 
 <script>
         // Basic FitVids Test
         jQuery(".container").fitVids();
           
-</script>
+</script> -->
 
 </body>
 </html>

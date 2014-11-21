@@ -15,13 +15,13 @@ return array(
 	'aliases' => array(
 			'bootstrap' => realpath(__DIR__.'/../extensions/bootstrap'), //change this if necessary
 			'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels'), // change if necessary
-			'booster' =>realpath(__DIR__ . '/../extensions/yiibooster'),
+		//	'booster' =>realpath(__DIR__ . '/../extensions/yiibooster'),
 		),
 
 	// preloading 'log' component
 	'preload'=>array(
 		'log',
-		'booster',
+		//'booster',
 	),
 
 	// autoloading model and component classes
@@ -76,10 +76,9 @@ return array(
             'class' => 'yiiwheels.YiiWheels',
          ), 
         // yiibooster configuration
-        'booster' => array(
-        	'responsiveCss'=>true,
-    		'class' => 'booster.components.Booster',
-		),
+       // 'booster' => array(
+    	//	'class' => 'booster.components.Booster',
+		//),
 
 		/*
 		'db'=>array(
