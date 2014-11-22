@@ -30,7 +30,7 @@ class Donacionsangre extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cantidad_sangre, tipo_sangre', 'required'),
+			array('tipo_sangre', 'required'),
 			array('cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('dsangre_observaciones', 'safe'),
@@ -58,9 +58,9 @@ class Donacionsangre extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_donacionsangre' => 'Id Donacionsangre',
+			'id_donacionsangre' => 'Id Donacion de Sangre',
 			'cantidad_sangre' => 'Cantidad Sangre',
-			'dsangre_observaciones' => 'Dsangre Observaciones',
+			'dsangre_observaciones' => 'Observaciones de Donación de Sangre',
 			'tipo_sangre' => 'Tipo Sangre',
 		);
 	}
@@ -109,6 +109,13 @@ class Donacionsangre extends CActiveRecord
 		return array(
       	'O+'=>'O+', 'O-'=>'O-', 'A-'=>'A-', 'A+'=>'A+', 'B-'=>'B-', 'B+'=>'B+', 'AB-'=>'AB-', 'AB+'=>'AB+'
    		);
+	}
+	public function beforeSave() 
+	{
+	    if ($this->isNewRecord)
+	        $this->cantidad_sangre = '450';
+
+	    return parent::beforeSave();
 	}
 
 	public function afterSave() 

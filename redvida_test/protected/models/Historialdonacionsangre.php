@@ -32,7 +32,7 @@ class Historialdonacionsangre extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_donacionsangre, rut, fecha_donacionsangre, fecha_expiracion', 'required'),
+			array('fecha_expiracion', 'required'),
 			array('id_donacionsangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			// The following rule is used by search().
@@ -107,4 +107,12 @@ class Historialdonacionsangre extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/*public function beforeSave() 
+	{
+	    if ($this->isNewRecord)
+	        
+
+	    return parent::beforeSave();
+	}*/
 }

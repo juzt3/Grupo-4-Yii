@@ -58,7 +58,7 @@ class Donacionmedula extends CActiveRecord
 		return array(
 			'id_donacionmedula' => 'Id Donacionmedula',
 			'cantidad_medula' => 'Cantidad Medula',
-			'd_medula_observaciones' => 'D Medula Observaciones',
+			'd_medula_observaciones' => 'Observaciones de Donación de Medula',
 		);
 	}
 

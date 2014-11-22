@@ -5,19 +5,19 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donacionsangres'=>array('index'),
+	'Donación de Sangre'=>array('index'),
 	$model->id_donacionsangre=>array('view','id'=>$model->id_donacionsangre),
-	'Update',
+	'Modificar Donación de Sangre',
 );
 
 $this->menu=array(
-	array('label'=>'List Donacionsangre', 'url'=>array('index')),
-	array('label'=>'Create Donacionsangre', 'url'=>array('create')),
-	array('label'=>'View Donacionsangre', 'url'=>array('view', 'id'=>$model->id_donacionsangre)),
-	array('label'=>'Manage Donacionsangre', 'url'=>array('admin')),
+	array('label'=>'Mostrar Donaciones de Sangre', 'url'=>array('index')),
+	//array('label'=>'Registrar Donación de Sangre', 'url'=>array('create')),
+	array('label'=>'Ver Donación de Sangre', 'url'=>array('view', 'id'=>$model->id_donacionsangre)),
+	array('label'=>'Gestionar Donaciones de Sangre', 'url'=>array('admin')),
 );
 ?>
 
-    <h1>Update Donacionsangre <?php echo $model->id_donacionsangre; ?></h1>
+    <h1>Modificar Donación de Sangre <?php echo $model->id_donacionsangre; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

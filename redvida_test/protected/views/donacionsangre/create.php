@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donacionsangres'=>array('index'),
-	'Create',
+	'Donación de Sangre'=>array('index'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Donacionsangre', 'url'=>array('index')),
-	array('label'=>'Manage Donacionsangre', 'url'=>array('admin')),
+	array('label'=>'Mostrar Donaciones de Sangre', 'url'=>array('index')),
+	array('label'=>'Gestionar Donaciones de Sangre', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Donacionsangre</h1>
+<h1>Registrar Donación de Sangre</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('donacion'=>$donacion, 'historial'=>$historial)); ?>
