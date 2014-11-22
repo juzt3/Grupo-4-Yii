@@ -12,8 +12,8 @@
 	<div class="span3">
 		<div class="panel panel-info">
 			<div class="panel panel-heading">
-					<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_sangre')); ?>:</b>
-					<?php echo CHtml::encode($data->tipo_sangre); ?>
+				<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_sangre')); ?>:</b>
+				<?php echo CHtml::encode($data->tipo_sangre); ?>
 			</div>	  
 			<div class="panel panel-body">
 				<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>

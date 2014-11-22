@@ -5,7 +5,7 @@
 
 <div class="view">
 
-    	<b><?php echo CHtml::encode($data->getAttributeLabel('rut')); ?>:</b>
+    <b><?php echo CHtml::encode($data->getAttributeLabel('rut')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->rut),array('view','id'=>$data->rut)); ?>
 	<br />
 
