@@ -105,6 +105,7 @@ class Donantes extends CActiveRecord
 			'fecha_nac' => 'Fecha de Nacimiento',
 			'afiliacion' => 'Afiliacion',
 			'donantemedula' => 'Donante de Medula',
+			'centromedico0.nombre_cm'=>'Centro Medico',
 		);
 	}
 

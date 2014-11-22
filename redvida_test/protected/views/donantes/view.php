@@ -58,7 +58,7 @@ $this->menu=array(
 										'celular',
 										'alergias',
 										'afiliacion',
-										'centromedico',
+										'centromedico0.nombre_cm',
 										'tiposangre',
 										'donanteorganos',
 										'donantemedula',
