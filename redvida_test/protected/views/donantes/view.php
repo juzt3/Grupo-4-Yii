@@ -70,7 +70,11 @@ $this->menu=array(
 								<?php echo TbHtml::pills(array(
 								    array('label' => 'Asignar Enfermedad', 'url' =>array('historialenfermedades/create', 'id'=>$model->rut)),
 								)); ?>
-								<?php $this->widget('zii.widgets.CDetailView',array(
+								<?php if($hist_enfermedades === null){
+									echo 'No tiene enfermedades registrdas.';									
+								}
+								else{
+								 $this->widget('zii.widgets.CDetailView',array(
 								    'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
 								    ),
@@ -80,7 +84,9 @@ $this->menu=array(
 										'idenfermedad0.nombre',
 										'idenfermedad0.descripcion',
 									),
-								)); ?>
+								)); 
+								}
+								?>
 							</div>
 						</div>
 					</div>

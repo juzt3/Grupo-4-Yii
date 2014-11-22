@@ -64,7 +64,7 @@
 	<div class="buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
 	</div>
-	</div>
+    </div>
 
 <?php $this->endWidget(); ?>
 
