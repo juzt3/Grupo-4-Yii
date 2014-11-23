@@ -16,6 +16,9 @@ $this->menu=array(
 	array('label'=>'Deshabilitar Donantes', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
 	array('label'=>'Administrar Donantes', 'url'=>array('admin')),
 	array('label'=>'Asignar Enfermedad', 'url'=>array('historialenfermedades/create', 'id'=>$model->rut)),
+	array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),
+	array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),
+
 );
 ?>
 

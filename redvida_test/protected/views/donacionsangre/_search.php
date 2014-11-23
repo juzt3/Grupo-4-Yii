@@ -11,10 +11,6 @@
 	'method'=>'get',
 )); ?>
 
-                    <?php echo $form->textFieldControlGroup($model,'id_donacionsangre',array('span'=>5)); ?>
-
-                    <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>5)); ?>
-
                     <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>6,'span'=>8)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'tipo_sangre',array('span'=>5,'maxlength'=>3)); ?>

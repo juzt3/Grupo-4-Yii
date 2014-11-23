@@ -40,7 +40,7 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Res99',
+			'password'=>'casa012',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 			'generatorPaths' => array('bootstrap.gii'),
@@ -90,7 +90,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=redvida_test',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'Res99',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
