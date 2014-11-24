@@ -1,7 +1,7 @@
 <?php
 /* @var $this DonantesController */
 /* @var $model Donantes */
-/* @var $form TActiveForm */
+/* @var $form TbActiveForm */
 ?>
 
 <div class="form">
@@ -39,11 +39,11 @@
 			<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			        'attribute' => 'fecha_nac',
 			        "model"=>$model,
+			        'language'=>'es',
 			        'options' => array(
-			            'format' => 'dd/mm/yyyy',
+			        	'constrainInput'=>true,
+			            'dateFormat' => 'dd-mm-yy',
 						'changeYear'=>true,
-						'changeYear'=>true,
-						'changeMonth'=>true,
 						'autoSize'=>true,
 						'yearRange'=>'-130:-0',
 						'minDate'=>'-130y',
@@ -109,18 +109,18 @@
 
 	<div>
 		<div class="span3">
-			<?php echo $form->checkBoxControlGroup($model,'donanteorganos',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
+			<?php echo $form->checkBoxControlGroup($model,'donanteorganos',array('value'=>'Si', 'uncheckValue'=>'No')); ?>
 		</div>
 
 		<div class='span9 last'>
-			<?php echo $form->checkBoxControlGroup($model,'donantemedula',array('checkedValue'=>'Si', 'uncheckValue'=>'No', 'checked'=>false)); ?>
+			<?php echo $form->checkBoxControlGroup($model,'donantemedula',array('value'=>'Si', 'uncheckValue'=>'No')); ?>
 		</div>
 	</div>
 	
 	<div class="buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar', array('class'=>'btn btn-primary')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar', array('class'=>'btn btn-primary btn-large')); ?>
 	</div>
 
-<?php $this->endWidget(); ?>
+	<?php $this->endWidget(); ?>
 
 </div><!-- form -->

@@ -31,5 +31,6 @@ $this->menu=array(
 		'dsangre_observaciones',
 		'tipo_sangre',
 		'historialdonacionsangres.rut',
+		'historialdonacionsangres.fecha_expiracion',
 	),
 )); ?>

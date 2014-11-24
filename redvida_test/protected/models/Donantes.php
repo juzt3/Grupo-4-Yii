@@ -21,9 +21,12 @@
  * @property string $fecha_nac
  * @property string $afiliacion
  * @property string $donantemedula
+ * @property string $fecha_muerte
  *
  * The followings are the available model relations:
  * @property Centrosmedicos $centromedico0
+ * @property Historialdonacionmedula[] $historialdonacionmedulas
+ * @property Historialdonacionsangre[] $historialdonacionsangres
  * @property Historialenfermedades[] $historialenfermedades
  */
 class Donantes extends CActiveRecord
@@ -45,7 +48,7 @@ class Donantes extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, centromedico, celular, sexo, fecha_nac, afiliacion, donantemedula, donanteorganos', 'required'),
-			array('nombres, apellidos', 'length', 'max'=>100),
+			array('nombres, apellidos, afiliacion', 'length', 'max'=>100),
 			array('nombres, apellidos', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('rut, telefono, celular', 'length', 'max'=>10),
 			array('rut', 'ext.alpha', 'allowNumbers' => true, 'extra' => array('-'), 'minChars' => 9, 'maxChars' => 10),
@@ -59,13 +62,13 @@ class Donantes extends CActiveRecord
 			array('centromedico', 'length', 'max'=>11),
 			array('centromedico', 'ext.alpha', 'allowNumbers' => true),
 			array('donanteorganos, habilitado, donantemedula', 'length', 'max'=>2),
-			array('alergias', 'safe'),
+			array('alergias, fecha_muerte', 'safe'),
 			array('sexo', 'length', 'max'=>9),
-			array('afiliacion', 'length', 'max'=>100),
+			array('fecha_nac', 'type', 'type'=>'date', 'dateFormat'=>'dd-MM-yyyy'), 
 			array('fecha_nac','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha de necimiento es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado', 'safe', 'on'=>'search'),
+			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado, sexo, fecha_nac, afiliacion, donantemedula, fecha_muerte', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,8 +80,10 @@ class Donantes extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'historialenfermedades' => array(self::HAS_MANY, 'Historialenfermedades', 'rut'),
 			'centromedico0' => array(self::BELONGS_TO, 'Centrosmedicos', 'centromedico'),
+			'historialdonacionmedulas' => array(self::HAS_MANY, 'Historialdonacionmedula', 'rut'),
+			'historialdonacionsangres' => array(self::HAS_MANY, 'Historialdonacionsangre', 'rut'),
+			'historialenfermedades' => array(self::HAS_MANY, 'Historialenfermedades', 'rut'),
 		);
 	}
 
@@ -105,6 +110,7 @@ class Donantes extends CActiveRecord
 			'fecha_nac' => 'Fecha de Nacimiento',
 			'afiliacion' => 'Afiliacion',
 			'donantemedula' => 'Donante de Medula',
+			'fecha_muerte' => 'Fecha de Muerte',
 			'centromedico0.nombre_cm'=>'Centro Medico',
 		);
 	}
@@ -165,6 +171,7 @@ class Donantes extends CActiveRecord
 		$criteria->compare('fecha_nac',$this->fecha_nac,true);
 		$criteria->compare('afiliacion',$this->afiliacion,true);
 		$criteria->compare('donantemedula',$this->donantemedula,true);
+		$criteria->compare('fecha_muerte',$this->fecha_muerte,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -187,5 +194,18 @@ class Donantes extends CActiveRecord
 		return array(
       	'O+'=>'O+', 'O-'=>'O-', 'A-'=>'A-', 'A+'=>'A+', 'B-'=>'B-', 'B+'=>'B+', 'AB-'=>'AB-', 'AB+'=>'AB+'
    		);
+	}
+
+	protected function beforeSave()
+	{
+	    $this->fecha_nac = date('Y-m-d', CDateTimeParser::parse($this->fecha_nac, 'dd-MM-yyyy'));
+	    return parent::beforeSave();
+	}
+	     
+	protected function afterFind()
+	{
+	    $this->fecha_nac = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_nac);
+	    $this->fecha_muerte = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_muerte);
+	    return parent::afterFind();
 	}
 }
