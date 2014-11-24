@@ -87,7 +87,11 @@ Read usage license on for this template on http://www.bootstraptor.com
 						'items'=>array(
 							array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
 							array('label'=>'Donantes', 'url'=>array('/donantes'), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Urgencias', 'url'=>array('/urgencia'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Urgencias', 'items' => array(
+								array('label' => 'Urgencias Sangre', 'url' => array('/urgenciassangre')),
+								array('label' => 'Urgencias Organos', 'url' => array('/urgenciasorganos')),
+								array('label' => 'Urgencias Medula', 'url' => array('/urgenciasmedula')),
+								),'visible'=>!Yii::app()->user->isGuest),
 							array('label' => 'Donaciones', 'items' => array(
 								array('label' => 'Donación Sangre', 'url' => array('/donacionsangre')),
 								array('label' => 'Donación Medula', 'url' => array('/donacionmedula')),
