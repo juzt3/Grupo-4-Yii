@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donación de Sangre',
+	'Donacionsangres',
 );
 
 $this->menu=array(
-	//array('label'=>'Registrar Donación de Sangre','url'=>array('create')),
-	array('label'=>'Gestionar Donaciónes de Sangre','url'=>array('admin')),
+	array('label'=>'Create Donacionsangre','url'=>array('create')),
+	array('label'=>'Manage Donacionsangre','url'=>array('admin')),
 );
 ?>
 
-<h1>Donación de Sangre</h1>
+<h1>Donacionsangres</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

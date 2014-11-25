@@ -60,32 +60,22 @@ class DonacionsangreController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($id)
+	public function actionCreate()
 	{
-		$donacion=new Donacionsangre;
-		$historial=new Historialdonacionsangre;
-		$donante= Donantes::model()->find($id);
+		$model=new Donacionsangre;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Donacionsangre'], $_POST['Historialdonacionsangre'])) {
-			$donacion->attributes=$_POST['Donacionsangre'];
-			$historial->attributes=$_POST['Historialdonacionsangre'];
-			$historial->rut=$id;
-			$historial->fecha_donacionsangre= new CDbExpression('NOW()');
-			$donacion->tipo_sangre=$donante->tiposangre;
-			if ($donacion->save()) {
-				$historial->id_donacionsangre=$donacion->id_donacionsangre;
-				if($historial->save()){
-				$this->redirect(array('view','id'=>$donacion->id_donacionsangre));	
-				}
+		if (isset($_POST['Donacionsangre'])) {
+			$model->attributes=$_POST['Donacionsangre'];
+			if ($model->save()) {
+				$this->redirect(array('view','id'=>$model->id_donacionsangre));
 			}
 		}
 
 		$this->render('create',array(
-			'donacion'=>$donacion,
-			'historial'=>$historial,
+			'model'=>$model,
 		));
 	}
 
@@ -129,7 +119,7 @@ class DonacionsangreController extends Controller
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 			}
 		} else {
-			throw new CHttpException(400,'Solicitud no válida. Por favor, no repita esta solicitud de nuevo.');
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 		}
 	}
 
@@ -171,7 +161,7 @@ class DonacionsangreController extends Controller
 	{
 		$model=Donacionsangre::model()->findByPk($id);
 		if ($model===null) {
-			throw new CHttpException(404,'La informacion solicitada no existe.');
+			throw new CHttpException(404,'The requested page does not exist.');
 		}
 		return $model;
 	}

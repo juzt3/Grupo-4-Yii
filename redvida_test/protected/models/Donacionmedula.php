@@ -5,11 +5,14 @@
  *
  * The followings are the available columns in table 'donacionmedula':
  * @property integer $id_donacionmedula
+ * @property string $rut
  * @property integer $cantidad_medula
  * @property string $d_medula_observaciones
+ * @property string $fecha_donacionmedula
+ * @property string $fecha_expiracionmedula
  *
  * The followings are the available model relations:
- * @property Historialdonacionmedula[] $historialdonacionmedulas
+ * @property Donantes $rut0
  */
 class Donacionmedula extends CActiveRecord
 {
@@ -29,12 +32,13 @@ class Donacionmedula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cantidad_medula', 'required'),
+			array('cantidad_medula, fecha_donacionmedula, fecha_expiracionmedula', 'required'),
 			array('cantidad_medula', 'numerical', 'integerOnly'=>true),
+			array('rut', 'length', 'max'=>10),
 			array('d_medula_observaciones', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_donacionmedula, cantidad_medula, d_medula_observaciones', 'safe', 'on'=>'search'),
+			array('id_donacionmedula, rut, cantidad_medula, d_medula_observaciones, fecha_donacionmedula, fecha_expiracionmedula', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +50,7 @@ class Donacionmedula extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'historialdonacionmedulas' => array(self::HAS_MANY, 'Historialdonacionmedula', 'id_donacionmedula'),
+			'rut0' => array(self::BELONGS_TO, 'Donantes', 'rut'),
 		);
 	}
 
@@ -57,8 +61,11 @@ class Donacionmedula extends CActiveRecord
 	{
 		return array(
 			'id_donacionmedula' => 'Id Donacionmedula',
+			'rut' => 'Rut',
 			'cantidad_medula' => 'Cantidad Medula',
-			'd_medula_observaciones' => 'Observaciones de Donación de Medula',
+			'd_medula_observaciones' => 'D Medula Observaciones',
+			'fecha_donacionmedula' => 'Fecha Donacionmedula',
+			'fecha_expiracionmedula' => 'Fecha Expiracionmedula',
 		);
 	}
 
@@ -81,8 +88,11 @@ class Donacionmedula extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id_donacionmedula',$this->id_donacionmedula);
+		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('cantidad_medula',$this->cantidad_medula);
 		$criteria->compare('d_medula_observaciones',$this->d_medula_observaciones,true);
+		$criteria->compare('fecha_donacionmedula',$this->fecha_donacionmedula,true);
+		$criteria->compare('fecha_expiracionmedula',$this->fecha_expiracionmedula,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

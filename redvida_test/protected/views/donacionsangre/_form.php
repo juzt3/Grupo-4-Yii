@@ -15,43 +15,24 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="help-block">Los campos con <span class="required">*</span> son obligatorios.</p>
+    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
-    <?php echo $form->errorSummary(array($donacion, $historial)); ?>
+    <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($donacion,'cantidad_sangre',array('value'=>'450', 'disabled'=>true)); ?>
-           
-            <?php echo $form->textAreaControlGroup($donacion,'dsangre_observaciones',array('rows'=>6,'span'=>8)); ?>
-     
-        <!-- Esta parte es del historial-->
+            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
 
-            <div>
-                <?php echo $form->labelEx($historial,'fecha_expiracion'); ?>
-                <br>
-                <div class="input-append date">
-                    <?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-                            'attribute' => 'fecha_expiracion',
-                            "model"=>$historial,
-                            'options' => array(
-                                'format' => 'dd/mm/yyyy',
-                                'changeYear'=>true,
-                                'changeYear'=>true,
-                                'changeMonth'=>true,
-                                'autoSize'=>true,
-                                'yearRange'=>'-130:-0',
-                                'minDate'=>'-130y',
-                                'maxDate'=>'-0y',
-                            ),
-                        ));
-                    ?>
-                    <span class="add-on"><i class="icon-calendar"></i></span>
-                </div>
-                <br>
-                <?php echo $form->error($historial,'fecha_expiracion'); ?>
-            </div>
+            <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>5)); ?>
+
+            <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>6,'span'=>8)); ?>
+
+            <?php echo $form->textFieldControlGroup($model,'tipo_sangre',array('span'=>5,'maxlength'=>3)); ?>
+
+            <?php echo $form->textFieldControlGroup($model,'fecha_donacionsangre',array('span'=>5)); ?>
+
+            <?php echo $form->textFieldControlGroup($model,'fecha_expiracion',array('span'=>5)); ?>
 
         <div class="form-actions">
-        <?php echo TbHtml::submitButton($donacion->isNewRecord ? 'Registrar' : 'Guardad',array(
+        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
 		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
 		)); ?>

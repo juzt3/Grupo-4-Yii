@@ -119,7 +119,7 @@ class DonacionmedulaController extends Controller
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 			}
 		} else {
-			throw new CHttpException(400,'Solicitud no válida. Por favor, no repita esta solicitud de nuevo.');
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 		}
 	}
 
@@ -161,7 +161,7 @@ class DonacionmedulaController extends Controller
 	{
 		$model=Donacionmedula::model()->findByPk($id);
 		if ($model===null) {
-			throw new CHttpException(404,'La informacion solicitada no existe.');
+			throw new CHttpException(404,'The requested page does not exist.');
 		}
 		return $model;
 	}

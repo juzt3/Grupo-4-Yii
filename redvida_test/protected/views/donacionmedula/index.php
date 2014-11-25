@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donación de Medula',
+	'Donacionmedulas',
 );
 
 $this->menu=array(
-	array('label'=>'Registrar Donación de Medula','url'=>array('create')),
-	array('label'=>'Gestionar Donaciones de Medula','url'=>array('admin')),
+	array('label'=>'Create Donacionmedula','url'=>array('create')),
+	array('label'=>'Manage Donacionmedula','url'=>array('admin')),
 );
 ?>
 
-<h1>Donación de Medula</h1>
+<h1>Donacionmedulas</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

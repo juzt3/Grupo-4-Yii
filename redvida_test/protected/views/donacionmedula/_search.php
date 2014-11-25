@@ -13,9 +13,15 @@
 
                     <?php echo $form->textFieldControlGroup($model,'id_donacionmedula',array('span'=>5)); ?>
 
+                    <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
+
                     <?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('span'=>5)); ?>
 
                     <?php echo $form->textAreaControlGroup($model,'d_medula_observaciones',array('rows'=>6,'span'=>8)); ?>
+
+                    <?php echo $form->textFieldControlGroup($model,'fecha_donacionmedula',array('span'=>5)); ?>
+
+                    <?php echo $form->textFieldControlGroup($model,'fecha_expiracionmedula',array('span'=>5)); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton('Search',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
