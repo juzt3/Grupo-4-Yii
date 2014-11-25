@@ -44,6 +44,10 @@ class UrgenciasMedula extends CActiveRecord
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('grado_urgencia', 'length', 'max'=>1),
 			array('fecha_fin', 'safe'),
+			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_urgencia_medula, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_transplante, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),

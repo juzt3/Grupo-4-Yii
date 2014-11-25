@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Urgencias Organoses'=>array('index'),
-	'Create',
+	'Urgencias Organos'=>array('index'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasOrganos', 'url'=>array('index')),
-	array('label'=>'Manage UrgenciasOrganos', 'url'=>array('admin')),
+	array('label'=>'Lista Urgencias de Organos', 'url'=>array('index')),
+	array('label'=>'Administrar Urgencias de Organos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create UrgenciasOrganos</h1>
+<h1>Registrar Urgencias de Organos</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
