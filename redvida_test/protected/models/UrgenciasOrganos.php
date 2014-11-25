@@ -47,6 +47,10 @@ class UrgenciasOrganos extends CActiveRecord
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('grado_urgencia', 'length', 'max'=>1),
 			array('fecha_fin', 'safe'),
+			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_urgencia_organo, cod_cm, id_organo, id_enfermedad_urgencia, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),

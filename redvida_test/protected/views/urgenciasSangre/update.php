@@ -11,13 +11,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasSangre', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasSangre', 'url'=>array('create')),
-	array('label'=>'View UrgenciasSangre', 'url'=>array('view', 'id'=>$model->id_urgencia_sangre)),
-	array('label'=>'Manage UrgenciasSangre', 'url'=>array('admin')),
+	array('label'=>'Lista Urgencias de Sangre', 'url'=>array('index')),
+	array('label'=>'Registrar Urgencia de Sangre', 'url'=>array('create')),
+	array('label'=>'Ver Urgencias de Sangre', 'url'=>array('view', 'id'=>$model->id_urgencia_sangre)),
+	array('label'=>'Administrar Urgencias de Sangre', 'url'=>array('admin')),
 );
 ?>
 
-    <h1>Update UrgenciasSangre <?php echo $model->id_urgencia_sangre; ?></h1>
+    <h1>Modificar Urgencia de Sangre <?php echo $model->id_urgencia_sangre; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -10,15 +10,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasMedula', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasMedula', 'url'=>array('create')),
-	array('label'=>'Update UrgenciasMedula', 'url'=>array('update', 'id'=>$model->id_urgencia_medula)),
-	array('label'=>'Delete UrgenciasMedula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_medula),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage UrgenciasMedula', 'url'=>array('admin')),
+	array('label'=>'Lista de Urgencias de Medula', 'url'=>array('index')),
+	array('label'=>'Registrar Urgencia de Medula', 'url'=>array('create')),
+	array('label'=>'Modificar Urgencia de Medula', 'url'=>array('update', 'id'=>$model->id_urgencia_medula)),
+	array('label'=>'Finalizar Urgencia de Medula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_medula),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Urgencias de Medula', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View UrgenciasMedula #<?php echo $model->id_urgencia_medula; ?></h1>
+<h1>Ver Urgencia de Medula #<?php echo $model->id_urgencia_medula; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

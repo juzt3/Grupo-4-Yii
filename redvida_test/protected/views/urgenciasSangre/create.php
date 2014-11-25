@@ -6,15 +6,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Urgencias Sangres'=>array('index'),
-	'Create',
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasSangre', 'url'=>array('index')),
-	array('label'=>'Manage UrgenciasSangre', 'url'=>array('admin')),
+	array('label'=>'Lista Urgencias de Sangre', 'url'=>array('index')),
+	array('label'=>'Administrar Urgencias de Sangre', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create UrgenciasSangre</h1>
+<h1>Registrar Urgencia de Sangre</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

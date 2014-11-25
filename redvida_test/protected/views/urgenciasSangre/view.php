@@ -10,15 +10,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasSangre', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasSangre', 'url'=>array('create')),
-	array('label'=>'Update UrgenciasSangre', 'url'=>array('update', 'id'=>$model->id_urgencia_sangre)),
-	array('label'=>'Delete UrgenciasSangre', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_sangre),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage UrgenciasSangre', 'url'=>array('admin')),
+	array('label'=>'Lista de Urgencias de Sangre', 'url'=>array('index')),
+	array('label'=>'Registrar Urgencia de Sangre', 'url'=>array('create')),
+	array('label'=>'Modificar Urgencia de Sangre', 'url'=>array('update', 'id'=>$model->id_urgencia_sangre)),
+	array('label'=>'Finalizar Urgencia de Sangre', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_sangre),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Urgencias deSangre', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View UrgenciasSangre #<?php echo $model->id_urgencia_sangre; ?></h1>
+<h1>Ver Urgencia de Sangre #<?php echo $model->id_urgencia_sangre; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

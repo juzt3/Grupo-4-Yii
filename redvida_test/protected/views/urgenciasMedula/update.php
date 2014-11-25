@@ -11,13 +11,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasMedula', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasMedula', 'url'=>array('create')),
-	array('label'=>'View UrgenciasMedula', 'url'=>array('view', 'id'=>$model->id_urgencia_medula)),
-	array('label'=>'Manage UrgenciasMedula', 'url'=>array('admin')),
+	array('label'=>'Lista Urgencias de Medula', 'url'=>array('index')),
+	array('label'=>'Registrar Urgencia de Medula', 'url'=>array('create')),
+	array('label'=>'Ver Urgencias de Medula', 'url'=>array('view', 'id'=>$model->id_urgencia_medula)),
+	array('label'=>'Administrar Urgencias de Medula', 'url'=>array('admin')),
 );
 ?>
 
-    <h1>Update UrgenciasMedula <?php echo $model->id_urgencia_medula; ?></h1>
+    <h1>Modificar Urgencia de Medula <?php echo $model->id_urgencia_medula; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

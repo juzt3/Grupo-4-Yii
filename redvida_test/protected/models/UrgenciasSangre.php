@@ -47,6 +47,11 @@ class UrgenciasSangre extends CActiveRecord
 			array('grado_urgencia', 'length', 'max'=>1),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('fecha_fin', 'safe'),
+			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+			array('enfermedad', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_urgencia_sangre, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),

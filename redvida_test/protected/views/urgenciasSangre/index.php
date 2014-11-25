@@ -9,8 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create UrgenciasSangre','url'=>array('create')),
-	array('label'=>'Manage UrgenciasSangre','url'=>array('admin')),
+	array('label'=>'Registrar Urgencia de Sangre','url'=>array('create')),
+	array('label'=>'Administrar Urgencias de Sangre','url'=>array('admin')),
 );
 ?>
 
