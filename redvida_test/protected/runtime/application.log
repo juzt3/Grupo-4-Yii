@@ -30338,3 +30338,81 @@ Stack trace:
 REQUEST_URI=/yii/redvida_test/donacionsangre/view/id/1
 HTTP_REFERER=http://localhost/yii/redvida_test/donacionsangre
 ---
+2014/11/25 19:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El Donante que busca no existe.' in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php:217
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php(55): DonantesController->loadModel('17349196-4')
+#1 [internal function]: DonantesController->actionView('17349196-4')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DonantesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DonantesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes/view/i...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/redvida_test/donantes/view/id/17349196-4
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/Indexmuertos
+---
+2014/11/25 19:29:58 [error] [php] Undefined variable: historial (C:\xampp\htdocs\yii\redvida_test\protected\views\donacionsangre\_form.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DonacionsangreController->renderFile()
+#1 C:\xampp\htdocs\yii\redvida_test\protected\views\donacionsangre\create.php(20): DonacionsangreController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DonacionsangreController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): DonacionsangreController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): DonacionsangreController->renderPartial()
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonacionsangreController.php(84): DonacionsangreController->render()
+#7 unknown(0): DonacionsangreController->actionCreate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DonacionsangreController->runAction()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DonacionsangreController->filterAccessControl()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): DonacionsangreController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DonacionsangreController->run()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/donacionsangre/create/id/17510533-6
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donacionsangre\_form.php (29)
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donacionsangre\create.php (20)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonacionsangreController.php (84)
+2014/11/25 19:41:47 [error] [exception.CException] exception 'CException' with message 'La propiedad "Donacionsangre"."fecha_nac" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('fecha_nac')
+#1 C:\xampp\htdocs\yii\redvida_test\protected\models\Donacionsangre.php(159): CActiveRecord->__get('fecha_nac')
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1866): Donacionsangre->afterFind()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1351): CActiveRecord->populateRecord(Array)
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1486): CActiveRecord->query(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonacionsangreController.php(167): CActiveRecord->findByPk('2')
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonacionsangreController.php(55): DonacionsangreController->loadModel('2')
+#7 [internal function]: DonacionsangreController->actionView('2')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DonacionsangreController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DonacionsangreController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donacionsangre/...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/redvida_test/donacionsangre/view/id/2
+HTTP_REFERER=http://localhost/yii/redvida_test/donacionsangre/create/id/17510533-6
+---
