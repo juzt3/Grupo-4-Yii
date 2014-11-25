@@ -11,11 +11,11 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Registrar Donantes','url'=>array('create')),
 	array('label'=>'Administrar Donantes','url'=>array('admin')),
-	array('label'=>'Donantes Desactivados','url'=>array('Indexdesactivados')),
+	array('label'=>'Donantes Muertos','url'=>array('Indexmuertos')),
 );
 ?>
 
-<h1>Donantes Muertos</h1>
+<h1>Donantes Desactivados</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

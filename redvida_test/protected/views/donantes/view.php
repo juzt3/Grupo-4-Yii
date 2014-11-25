@@ -13,10 +13,8 @@ $this->menu=array(
 	array('label'=>'Lista de Donantes', 'url'=>array('index')),
 	array('label'=>'Registrar Donantes', 'url'=>array('create')),
 	array('label'=>'Modificar Donantes', 'url'=>array('update', 'id'=>$model->rut)),
-	array('label'=>'Asignar Enfermedad', 'url'=>array('historialenfermedades/create', 'id'=>$model->rut)),
 	array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),
 	array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),
-
 );
 ?>
 
@@ -35,7 +33,7 @@ $this->menu=array(
 				<!-- TABS CONTROLS -->
 					<ul id="myTab" class="nav nav-tabs nav-justified">
 						<li class="active"><a href="#home" data-toggle="tab"> Datos Personales</a></li>
-						<li ><a href="#profile" data-toggle="tab"> Enfermedades registradas</a></li>
+						<li ><a href="#profile" data-toggle="tab"> Enfermedades Registradas</a></li>
 					</ul>
 					<!-- /TABS CONTROLS -->
 						<!-- PANES -->
@@ -44,7 +42,7 @@ $this->menu=array(
 								<?php 
 										echo TbHtml::pills(array(
 									    	array('label'=>'Registrar Muerte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('setdead','id'=>$model->rut),'confirm'=>'La fecha de muerte sera registrada al dia actual ¿Esta seguro de registrar esta muerte?')),
-									    	array('label'=>'Deshabilitar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
+									    	array('label'=>'Deshabilitar/Activar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
 										));
 								 ?>
 								<?php $this->widget('zii.widgets.CDetailView',array(

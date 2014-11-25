@@ -108,8 +108,12 @@ class Historialenfermedades extends CActiveRecord
 
 	public function beforeSave() 
 	{
-	    if ($this->isNewRecord)
+	    if ($this->isNewRecord){
 	        $this->fecha = new CDbExpression('NOW()');
+	        $donante = Donantes::model()->find($this->rut);
+	        $donante->habilitado='No';
+	        $donante->save();
+	    }
 
 	    return parent::beforeSave();
 	}

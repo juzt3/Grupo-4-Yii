@@ -28,7 +28,7 @@ class DonantesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'indexmuertos', 'setdead'),
+				'actions'=>array('index','view', 'indexmuertos', 'indexdesactivados', 'setdead'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -156,14 +156,29 @@ class DonantesController extends Controller
 		));
 	}
 
+	public function actionIndexdesactivados()
+	{
+		//solo carga los donantes vivos, sin enfermedades y activos.
+		$dataProvider=new CActiveDataProvider('Donantes', array(
+			'criteria'=>array(
+					'condition'=>'t.habilitado="No"',
+				),
+		));
+		$this->render('indexdesactivados',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
+
 	public function actionSetdead($id) //registra la fecha de muerte al dia actual
 	{
 		if (Yii::app()->request->isPostRequest) {
 			// we only allow deletion via POST request
 			$model=$this->loadModel($id);
-			if($model->fecha_muerte==NULL)
+			if($model->fecha_muerte == NULL ){
 				$model->fecha_muerte=new CDbExpression('NOW()');
-			$model->save();
+				$model->save();
+			}
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
