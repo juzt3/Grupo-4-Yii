@@ -11,8 +11,6 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Registrar Donantes','url'=>array('create')),
 	array('label'=>'Administrar Donantes','url'=>array('admin')),
-	array('label'=>'Donantes Muertos','url'=>array('Indexmuertos')),
-	array('label'=>'Donantes Desactivados','url'=>array('Indexdesactivados')),
 );
 ?>
 

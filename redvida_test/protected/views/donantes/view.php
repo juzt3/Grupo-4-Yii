@@ -13,8 +13,6 @@ $this->menu=array(
 	array('label'=>'Lista de Donantes', 'url'=>array('index')),
 	array('label'=>'Registrar Donantes', 'url'=>array('create')),
 	array('label'=>'Modificar Donantes', 'url'=>array('update', 'id'=>$model->rut)),
-	array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),
-	array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),
 );
 ?>
 
@@ -22,7 +20,6 @@ $this->menu=array(
 	$hist_enfermedades = Historialenfermedades::model()->find(array(
 													'condition'=>'rut = :rut',
 													'params'=>array(':rut'=>$model->rut),
-													//'join'=>  'INNER JOIN enfermedades e ON e.idenfermedad = t.idenfermedad',
 													));
 ?>
 
@@ -32,18 +29,21 @@ $this->menu=array(
 				<div class="panel-body">
 				<!-- TABS CONTROLS -->
 					<ul id="myTab" class="nav nav-tabs nav-justified">
-						<li class="active"><a href="#home" data-toggle="tab"> Datos Personales</a></li>
-						<li ><a href="#profile" data-toggle="tab"> Enfermedades Registradas</a></li>
+						<li class="active"><a href="#datos" data-toggle="tab"> Datos Personales</a></li>
+						<li ><a href="#enfermedades" data-toggle="tab"> Enfermedades Registradas</a></li>
+						<li ><a href="#donacionessangre" data-toggle="tab"> Donaciones de Sangre</a></li>
+						<li ><a href="#donacionesmedula" data-toggle="tab"> Donaciones de Medula</a></li>
 					</ul>
 					<!-- /TABS CONTROLS -->
 						<!-- PANES -->
 						<div id="myTabContent" class="tab-content">
-							<div class="tab-pane fade in active" id="home">
-								<?php 
+							<div class="tab-pane fade in active" id="datos">
+								<?php if($model->fecha_muerte == NULL || $model->habilitado == 'Si'){
 										echo TbHtml::pills(array(
 									    	array('label'=>'Registrar Muerte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('setdead','id'=>$model->rut),'confirm'=>'La fecha de muerte sera registrada al dia actual ¿Esta seguro de registrar esta muerte?')),
 									    	array('label'=>'Deshabilitar/Activar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
 										));
+								}
 								 ?>
 								<?php $this->widget('zii.widgets.CDetailView',array(
 								    'htmlOptions' => array(
@@ -72,7 +72,7 @@ $this->menu=array(
 									),
 								)); ?>
 							</div>
-							<div class="tab-pane fade widget-tags " id="profile">
+							<div class="tab-pane fade widget-tags " id="enfermedades">
 								<?php echo TbHtml::pills(array(
 								    array('label' => 'Asignar Enfermedad', 'url' =>array('historialenfermedades/create', 'id'=>$model->rut)),
 								)); ?>
@@ -93,6 +93,18 @@ $this->menu=array(
 								)); 
 								}
 								?>
+							</div>
+							<div class="tab-pane fade widget-tags " id="donacionessangre">
+								<?php echo TbHtml::pills(array(
+								    array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
+								)); ?>
+								<?php echo 'AQUI VAN LAS DONACIONES DE SANGRE'?>
+							</div>
+							<div class="tab-pane fade widget-tags " id="donacionesmedula">
+								<?php echo TbHtml::pills(array(
+								    array('label'=>'Donar Sangre', 'url'=>array('donacionsesmedula/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
+								)); ?>
+								<?php echo 'AQUI VAN LAS DONACIONES DE MEDULA'?>
 							</div>
 						</div>
 					</div>
