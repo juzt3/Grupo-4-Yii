@@ -19,8 +19,6 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
-
             <?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('span'=>5)); ?>
 
             <?php echo $form->textAreaControlGroup($model,'d_medula_observaciones',array('rows'=>6,'span'=>8)); ?>

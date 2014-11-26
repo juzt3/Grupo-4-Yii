@@ -62,13 +62,15 @@ class DonacionmedulaController extends Controller
 	 */
 	public function actionCreate($id)
 	{
-		$model=new Donacionmedula;
+		$donante= Donantes::model()->find($id);
+                $model=new Donacionmedula;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if (isset($_POST['Donacionmedula'])) {
 			$model->attributes=$_POST['Donacionmedula'];
+                        $model->rut=$id;
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_donacionmedula));
 			}
