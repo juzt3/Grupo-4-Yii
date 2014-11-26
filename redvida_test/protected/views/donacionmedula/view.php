@@ -5,20 +5,19 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donacionmedulas'=>array('index'),
+	'Donacion de Medula'=>array('index'),
 	$model->id_donacionmedula,
 );
 
 $this->menu=array(
-	array('label'=>'List Donacionmedula', 'url'=>array('index')),
-	array('label'=>'Create Donacionmedula', 'url'=>array('create')),
-	array('label'=>'Update Donacionmedula', 'url'=>array('update', 'id'=>$model->id_donacionmedula)),
-	array('label'=>'Delete Donacionmedula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_donacionmedula),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Donacionmedula', 'url'=>array('admin')),
+	array('label'=>'Mostrar Donaciones de Medula', 'url'=>array('index')),
+	array('label'=>'Modificar Donación de Medula', 'url'=>array('update', 'id'=>$model->id_donacionmedula)),
+	array('label'=>'Borrar Donación de Medula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_donacionmedula),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Gestionar Donaciones de Medula', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Donacionmedula #<?php echo $model->id_donacionmedula; ?></h1>
+<h1>Mostrar Donación de Medula #<?php echo $model->id_donacionmedula; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

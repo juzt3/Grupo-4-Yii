@@ -102,7 +102,7 @@ $this->menu=array(
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionesmedula">
 								<?php echo TbHtml::pills(array(
-								    array('label'=>'Donar Sangre', 'url'=>array('donacionsesmedula/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
+								    array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
 								)); ?>
 								<?php echo 'AQUI VAN LAS DONACIONES DE MEDULA'?>
 							</div>

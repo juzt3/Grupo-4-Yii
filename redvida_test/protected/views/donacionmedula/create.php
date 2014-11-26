@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Donacionmedulas'=>array('index'),
-	'Create',
+	'Donación de Medula'=>array('index'),
+	'Registrar Donación de Medula',
 );
 
 $this->menu=array(
-	array('label'=>'List Donacionmedula', 'url'=>array('index')),
-	array('label'=>'Manage Donacionmedula', 'url'=>array('admin')),
+	array('label'=>'Mostrar Donaciones de Medula', 'url'=>array('index')),
+	array('label'=>'Gestionar Donaciones de Medula', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Donacionmedula</h1>
+<h1>Registrar Donación de Medula</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

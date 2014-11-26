@@ -32,7 +32,7 @@ class Donacionmedula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cantidad_medula, fecha_donacionmedula, fecha_expiracionmedula', 'required'),
+			array('cantidad_medula, fecha_expiracionmedula', 'required'),
 			array('cantidad_medula', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('d_medula_observaciones', 'safe'),
@@ -60,12 +60,12 @@ class Donacionmedula extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_donacionmedula' => 'Id Donacionmedula',
+			'id_donacionmedula' => 'Id Donación de Medula',
 			'rut' => 'Rut',
-			'cantidad_medula' => 'Cantidad Medula',
-			'd_medula_observaciones' => 'D Medula Observaciones',
-			'fecha_donacionmedula' => 'Fecha Donacionmedula',
-			'fecha_expiracionmedula' => 'Fecha Expiracionmedula',
+			'cantidad_medula' => 'Cantidad de Medula',
+			'd_medula_observaciones' => 'Observaciones',
+			'fecha_donacionmedula' => 'Fecha de Donación',
+			'fecha_expiracionmedula' => 'Fecha Expiración',
 		);
 	}
 
@@ -99,6 +99,24 @@ class Donacionmedula extends CActiveRecord
 		));
 	}
 
+        public function beforeSave() 
+	{ 
+      
+	    if ($this->isNewRecord){
+	        $this->fecha_donacionmedula = new CDbExpression('NOW()');
+	    }
+           
+            $this->fecha_expiracionmedula = date('Y-m-d', CDateTimeParser::parse($this->fecha_expiracionmedula, 'dd-MM-yyyy'));
+            
+	    return parent::beforeSave();
+	}
+	     
+	protected function afterFind()
+	{
+	    $this->fecha_expiracionmedula = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_expiracionmedula);
+	    $this->fecha_donacionmedula = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_donacionmedula);
+	    return parent::afterFind();
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
