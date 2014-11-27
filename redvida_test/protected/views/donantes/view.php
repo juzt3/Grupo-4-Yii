@@ -73,12 +73,12 @@ $this->menu=array(
 									echo 'No tiene enfermedades registrdas.';									
 								}
 								else{
-								 $this->widget('zii.widgets.CDetailView',array(
+								 $this->widget('bootstrap.widgets.TbGridView',array(
 								    'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
 								    ),
-								    'data'=>$hist_enfermedades,
-								    'attributes'=>array(
+								    'dataProvider'=>$hist_enfermedades,
+								    'columns'=>array(
 										'fecha',
 										'idenfermedad0.nombre',
 										'idenfermedad0.descripcion',
@@ -95,7 +95,22 @@ $this->menu=array(
 										));
 									}
 								?>
-								<?php echo 'AQUI VAN LAS DONACIONES DE SANGRE'?>
+								<?php if($sangre === null){
+									echo 'No tiene donaciones de sangre registradas.';									
+								}
+								else{
+									 $this->widget('bootstrap.widgets.TbGridView',array(
+									 	'htmlOptions' => array(
+								        'class' => 'table table-striped table-condensed table-hover',
+								    	),
+									    'dataProvider'=>$sangre,
+									    'columns'=>array(
+											'fecha_donacionsangre',
+											'dsangre_observaciones',
+										),
+									)); 
+								}
+								?>
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionesmedula">
 								<?php
@@ -105,7 +120,22 @@ $this->menu=array(
 											));
 										} 
 								?>
-								<?php echo 'AQUI VAN LAS DONACIONES DE MEDULA'?>
+								<?php if($medula === null){
+									echo 'No tiene donaciones de sangre registrdas.';									
+								}
+								else{
+								 $this->widget('bootstrap.widgets.TbGridView',array(
+								    'htmlOptions' => array(
+								        'class' => 'table table-striped table-condensed table-hover',
+								    ),
+								    'dataProvider'=>$medula,
+								    'columns'=>array(
+										'fecha_donacionmedula',
+										'd_medula_observaciones',
+									),
+								)); 
+								}
+								?>
 							</div>
 						</div>
 					</div>

@@ -31,6 +31,8 @@
 
                     <?php echo $form->textFieldControlGroup($model,'tipo_sangre',array('span'=>5,'maxlength'=>3)); ?>
 
+                    <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>5)); ?>
+
                     <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('span'=>5)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'fecha_fin',array('span'=>5)); ?>

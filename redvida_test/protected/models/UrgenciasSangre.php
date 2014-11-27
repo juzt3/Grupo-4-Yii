@@ -14,6 +14,7 @@
  * @property string $enfermedad
  * @property string $grado_urgencia
  * @property string $tipo_sangre
+ * @property integer $cantidad_sangre
  * @property string $fecha_ini
  * @property string $fecha_fin
  *
@@ -39,7 +40,7 @@ class UrgenciasSangre extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array(' rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre', 'required'),
-			array('id_urgencia_sangre, cod_cm', 'numerical', 'integerOnly'=>true),
+			array('id_urgencia_sangre, cod_cm, cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
@@ -54,7 +55,7 @@ class UrgenciasSangre extends CActiveRecord
 			array('enfermedad', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_sangre, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
+			array('id_urgencia_sangre, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, cantidad_sangre, fecha_fin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,6 +87,7 @@ class UrgenciasSangre extends CActiveRecord
 			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
 			'tipo_sangre' => 'Tipo Sangre',
+			'cantidad_sangre' => 'Cantidad de Sangre',
 			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 		);
@@ -143,6 +145,7 @@ class UrgenciasSangre extends CActiveRecord
 		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
+		$criteria->compare('cantidad_sangre',$this->cantidad_sangre,true);
 		$criteria->compare('fecha_ini',$this->fecha_ini,true);
 		$criteria->compare('fecha_fin',$this->fecha_fin,true);
 

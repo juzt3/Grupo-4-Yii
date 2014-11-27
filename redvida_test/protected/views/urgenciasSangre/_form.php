@@ -49,6 +49,10 @@
             <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
     </div>
 
+    <div>
+          <?php echo  $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>2)); ?>
+    </div>
+
     <div >
         <?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>50, 'placeholder'=>'Ej: Fonasa')); ?>
     </div>

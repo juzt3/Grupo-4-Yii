@@ -50,13 +50,30 @@ class DonantesController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{	
 		$hist_enfermedades = Historialenfermedades::model()->find(array(
 													'condition'=>'rut = :rut',
-													'params'=>array(':rut'=>$this->id),
+													'params'=>array(':rut'=>$id),
 													));
+		$dataEnfermedades = new CActiveDataProvider('HistorialEnfermedades');
+		$dataEnfermedades->setData($hist_enfermedades);
+
+		$sangre = Donacionsangre::model()->findAll(array(
+													'condition'=>'rut = :rut',
+													'params'=>array(':rut'=>$id),
+													));
+		$dataSangre=new CActiveDataProvider('Donacionsangre');
+		$dataSangre->setData($sangre);
+
+		$medula = Donacionmedula::model()->find(array(
+													'condition'=>'rut = :rut',
+													'params'=>array(':rut'=>$id),
+													));
+		$dataMedula = new CActiveDataProvider('Donacionmedula');
+		$dataMedula->setData($medula);
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$hist_enfermedades,
+			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$dataEnfermedades, 'sangre'=>$dataSangre, 'medula'=>$dataMedula,
 		));
 	}
 

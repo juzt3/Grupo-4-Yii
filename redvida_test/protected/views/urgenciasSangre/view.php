@@ -35,6 +35,7 @@ $this->menu=array(
 		'enfermedad',
 		'grado_urgencia',
 		'tipo_sangre',
+		'cantida_sangre',
 		'fecha_ini',
 	),
 )); ?>

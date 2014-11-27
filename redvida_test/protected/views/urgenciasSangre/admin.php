@@ -58,6 +58,7 @@ $('.search-form form').submit(function(){
 		'enfermedad',
 		'grado_urgencia',
 		'tipo_sangre',
+		'cantidad_sangre',
 		'fecha_ini',
 		'fecha_fin',
 		*/
