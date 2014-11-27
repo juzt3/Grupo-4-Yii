@@ -74,8 +74,13 @@ class DonacionsangreController extends Controller
 			$model->cantidad_sangre='450';
 			$model->tipo_sangre=$donante->tiposangre;
 			$model->fecha_donacionsangre=new CDbExpression('NOW()');
-			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id_donacionsangre));
+			if($donante->habilitado === 'Si' && $donante->fecha_muerte === NULL){
+				if ($model->save()) {
+					$this->redirect(array('view','id'=>$model->id_donacionsangre));
+				}
+			}
+			else{
+				$model->addError('observaciones',"Este donante se encuentra inhabilitado de donar. No vuelva a intentarlo.");
 			}
 		}
 

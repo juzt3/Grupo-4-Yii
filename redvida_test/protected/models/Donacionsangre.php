@@ -38,6 +38,7 @@ class Donacionsangre extends CActiveRecord
 			array('rut', 'length', 'max'=>10),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('dsangre_observaciones', 'safe'),
+			array('fecha_expiracion','compare','compareValue'=>date('Y-m-d'),'operator'=>'>=', 'message'=>'La fecha de expiracion es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_donacionsangre, rut, cantidad_sangre, dsangre_observaciones, tipo_sangre, fecha_donacionsangre, fecha_expiracion', 'safe', 'on'=>'search'),
@@ -150,6 +151,7 @@ class Donacionsangre extends CActiveRecord
 
 	protected function beforeSave()
 	{
+		$this->fecha_donacionsangre=new CDbExpression('NOW()');
 	    $this->fecha_expiracion = date('Y-m-d', CDateTimeParser::parse($this->fecha_expiracion, 'dd-MM-yyyy'));
 	    return parent::beforeSave();
 	}

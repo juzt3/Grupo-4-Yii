@@ -31,12 +31,12 @@
                 <div class="input-append date">
                     <?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                             'attribute' => 'fecha_expiracion',
+                            'language'=>'es',
                             "model"=>$model,
                             'options' => array(
-                                'format' => 'dd/mm/yyyy',
+                                'constrainInput'=>true,
+                                'dateFormat' => 'dd-mm-yy',
                                 'changeYear'=>true,
-                                'changeYear'=>true,
-                                'changeMonth'=>true,
                                 'autoSize'=>true,
                                 'minDate'=>-0,
                                 'maxDate' => '+1M',

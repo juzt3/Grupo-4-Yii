@@ -51,8 +51,12 @@ class DonantesController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$hist_enfermedades = Historialenfermedades::model()->find(array(
+													'condition'=>'rut = :rut',
+													'params'=>array(':rut'=>$this->id),
+													));
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$hist_enfermedades,
 		));
 	}
 

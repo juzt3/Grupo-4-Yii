@@ -16,13 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<?php
-	$hist_enfermedades = Historialenfermedades::model()->find(array(
-													'condition'=>'rut = :rut',
-													'params'=>array(':rut'=>$model->rut),
-													));
-?>
-
 <h1>Donante: Rut <?php echo $model->rut; ?></h1>
 
 <div class="panel panel-default hidden-xs" style="margin-top:30px;">
@@ -38,7 +31,7 @@ $this->menu=array(
 						<!-- PANES -->
 						<div id="myTabContent" class="tab-content">
 							<div class="tab-pane fade in active" id="datos">
-								<?php if($model->fecha_muerte == NULL || $model->habilitado == 'Si'){
+								<?php if($model->fecha_muerte === NULL || $model->habilitado === 'Si'){
 										echo TbHtml::pills(array(
 									    	array('label'=>'Registrar Muerte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('setdead','id'=>$model->rut),'confirm'=>'La fecha de muerte sera registrada al dia actual ¿Esta seguro de registrar esta muerte?')),
 									    	array('label'=>'Deshabilitar/Activar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
@@ -95,15 +88,23 @@ $this->menu=array(
 								?>
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionessangre">
-								<?php echo TbHtml::pills(array(
-								    array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
-								)); ?>
+								<?php 
+									if($model->habilitado === 'Si'){
+										echo TbHtml::pills(array(
+									    	array('label'=>'Donar Sangre', 'url'=>array('donacionsangre/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
+										));
+									}
+								?>
 								<?php echo 'AQUI VAN LAS DONACIONES DE SANGRE'?>
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionesmedula">
-								<?php echo TbHtml::pills(array(
-								    array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
-								)); ?>
+								<?php
+									if($model->habilitado === 'Si' && $model->donantemedula === 'Si'){
+										echo TbHtml::pills(array(
+										    array('label'=>'Donar Medula', 'url'=>array('donacionmedula/create', 'id'=>$model->rut)),//CAMBIAR EL LINK
+											));
+										} 
+								?>
 								<?php echo 'AQUI VAN LAS DONACIONES DE MEDULA'?>
 							</div>
 						</div>
