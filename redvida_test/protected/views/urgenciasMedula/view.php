@@ -26,8 +26,7 @@ $this->menu=array(
     ),
     'data'=>$model,
     'attributes'=>array(
-		'id_urgencia_medula',
-		'cod_cm',
+		'codCm.nombre_cm',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',

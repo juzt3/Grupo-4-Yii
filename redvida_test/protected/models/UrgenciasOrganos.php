@@ -78,16 +78,16 @@ class UrgenciasOrganos extends CActiveRecord
 	{
 		return array(
 			'id_urgencia_organo' => 'Id Urgencia Organo',
-			'cod_cm' => 'Cod Cm',
-			'id_organo' => 'Id Organo',
-			'id_enfermedad_urgencia' => 'Id Enfermedad Urgencia',
+			'cod_cm' => 'Centro Medico',
+			'id_organo' => 'Organo',
+			'id_enfermedad_urgencia' => 'Enfermedad',
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres del Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
 			'grado_urgencia' => 'Grado Urgencia',
-			'fecha_ini' => 'Fecha Ini',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 		);
 	}

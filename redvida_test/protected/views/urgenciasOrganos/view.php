@@ -26,10 +26,9 @@ $this->menu=array(
     ),
     'data'=>$model,
     'attributes'=>array(
-		'id_urgencia_organo',
-		'cod_cm',
-		'id_organo',
-		'id_enfermedad_urgencia',
+		'codCm.nombre_cm',
+		'idOrgano.nombre_organo',
+		'idEnfermedadUrgencia.nombre',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',

@@ -73,15 +73,15 @@ class UrgenciasMedula extends CActiveRecord
 	{
 		return array(
 			'id_urgencia_medula' => 'Id Urgencia Medula',
-			'cod_cm' => 'Cod Cm',
+			'cod_cm' => 'Centro Medico',
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres del Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
-			'grado_urgencia' => 'Grado Urgencia',
-			'tipo_transplante' => 'Tipo Transplante',
-			'fecha_ini' => 'Fecha Ini',
+			'grado_urgencia' => 'Grado de Urgencia',
+			'tipo_transplante' => 'Tipo de Transplante',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 		);
 	}

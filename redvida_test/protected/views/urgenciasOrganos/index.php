@@ -11,6 +11,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Registrar Urgencia de Organos','url'=>array('create')),
 	array('label'=>'Administrar Urgencias de Organos','url'=>array('admin')),
+	array('label'=>'Urgencias de Organos Terminadas','url'=>array('urgenciasOrganoTerminada/admin')),
 );
 ?>
 

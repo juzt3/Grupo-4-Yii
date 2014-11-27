@@ -11,6 +11,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Registrar Urgencia de Medula','url'=>array('create')),
 	array('label'=>'Administrar Urgencias de Medula','url'=>array('admin')),
+	array('label'=>'Urgencias de Medula Terminadas','url'=>array('urgenciasMedulaTerminada/admin')),
 );
 ?>
 

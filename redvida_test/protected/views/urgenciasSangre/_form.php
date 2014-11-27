@@ -55,7 +55,7 @@
 
 
     <div >
-        <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
+        <?php echo $form->dropDownListControlGroup($model,'grado_urgencia',$model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
     </div>
 
     <div >

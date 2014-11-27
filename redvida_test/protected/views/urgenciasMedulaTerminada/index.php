@@ -9,8 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create UrgenciasMedulaTerminada','url'=>array('create')),
-	array('label'=>'Manage UrgenciasMedulaTerminada','url'=>array('admin')),
+	array('label'=>'Administrar Urgencias Medula Terminada','url'=>array('admin')),
 );
 ?>
 

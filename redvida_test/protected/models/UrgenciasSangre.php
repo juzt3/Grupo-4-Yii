@@ -44,7 +44,7 @@ class UrgenciasSangre extends CActiveRecord
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad', 'length', 'max'=>100),
-			array('grado_urgencia', 'length', 'max'=>1),
+			array('grado_urgencia', 'length', 'max'=>8),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('fecha_fin', 'safe'),
 			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
@@ -77,16 +77,16 @@ class UrgenciasSangre extends CActiveRecord
 	{
 		return array(
 			'id_urgencia_sangre' => 'Id Urgencia Sangre',
-			'cod_cm' => 'Cod Cm',
+			'cod_cm' => 'Centro Medico',
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres del Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
 			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
 			'tipo_sangre' => 'Tipo Sangre',
-			'fecha_ini' => 'Fecha Ini',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 		);
 	}

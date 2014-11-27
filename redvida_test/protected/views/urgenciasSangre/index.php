@@ -11,6 +11,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Registrar Urgencia de Sangre','url'=>array('create')),
 	array('label'=>'Administrar Urgencias de Sangre','url'=>array('admin')),
+	array('label'=>'Urgencias de Sangre Terminadas','url'=>array('urgenciasSangreTerminada/admin')),
 );
 ?>
 

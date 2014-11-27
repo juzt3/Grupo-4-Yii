@@ -26,8 +26,7 @@ $this->menu=array(
     ),
     'data'=>$model,
     'attributes'=>array(
-		'id_urgencia_sangre',
-		'cod_cm',
+		'codCm.nombre_cm',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',
@@ -37,6 +36,5 @@ $this->menu=array(
 		'grado_urgencia',
 		'tipo_sangre',
 		'fecha_ini',
-		'fecha_fin',
 	),
 )); ?>

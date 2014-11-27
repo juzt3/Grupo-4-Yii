@@ -10,15 +10,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasMedulaTerminada', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasMedulaTerminada', 'url'=>array('create')),
-	array('label'=>'Update UrgenciasMedulaTerminada', 'url'=>array('update', 'id'=>$model->id_urgencia_medula_terminada)),
-	array('label'=>'Delete UrgenciasMedulaTerminada', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_medula_terminada),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista Urgencias de Medula Terminada', 'url'=>array('index')),
 	array('label'=>'Manage UrgenciasMedulaTerminada', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View UrgenciasMedulaTerminada #<?php echo $model->id_urgencia_medula_terminada; ?></h1>
+<h1>Ver Urgencia de Medula Terminada #<?php echo $model->id_urgencia_medula_terminada; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

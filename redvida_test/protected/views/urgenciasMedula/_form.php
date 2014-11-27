@@ -49,7 +49,8 @@
     </div>
 
     <div>
-        <?php echo $form->dropDownListControlGroup($model,'tipo_transplante', $model->getUrgenciasMedula(), array("empty"=>"Seleccionar Tipo Transplante"));?>
+
+        <?php echo $form->dropDownListControlGroup($model,'tipo_transplante', $model->getUrgenciasMedula(), array("empty"=>"Seleccionar Transplante"));?>
     </div>
 
     <div >
@@ -58,7 +59,7 @@
 
 
     <div >
-        <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
+        <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Grado Urgencia")); ?>
     </div>
 
 

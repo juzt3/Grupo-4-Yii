@@ -10,15 +10,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List UrgenciasOrganoTerminada', 'url'=>array('index')),
-	array('label'=>'Create UrgenciasOrganoTerminada', 'url'=>array('create')),
-	array('label'=>'Update UrgenciasOrganoTerminada', 'url'=>array('update', 'id'=>$model->id_urgencia_organo)),
-	array('label'=>'Delete UrgenciasOrganoTerminada', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_organo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage UrgenciasOrganoTerminada', 'url'=>array('admin')),
+	array('label'=>'Lista de  Urgencias de Organo Terminadas', 'url'=>array('index')),
+	array('label'=>'Administrar Urgencia de Organo Terminada', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View UrgenciasOrganoTerminada #<?php echo $model->id_urgencia_organo; ?></h1>
+<h1>Ver Urgencia de Organo Terminada #<?php echo $model->id_urgencia_organo; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

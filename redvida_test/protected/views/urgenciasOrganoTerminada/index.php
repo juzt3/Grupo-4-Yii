@@ -9,8 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create UrgenciasOrganoTerminada','url'=>array('create')),
-	array('label'=>'Manage UrgenciasOrganoTerminada','url'=>array('admin')),
+	array('label'=>'Administrar Urgencias de Organo Terminadas','url'=>array('admin')),
 );
 ?>
 

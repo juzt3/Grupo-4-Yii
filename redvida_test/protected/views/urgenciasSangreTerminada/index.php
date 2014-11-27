@@ -9,8 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create UrgenciasSangreTerminada','url'=>array('create')),
-	array('label'=>'Manage UrgenciasSangreTerminada','url'=>array('admin')),
+	array('label'=>'Administrar Urgencia de Sangre Terminada','url'=>array('admin')),
 );
 ?>
 
