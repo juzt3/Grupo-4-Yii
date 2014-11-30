@@ -95,10 +95,7 @@ $this->menu=array(
 										));
 									}
 								?>
-								<?php if($sangre === null){
-									echo 'No tiene donaciones de sangre registradas.';									
-								}
-								else{
+								<?php
 									 $this->widget('bootstrap.widgets.TbGridView',array(
 									 	'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
@@ -109,7 +106,6 @@ $this->menu=array(
 											'dsangre_observaciones',
 										),
 									)); 
-								}
 								?>
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionesmedula">
@@ -120,21 +116,17 @@ $this->menu=array(
 											));
 										} 
 								?>
-								<?php if($medula === null){
-									echo 'No tiene donaciones de sangre registrdas.';									
-								}
-								else{
+								<?php
 								 $this->widget('bootstrap.widgets.TbGridView',array(
 								    'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
 								    ),
-								    'dataProvider'=>$medula,
+								    'dataProvider'=>Donacionmedula::model()->searchByRut($model->rut),
 								    'columns'=>array(
 										'fecha_donacionmedula',
 										'd_medula_observaciones',
 									),
 								)); 
-								}
 								?>
 							</div>
 						</div>

@@ -65,15 +65,8 @@ class DonantesController extends Controller
 		$dataSangre=new CActiveDataProvider('Donacionsangre');
 		$dataSangre->setData($sangre);
 
-		$medula = Donacionmedula::model()->find(array(
-													'condition'=>'rut = :rut',
-													'params'=>array(':rut'=>$id),
-													));
-		$dataMedula = new CActiveDataProvider('Donacionmedula');
-		$dataMedula->setData($medula);
-
 		$this->render('view',array(
-			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$dataEnfermedades, 'sangre'=>$dataSangre, 'medula'=>$dataMedula,
+			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$dataEnfermedades, 'sangre'=>$dataSangre,
 		));
 	}
 
