@@ -69,6 +69,7 @@ class Donantes extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado, sexo, fecha_nac, afiliacion, donantemedula, fecha_muerte', 'safe', 'on'=>'search'),
+			array('nombres, apellidos, rut, direccion, comuna, tiposangre, alergias, centromedico, donanteorganos, email, telefono, celular, habilitado, sexo, fecha_nac, afiliacion, donantemedula, fecha_muerte', 'safe', 'on'=>'searchmuertos'),
 		);
 	}
 
@@ -173,6 +174,68 @@ class Donantes extends CActiveRecord
 		$criteria->compare('donantemedula',$this->donantemedula,true);
 		$criteria->compare('fecha_muerte',$this->fecha_muerte,true);
 		$criteria->addCondition('t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM HistorialEnfermedades)');
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function searchmuertos()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('nombres',$this->nombres,true);
+		$criteria->compare('apellidos',$this->apellidos,true);
+		$criteria->compare('rut',$this->rut,true);
+		$criteria->compare('direccion',$this->direccion,true);
+		$criteria->compare('comuna',$this->comuna,true);
+		$criteria->compare('tiposangre',$this->tiposangre,true);
+		$criteria->compare('alergias',$this->alergias,true);
+		$criteria->compare('centromedico',$this->centromedico);
+		$criteria->compare('donanteorganos',$this->donanteorganos,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('telefono',$this->telefono,true);
+		$criteria->compare('celular',$this->celular,true);
+		$criteria->compare('habilitado',$this->habilitado,true);
+		$criteria->compare('sexo',$this->sexo,true);
+		$criteria->compare('fecha_nac',$this->fecha_nac,true);
+		$criteria->compare('afiliacion',$this->afiliacion,true);
+		$criteria->compare('donantemedula',$this->donantemedula,true);
+		$criteria->compare('fecha_muerte',$this->fecha_muerte,true);
+		$criteria->addCondition('t.fecha_muerte IS NOT NULL');
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function searchdesactivados()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('nombres',$this->nombres,true);
+		$criteria->compare('apellidos',$this->apellidos,true);
+		$criteria->compare('rut',$this->rut,true);
+		$criteria->compare('direccion',$this->direccion,true);
+		$criteria->compare('comuna',$this->comuna,true);
+		$criteria->compare('tiposangre',$this->tiposangre,true);
+		$criteria->compare('alergias',$this->alergias,true);
+		$criteria->compare('centromedico',$this->centromedico);
+		$criteria->compare('donanteorganos',$this->donanteorganos,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('telefono',$this->telefono,true);
+		$criteria->compare('celular',$this->celular,true);
+		$criteria->compare('habilitado',$this->habilitado,true);
+		$criteria->compare('sexo',$this->sexo,true);
+		$criteria->compare('fecha_nac',$this->fecha_nac,true);
+		$criteria->compare('afiliacion',$this->afiliacion,true);
+		$criteria->compare('donantemedula',$this->donantemedula,true);
+		$criteria->compare('fecha_muerte',$this->fecha_muerte,true);
+		$criteria->addCondition('t.habilitado="No"');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

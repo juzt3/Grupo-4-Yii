@@ -13,7 +13,7 @@
     <div class="row">
 	  
 	<!-- CONTENT SIDE-->
-	<div class="col-sm-12 col-lg-7 span7">
+	<div class="col-sm-12 col-lg-12">
 	<!-- article-->
 		<div class="thumbnail">
 			<img class="img-responsive" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/thumb.jpg" alt="post image">
@@ -24,17 +24,19 @@
 				<div class="panel-body">
 				<!-- TABS CONTROLS -->
 					<ul id="myTab" class="nav nav-tabs nav-justified">
-						<li class="active"><a href="#home" data-toggle="tab"><i class="icon-info-sign"></i> DESCRIPTION TAB 1</a></li>
-						<li ><a href="#profile" data-toggle="tab"><i class="icon-info-sign"></i> DESCRIPTION TAB 2</a></li>
+						<li class="active"><a href="#home" data-toggle="tab"><i class="icon-info-sign"></i> Misión</a></li>
+						<li ><a href="#profile" data-toggle="tab"><i class="icon-info-sign"></i> Visión</a></li>
 					</ul>
 					<!-- /TABS CONTROLS -->
 						<!-- PANES -->
 						<div id="myTabContent" class="tab-content">
 							<div class="tab-pane fade in active" id="home">
-								<p>Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. </p>
+								<p>Clínica Universidad del Biobío es una entidad prestadora de salud, cuyo principal objetivo es entregar a nuestros pacientes y familias una atención integral, resolutiva y oportuna basada en la calidez, compromiso y los más altos estándares de calidad.
+Nuestra atención de salud está basada en la mística vocacional y el compromiso de los que forman el equipo de trabajo, entregando servicios de excelencia con eficiencia, buena percepción de la calidad y uso eficaz de la tecnología.</p>
 							</div>
 							<div class="tab-pane fade widget-tags " id="profile">
-								<p>Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet. Some text description lorem ipsum dolor sit amet.  </p>
+								<p>Clínica Universidad del Biobío quiere ser una clínica con una cultura de calidad que de cuenta de una atención centrada en los pacientes.
+Ser reconocidos a nivel nacional, buscando un posicionamiento de forma integral y de máxima confianza, transformándonos en protagonistas de la salud privada en Chile, brindando soluciones eficientes y eficaces a todas las necesidades de nuestros pacientes, mejorando día a día la calidad de los servicios.</p>
 							</div>
 						</div>
 					</div>
@@ -47,35 +49,8 @@
 </div>
 <!-- /CONTENT SIDE-->
    
-<!-- RIGHT SIDE-->   
-	<div class="col-sm-12 col-lg-5 span5 last">
-          <h2>Project sub-title heading test</h2>
-		  <hr>
-		  
-		  <p class="lead">Lead paragraph. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-		
-		<p class="">Standart paragraph. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Standart paragraph. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Standart paragraph. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-		<hr>
-		<p class=""><a class="btn btn-block btn-lg btn-warning"> CALL TO ACTION BUTTON! </a></p>
-		  
-		
-         
-    </div>
-<!-- /RIGHT SIDE--> 
-<!-- .pager -->
-<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 pull-left">
-	<ul class="pager">
-	  <li class="previous"><a href="#">&larr; Older</a></li>
-	  <li class="next"><a href="#">Newer &rarr;</a></li>
-	</ul>
-</div>
-<!-- /.pager -->
 </div>
 
- <hr>
- <!-- related projects -->
-<div class="row related-projects">
-	</div>
 <!-- END: THUMBNAIL -->
 </div>
 <!-- END ITEM -->

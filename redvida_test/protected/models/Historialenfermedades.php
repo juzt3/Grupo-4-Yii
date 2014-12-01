@@ -8,6 +8,7 @@
  * @property string $rut
  * @property integer $idenfermedad
  * @property string $fecha
+ * @property string $fecha_cura
  *
  * The followings are the available model relations:
  * @property Donantes $rut0
@@ -37,7 +38,7 @@ class Historialenfermedades extends CActiveRecord
 			//array('fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'<=', 'message'=>'La fecha es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idhistorial, rut, idenfermedad, fecha', 'safe', 'on'=>'search'),
+			array('idhistorial, rut, idenfermedad, fecha, fecha_cura', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +64,8 @@ class Historialenfermedades extends CActiveRecord
 			'idhistorial' => 'Idhistorial',
 			'rut' => 'Rut',
 			'idenfermedad' => 'Enfermedad',
-			'fecha' => 'Fecha de Creacion',
+			'fecha' => 'Fecha de registro',
+			'fecha_cura'=>'Fecha de curación/Borrado',
 		);
 	}
 
@@ -89,6 +91,20 @@ class Historialenfermedades extends CActiveRecord
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('idenfermedad',$this->idenfermedad);
 		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('fecha_cura',$this->fecha_cura,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function searchByRut($rut)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('rut',$rut,false);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -110,7 +126,7 @@ class Historialenfermedades extends CActiveRecord
 	{
 	    if ($this->isNewRecord){
 	        $this->fecha = new CDbExpression('NOW()');
-	        $donante = Donantes::model()->find($this->rut);
+	        $donante = Donantes::model()->find(`$this->rut`);
 	        $donante->habilitado='No';
 	        $donante->save();
 	    }

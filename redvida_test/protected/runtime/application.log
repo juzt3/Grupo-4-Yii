@@ -32195,3 +32195,336 @@ REQUEST_URI=/yii/redvida_test/donantes/view/id/17510533-6
 in C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php (123)
 in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php (70)
 in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/11/30 21:38:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donacionmedula/...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/redvida_test/donacionmedula/create
+---
+2014/11/30 21:38:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donacionsangre/...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/redvida_test/donacionsangre/create
+---
+2014/11/30 21:38:44 [error] [exception.CException] exception 'CException' with message 'BancodesangreController no ha podido encontrar la vista "create" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\controllers\BancodesangreController.php(79): CController->render('create', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BancodesangreController->actionCreate()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('bancodesangre/c...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/redvida_test/bancodesangre/create
+---
+2014/11/30 22:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "Admindesactivados" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('Admindesactivad...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('Admindesactivad...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes/Admind...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/redvida_test/donantes/Admindesactivados
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes/Indexdesactivados
+---
+2014/12/01 06:46:29 [error] [system.db.CDbCommand] CDbCommand::fetch() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1.
+in C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php (116)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/12/01 06:46:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. The SQL statement executed was: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php(116): CActiveRecord->find('15564852-k')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1071): Historialenfermedades->beforeSave()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#7 [internal function]: HistorialenfermedadesController->actionCreate('15564852-k')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/15564852-k
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/15564852-k
+---
+2014/12/01 06:52:31 [error] [system.db.CDbCommand] CDbCommand::fetch() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1.
+in C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php (116)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/12/01 06:52:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. The SQL statement executed was: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php(116): CActiveRecord->find('15564852-k')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1071): Historialenfermedades->beforeSave()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#7 [internal function]: HistorialenfermedadesController->actionCreate('15564852-k')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/15564852-k
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/15564852-k
+---
+2014/12/01 06:53:24 [error] [exception.CException] exception 'CException' with message 'Historialenfermedades y sus behaviors no tienen un método o closure llamado "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(115): CActiveRecord->__call('loadModel', Array)
+#2 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(115): Historialenfermedades->loadModel('1')
+#3 [internal function]: HistorialenfermedadesController->actionDelete('1')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/delete/id/1
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/view/id/1
+---
+2014/12/01 06:54:55 [error] [php] include(Donante.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(117): spl_autoload_call()
+#1 unknown(0): HistorialenfermedadesController->actionDelete()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HistorialenfermedadesController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterPostOnly()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HistorialenfermedadesController->filterAccessControl()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): HistorialenfermedadesController->runActionWithFilters()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HistorialenfermedadesController->run()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yii\redvida_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/redvida_test/historialenfermedades/delete/id/1
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (117)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/12/01 06:58:26 [error] [exception.CException] exception 'CException' with message 'La propiedad "Historialenfermedades"."0" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(137): CModel->offsetGet(0)
+#3 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(616): CGridColumn->renderDataCell(0)
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow(0)
+#5 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#6 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n<div cl...')
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#11 C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php(86): CBaseController->widget('bootstrap.widge...', Array)
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#16 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php(70): CController->render('view', Array)
+#17 [internal function]: DonantesController->actionView('17510533-6')
+#18 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DonantesController), Array)
+#19 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DonantesController), Object(ReflectionMethod), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes/view/i...')
+#30 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/yii/redvida_test/donantes/view/id/17510533-6
+---
+2014/12/01 07:09:29 [error] [system.db.CDbCommand] CDbCommand::fetch() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1.
+in C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php (129)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php (74)
+in C:\xampp\htdocs\yii\redvida_test\index.php (13)
+2014/12/01 07:09:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'k' in 'where clause'. The SQL statement executed was: SELECT * FROM `donantes` `t` WHERE 15564852-k LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\redvida_test\protected\models\Historialenfermedades.php(129): CActiveRecord->find('15564852-k')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1071): Historialenfermedades->beforeSave()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#6 C:\xampp\htdocs\yii\redvida_test\protected\controllers\HistorialenfermedadesController.php(74): CActiveRecord->save()
+#7 [internal function]: HistorialenfermedadesController->actionCreate('15564852-k')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HistorialenfermedadesController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HistorialenfermedadesController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('historialenferm...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/redvida_test/historialenfermedades/create/id/15564852-k
+HTTP_REFERER=http://localhost/yii/redvida_test/historialenfermedades/create/id/15564852-k
+---
+2014/12/01 07:20:20 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$this->rut' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `historialenfermedades` `t` WHERE rut = `$this->rut`.
+in C:\xampp\htdocs\yii\redvida_test\protected\extensions\bootstrap\widgets\TbGridView.php (44)
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php (84)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php (56)
+2014/12/01 07:20:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$this->rut' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `historialenfermedades` `t` WHERE rut = `$this->rut`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\yii\redvida_test\protected\extensions\bootstrap\widgets\TbGridView.php(44): CGridView->init()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php(84): CBaseController->widget('bootstrap.widge...', Array)
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#16 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php(56): CController->render('view', Array)
+#17 [internal function]: DonantesController->actionView('17510533-6')
+#18 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DonantesController), Array)
+#19 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DonantesController), Object(ReflectionMethod), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes/view/i...')
+#30 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/yii/redvida_test/donantes/view/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---
+2014/12/01 07:20:34 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>rut' at line 1. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `historialenfermedades` `t` WHERE rut = $this->rut.
+in C:\xampp\htdocs\yii\redvida_test\protected\extensions\bootstrap\widgets\TbGridView.php (44)
+in C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php (84)
+in C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php (56)
+2014/12/01 07:20:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>rut' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `historialenfermedades` `t` WHERE rut = $this->rut' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\yii\redvida_test\protected\extensions\bootstrap\widgets\TbGridView.php(44): CGridView->init()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 C:\xampp\htdocs\yii\redvida_test\protected\views\donantes\view.php(84): CBaseController->widget('bootstrap.widge...', Array)
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#16 C:\xampp\htdocs\yii\redvida_test\protected\controllers\DonantesController.php(56): CController->render('view', Array)
+#17 [internal function]: DonantesController->actionView('17510533-6')
+#18 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DonantesController), Array)
+#19 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DonantesController), Object(ReflectionMethod), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('donantes/view/i...')
+#30 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\yii\redvida_test\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/yii/redvida_test/donantes/view/id/17510533-6
+HTTP_REFERER=http://localhost/yii/redvida_test/donantes
+---

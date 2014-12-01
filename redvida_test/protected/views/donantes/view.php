@@ -69,22 +69,19 @@ $this->menu=array(
 								<?php echo TbHtml::pills(array(
 								    array('label' => 'Asignar Enfermedad', 'url' =>array('historialenfermedades/create', 'id'=>$model->rut)),
 								)); ?>
-								<?php if($hist_enfermedades === null){
-									echo 'No tiene enfermedades registrdas.';									
-								}
-								else{
+								<?php
 								 $this->widget('bootstrap.widgets.TbGridView',array(
 								    'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
 								    ),
-								    'dataProvider'=>$hist_enfermedades,
+								    'dataProvider'=>Historialenfermedades::model()->searchByRut($model->rut),
 								    'columns'=>array(
 										'fecha',
 										'idenfermedad0.nombre',
 										'idenfermedad0.descripcion',
+										'fecha_cura',
 									),
 								)); 
-								}
 								?>
 							</div>
 							<div class="tab-pane fade widget-tags " id="donacionessangre">
@@ -100,7 +97,7 @@ $this->menu=array(
 									 	'htmlOptions' => array(
 								        'class' => 'table table-striped table-condensed table-hover',
 								    	),
-									    'dataProvider'=>$sangre,
+									    'dataProvider'=>Donacionsangre::model()->searchByRut($model->rut),
 									    'columns'=>array(
 											'fecha_donacionsangre',
 											'dsangre_observaciones',

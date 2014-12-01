@@ -10,6 +10,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Donantes Muertos','url'=>array('Indexmuertos')),
+	array('label'=>'Administrar Donantes Desactivados','url'=>array('Admindesactivados')),
 );
 ?>
 

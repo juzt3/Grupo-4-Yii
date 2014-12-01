@@ -72,13 +72,6 @@ class HistorialenfermedadesController extends Controller
 			$model->attributes=$_POST['Historialenfermedades'];
 			$model->rut=$id;
 			if($model->save())
-				/*$donante = Donantes::$model->find(array('condition'=>'rut = :rut', 
-														'params'=>array(':rut'=>$this->id),
-																));
-				$don_desactivado = new Don_desactivado;
-				$don_desactivado->attributes = $donante->attributes;
-				$don_desactivado->save();
-				$donante->actionDelete($donante->rut);*/
 				$this->redirect(array('view','id'=>$model->idhistorial));
 		}
 
@@ -118,7 +111,14 @@ class HistorialenfermedadesController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model=new Historialenfermedades;
+		$model=$model->find($id);
+		$model->fecha_cura=new CDbExpression('NOW()');
+		$donante = new Donantes;
+		$donante = $donante->find($id);
+		$donante->habilitado='Si';
+		$model->save();
+		$donante->save();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

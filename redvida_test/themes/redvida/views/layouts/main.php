@@ -89,7 +89,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 							array('label' => 'Donantes', 'items' => array(
 								array('label'=>'Donantes Habilitados', 'url'=>array('/donantes'), 'visible'=>!Yii::app()->user->isGuest),
 								array('label'=>'Donantes Muertos','url'=>array('/donantes/Indexmuertos')),
-								array('label'=>'Donantes Inhabilitados','url'=>array('/donantes/Indexdesactivados')),
+								array('label'=>'Donantes Desactivados','url'=>array('/donantes/Indexdesactivados')),
 							),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Urgencias', 'items' => array(
 								array('label' => 'Urgencias Sangre', 'url' => array('/urgenciassangre')),

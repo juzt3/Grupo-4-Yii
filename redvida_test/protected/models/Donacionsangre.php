@@ -11,6 +11,7 @@
  * @property string $tipo_sangre
  * @property string $fecha_donacionsangre
  * @property string $fecha_expiracion
+ * @property string $usada
  *
  * The followings are the available model relations:
  * @property Donantes $rut0
@@ -37,11 +38,12 @@ class Donacionsangre extends CActiveRecord
 			array('cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('tipo_sangre', 'length', 'max'=>3),
+			array('usada', 'length', 'max'=>2),
 			array('dsangre_observaciones', 'safe'),
 			array('fecha_expiracion','compare','compareValue'=>date('Y-m-d'),'operator'=>'>=', 'message'=>'La fecha de expiracion es invalida.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_donacionsangre, rut, cantidad_sangre, dsangre_observaciones, tipo_sangre, fecha_donacionsangre, fecha_expiracion', 'safe', 'on'=>'search'),
+			array('id_donacionsangre, rut, cantidad_sangre, dsangre_observaciones, tipo_sangre, fecha_donacionsangre, fecha_expiracion, usada', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +72,7 @@ class Donacionsangre extends CActiveRecord
 			'tipo_sangre' => 'Tipo de Sangre',
 			'fecha_donacionsangre' => 'Fecha de Donacion',
 			'fecha_expiracion' => 'Fecha de Expiracion',
+			'usada' => 'Usada',
 		);
 	}
 
@@ -98,6 +101,22 @@ class Donacionsangre extends CActiveRecord
 		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
 		$criteria->compare('fecha_donacionsangre',$this->fecha_donacionsangre,true);
 		$criteria->compare('fecha_expiracion',$this->fecha_expiracion,true);
+		$criteria->compare('usada',$this->usada,true);
+
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function searchByRut($rut)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('rut',$rut,false);
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

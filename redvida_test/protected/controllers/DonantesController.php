@@ -36,7 +36,7 @@ class DonantesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin', 'adminmuertos', 'admindesactivados','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -51,22 +51,8 @@ class DonantesController extends Controller
 	 */
 	public function actionView($id)
 	{	
-		$hist_enfermedades = Historialenfermedades::model()->find(array(
-													'condition'=>'rut = :rut',
-													'params'=>array(':rut'=>$id),
-													));
-		$dataEnfermedades = new CActiveDataProvider('HistorialEnfermedades');
-		$dataEnfermedades->setData($hist_enfermedades);
-
-		$sangre = Donacionsangre::model()->findAll(array(
-													'condition'=>'rut = :rut',
-													'params'=>array(':rut'=>$id),
-													));
-		$dataSangre=new CActiveDataProvider('Donacionsangre');
-		$dataSangre->setData($sangre);
-
 		$this->render('view',array(
-			'model'=>$this->loadModel($id), 'hist_enfermedades'=>$dataEnfermedades, 'sangre'=>$dataSangre,
+			'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -85,7 +71,7 @@ class DonantesController extends Controller
 		{
 			$model->attributes=$_POST['Donantes'];
 			if($model->save())
-				$this->redirect(array('historialenfermedades/create','id'=>$model->rut));
+				$this->redirect(array('view','id'=>$model->rut));
 		}
 
 		$this->render('create',array(
@@ -149,7 +135,7 @@ class DonantesController extends Controller
 		//solo carga los donantes vivos, sin enfermedades y activos.
 		$dataProvider=new CActiveDataProvider('Donantes', array(
 			'criteria'=>array(
-					'condition'=>'t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM HistorialEnfermedades)',
+					'condition'=>'t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM HistorialEnfermedades WHERE fecha_cura IS NULL)',
 				),
 		));
 		$this->render('index',array(
@@ -189,7 +175,7 @@ class DonantesController extends Controller
 		if (Yii::app()->request->isPostRequest) {
 			// we only allow deletion via POST request
 			$model=$this->loadModel($id);
-			if($model->fecha_muerte == NULL ){
+			if($model->fecha_muerte === NULL){
 				$model->fecha_muerte=new CDbExpression('NOW()');
 				$model->save();
 			}
@@ -213,6 +199,30 @@ class DonantesController extends Controller
 			$model->attributes=$_GET['Donantes'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionAdminmuertos()
+	{
+		$model=new Donantes('searchmuertos');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Donantes']))
+			$model->attributes=$_GET['Donantes'];
+
+		$this->render('adminmuertos',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionAdmindesactivados()
+	{
+		$model=new Donantes('searchdesactivados');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Donantes']))
+			$model->attributes=$_GET['Donantes'];
+
+		$this->render('admindesactivados',array(
 			'model'=>$model,
 		));
 	}
