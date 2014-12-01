@@ -33,7 +33,7 @@ class Donacionmedula extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('cantidad_medula, fecha_expiracionmedula', 'required'),
-			array('cantidad_medula', 'numerical', 'integerOnly'=>true),
+			array('cantidad_medula', 'numerical', 'integerOnly'=>true, 'min'=>10, 'max'=>100),
 			array('rut', 'length', 'max'=>10),
 			array('d_medula_observaciones', 'safe'),
 			// The following rule is used by search().
@@ -102,7 +102,7 @@ class Donacionmedula extends CActiveRecord
     public function searchByRut($rut)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
-
+        
 		$criteria=new CDbCriteria;
 
 
@@ -113,14 +113,15 @@ class Donacionmedula extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+        
+        
         public function beforeSave() 
 	{ 
       
 	    if ($this->isNewRecord){
 	        $this->fecha_donacionmedula = new CDbExpression('NOW()');
 	    }
-           
+            
             $this->fecha_expiracionmedula = date('Y-m-d', CDateTimeParser::parse($this->fecha_expiracionmedula, 'dd-MM-yyyy'));
             
 	    return parent::beforeSave();
@@ -142,4 +143,7 @@ class Donacionmedula extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        
 }

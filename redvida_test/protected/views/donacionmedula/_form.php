@@ -19,9 +19,9 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('span'=>5)); ?>
+            <?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('span'=>2)); ?><span>cc</span>
 
-            <?php echo $form->textAreaControlGroup($model,'d_medula_observaciones',array('rows'=>6,'span'=>8)); ?>
+            <?php echo $form->textAreaControlGroup($model,'d_medula_observaciones',array('rows'=>5,'span'=>5)); ?>
 
             <div>
 		<?php echo $form->textFieldControlGroup($model,'fecha_donacionmedula',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
@@ -33,16 +33,16 @@
 		<div class="input-append date">
 			<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			        'attribute' => 'fecha_expiracionmedula',
-			        "model"=>$model,
-			        'language'=>'es',
+                                'language'=>'es',    
+                                "model"=>$model,
 			        'options' => array(
 			        	'constrainInput'=>true,
-			            'dateFormat' => 'dd-mm-yy',
-						'changeYear'=>true,
-						'autoSize'=>true,
-						'yearRange'=>'0:1',
-						'minDate'=>'NOW',
-						'maxDate'=>'1y',
+                                        'dateFormat' => 'dd-mm-yy',
+					'changeYear'=>true,
+					'autoSize'=>true,
+					'yearRange'=>'0:1',
+					'minDate'=>'NOW',
+					'maxDate'=>'1y',
 			        ),
 	    		));
 			?>

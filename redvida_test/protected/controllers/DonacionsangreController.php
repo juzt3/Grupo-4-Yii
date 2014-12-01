@@ -74,7 +74,23 @@ class DonacionsangreController extends Controller
 			$model->cantidad_sangre='450';
 			$model->tipo_sangre=$donante->tiposangre;
 			$model->fecha_donacionsangre=new CDbExpression('NOW()');
-			if($donante->habilitado === 'Si' && $donante->fecha_muerte === NULL){
+                        
+                        $edad=Donantes::validaEdad(Donantes::donanteEdad($id));
+                        
+			if($donante->habilitado === 'Si' && $donante->fecha_muerte === NULL ){
+				if($edad >18 && $edad <65 ){
+                                    if ($model->save()) {
+					$this->redirect(array('view','id'=>$model->id_donacionsangre));
+                                    }
+                                }
+                                else {
+                                        throw new CHttpException('Lo siento, no puede donar sangre, no se encuentra dentro del rango de edad permitido(entre 7 y 65)');
+                                }
+			}
+			else{
+				$model->addError('observaciones',"Este donante se encuentra inhabilitado de donar. No vuelva a intentarlo.");
+			}
+                        if($donante->habilitado === 'Si' && $donante->fecha_muerte === NULL){
 				if ($model->save()) {
 					$this->redirect(array('view','id'=>$model->id_donacionsangre));
 				}

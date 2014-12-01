@@ -259,7 +259,7 @@ class Donantes extends CActiveRecord
       	'O+'=>'O+', 'O-'=>'O-', 'A-'=>'A-', 'A+'=>'A+', 'B-'=>'B-', 'B+'=>'B+', 'AB-'=>'AB-', 'AB+'=>'AB+'
    		);
 	}
-
+        
 	protected function beforeSave()
 	{
 	    $this->fecha_nac = date('Y-m-d', CDateTimeParser::parse($this->fecha_nac, 'dd-MM-yyyy'));
@@ -272,4 +272,30 @@ class Donantes extends CActiveRecord
 	    $this->fecha_muerte = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_muerte);
 	    return parent::afterFind();
 	}
+        
+        public static function validaEdad($fecha_nac) {
+            
+            $sql = "SELECT DATEDIFF(NOW(),'$fecha_nac')/365 as edad";
+            
+            $edad = Yii::app()->db
+                    ->createCommand($sql)
+                    ->queryAll();
+            return $edad[0]['edad'];
+            
+        }
+        
+        public static function donanteEdad($rut) {
+            
+            $sql = "SELECT fecha_nac as f FROM donantes WHERE rut='$rut'";
+            
+            $edad = Yii::app()->db
+                    ->createCommand($sql)
+                    ->queryAll();
+            return $edad[0]['f'];
+            
+        }
+        
+        
+        
+        
 }

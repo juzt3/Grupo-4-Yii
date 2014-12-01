@@ -64,16 +64,23 @@ class DonacionmedulaController extends Controller
 	{
 		$donante= Donantes::model()->find($id);
                 $model=new Donacionmedula;
-
-		// Uncomment the following line if AJAX validation is needed
+                // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if (isset($_POST['Donacionmedula'])) {
 			$model->attributes=$_POST['Donacionmedula'];
                         $model->rut=$id;
+                        //Aqui puedes mandar a llamar un método que te calcule la edad
+                        $edad=Donantes::validaEdad(Donantes::donanteEdad($id));
+                     
+                if( $edad >7 && $edad <65 ){    
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_donacionmedula));
 			}
+                } 
+                else {
+			throw new CHttpException('Lo siento, no puede donar medula, no se encuentra dentro del rango de edad permitido(entre 7 y 65)');
+		}
 		}
 
 		$this->render('create',array(
@@ -168,6 +175,7 @@ class DonacionmedulaController extends Controller
 		return $model;
 	}
 
+        
 	/**
 	 * Performs the AJAX validation.
 	 * @param Donacionmedula $model the model to be validated
