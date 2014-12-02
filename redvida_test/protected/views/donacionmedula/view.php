@@ -31,5 +31,6 @@ $this->menu=array(
 		'd_medula_observaciones',
 		'fecha_donacionmedula',
 		'fecha_expiracionmedula',
+		'usada',
 	),
 )); ?>

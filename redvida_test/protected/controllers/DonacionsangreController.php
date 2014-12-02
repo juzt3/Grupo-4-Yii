@@ -62,7 +62,7 @@ class DonacionsangreController extends Controller
 	 */
 	public function actionCreate($id)
 	{
-		$donante= Donantes::model()->find($id);
+		$donante= Donantes::model()->findByPk($id);
 		$model=new Donacionsangre;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -75,7 +75,7 @@ class DonacionsangreController extends Controller
 			$model->tipo_sangre=$donante->tiposangre;
 			$model->fecha_donacionsangre=new CDbExpression('NOW()');
                         
-                        $edad=Donantes::validaEdad(Donantes::donanteEdad($id));
+            $edad=Donantes::validaEdad(Donantes::donanteEdad($id));
                         
 			if($donante->habilitado === 'Si' && $donante->fecha_muerte === NULL ){
 				if($edad >18 && $edad <65 ){

@@ -32,5 +32,6 @@ $this->menu=array(
 		'tipo_sangre',
 		'fecha_donacionsangre',
 		'fecha_expiracion',
+		'usada',
 	),
 )); ?>

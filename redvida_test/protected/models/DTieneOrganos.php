@@ -1,25 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "organos_donables".
+ * This is the model class for table "d_tiene_organos".
  *
- * The followings are the available columns in table 'organos_donables':
+ * The followings are the available columns in table 'd_tiene_organos':
+ * @property integer $id_tiene_organos
+ * @property string $rut
  * @property integer $id_organo
- * @property string $nombre_organo
+ * @property string $transplantado
  *
  * The followings are the available model relations:
- * @property Donantes[] $donantes
- * @property UrgenciasOrganoTerminada[] $urgenciasOrganoTerminadas
- * @property UrgenciasOrganos[] $urgenciasOrganoses
+ * @property OrganosDonables $idOrgano
+ * @property Donantes $rut0
  */
-class OrganosDonables extends CActiveRecord
+class DTieneOrganos extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'organos_donables';
+		return 'd_tiene_organos';
 	}
 
 	/**
@@ -30,11 +31,13 @@ class OrganosDonables extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre_organo', 'required'),
-			array('nombre_organo', 'length', 'max'=>100),
+			array('rut, id_organo', 'required'),
+			array('id_organo', 'numerical', 'integerOnly'=>true),
+			array('rut', 'length', 'max'=>10),
+			array('transplantado', 'length', 'max'=>2),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_organo, nombre_organo', 'safe', 'on'=>'search'),
+			array('id_tiene_organos, rut, id_organo, transplantado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,9 +49,8 @@ class OrganosDonables extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'donantes' => array(self::MANY_MANY, 'Donantes', 'd_tiene_organos(id_organo, rut)'),
-			'urgenciasOrganoTerminadas' => array(self::HAS_MANY, 'UrgenciasOrganoTerminada', 'id_organo'),
-			'urgenciasOrganoses' => array(self::HAS_MANY, 'UrgenciasOrganos', 'id_organo'),
+			'idOrgano' => array(self::BELONGS_TO, 'OrganosDonables', 'id_organo'),
+			'rut0' => array(self::BELONGS_TO, 'Donantes', 'rut'),
 		);
 	}
 
@@ -58,8 +60,10 @@ class OrganosDonables extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id_tiene_organos' => 'Id Tiene Organos',
+			'rut' => 'Rut',
 			'id_organo' => 'Id Organo',
-			'nombre_organo' => 'Nombre Organo',
+			'transplantado' => 'Transplantado',
 		);
 	}
 
@@ -81,8 +85,10 @@ class OrganosDonables extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id_tiene_organos',$this->id_tiene_organos);
+		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('id_organo',$this->id_organo);
-		$criteria->compare('nombre_organo',$this->nombre_organo,true);
+		$criteria->compare('transplantado',$this->transplantado,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -93,16 +99,10 @@ class OrganosDonables extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return OrganosDonables the static model class
+	 * @return DTieneOrganos the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	public static function getOrganosdonables()
-	{
-		$organos = Organosdonables::model()->findAll();
-		return CHtml::listData($organos, 'id_organo', 'nombre_organo');
 	}
 }

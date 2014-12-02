@@ -24,9 +24,10 @@
  * @property string $fecha_muerte
  *
  * The followings are the available model relations:
+ * @property DTieneOrganos[] $dTieneOrganoses
+ * @property Donacionmedula[] $donacionmedulas
+ * @property Donacionsangre[] $donacionsangres
  * @property Centrosmedicos $centromedico0
- * @property Historialdonacionmedula[] $historialdonacionmedulas
- * @property Historialdonacionsangre[] $historialdonacionsangres
  * @property Historialenfermedades[] $historialenfermedades
  */
 class Donantes extends CActiveRecord
@@ -61,6 +62,7 @@ class Donantes extends CActiveRecord
 			array('tiposangre', 'length', 'max'=>3),
 			array('centromedico', 'length', 'max'=>11),
 			array('centromedico', 'ext.alpha', 'allowNumbers' => true),
+			array('centromedico', 'numerical', 'integerOnly'=>true),
 			array('donanteorganos, habilitado, donantemedula', 'length', 'max'=>2),
 			array('alergias, fecha_muerte', 'safe'),
 			array('sexo', 'length', 'max'=>9),
@@ -81,9 +83,10 @@ class Donantes extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'dTieneOrganos' => array(self::HAS_MANY, 'DTieneOrganos', 'rut'),
+			'donacionmedulas' => array(self::HAS_MANY, 'Donacionmedula', 'rut'),
+			'donacionsangres' => array(self::HAS_MANY, 'Donacionsangre', 'rut'),
 			'centromedico0' => array(self::BELONGS_TO, 'Centrosmedicos', 'centromedico'),
-			'historialdonacionmedulas' => array(self::HAS_MANY, 'Historialdonacionmedula', 'rut'),
-			'historialdonacionsangres' => array(self::HAS_MANY, 'Historialdonacionsangre', 'rut'),
 			'historialenfermedades' => array(self::HAS_MANY, 'Historialenfermedades', 'rut'),
 		);
 	}

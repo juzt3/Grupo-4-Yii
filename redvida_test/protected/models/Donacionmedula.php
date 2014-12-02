@@ -10,6 +10,7 @@
  * @property string $d_medula_observaciones
  * @property string $fecha_donacionmedula
  * @property string $fecha_expiracionmedula
+ * @property string $usada
  *
  * The followings are the available model relations:
  * @property Donantes $rut0
@@ -35,10 +36,11 @@ class Donacionmedula extends CActiveRecord
 			array('cantidad_medula, fecha_expiracionmedula', 'required'),
 			array('cantidad_medula', 'numerical', 'integerOnly'=>true, 'min'=>10, 'max'=>100),
 			array('rut', 'length', 'max'=>10),
+			array('usada', 'length', 'max'=>2),
 			array('d_medula_observaciones', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_donacionmedula, rut, cantidad_medula, d_medula_observaciones, fecha_donacionmedula, fecha_expiracionmedula', 'safe', 'on'=>'search'),
+			array('id_donacionmedula, rut, cantidad_medula, d_medula_observaciones, fecha_donacionmedula, fecha_expiracionmedula, usada', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,6 +68,7 @@ class Donacionmedula extends CActiveRecord
 			'd_medula_observaciones' => 'Observaciones',
 			'fecha_donacionmedula' => 'Fecha de Donación',
 			'fecha_expiracionmedula' => 'Fecha Expiración',
+			'usada' => 'Usada',
 		);
 	}
 
@@ -93,6 +96,7 @@ class Donacionmedula extends CActiveRecord
 		$criteria->compare('d_medula_observaciones',$this->d_medula_observaciones,true);
 		$criteria->compare('fecha_donacionmedula',$this->fecha_donacionmedula,true);
 		$criteria->compare('fecha_expiracionmedula',$this->fecha_expiracionmedula,true);
+		$criteria->compare('usada',$this->usada,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

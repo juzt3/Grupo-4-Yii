@@ -19,9 +19,9 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('value'=>'450', 'disabled'=>true)); ?>
+            <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('value'=>'450', 'disabled'=>true, 'append'=>'ml')); ?>
 
-            <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>6,'span'=>8)); ?>
+            <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>5,'span'=>5)); ?>
 
             <?php echo $form->textFieldControlGroup($model,'fecha_donacionsangre',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
             
@@ -36,7 +36,6 @@
                             'options' => array(
                                 'constrainInput'=>true,
                                 'dateFormat' => 'dd-mm-yy',
-                                'changeYear'=>true,
                                 'autoSize'=>true,
                                 'minDate'=>-0,
                                 'maxDate' => '+1M',
