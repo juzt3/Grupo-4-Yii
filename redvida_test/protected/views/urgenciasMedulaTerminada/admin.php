@@ -54,7 +54,6 @@ $('.search-form form').submit(function(){
 		'apellido_mat',
 		/*
 		'afiliacion',
-		'enfermedad',
 		'grado_urgencia',
 		'necesidad_transplante',
 		'fecha_ini',

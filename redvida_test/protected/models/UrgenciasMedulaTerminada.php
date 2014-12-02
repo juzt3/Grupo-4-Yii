@@ -6,14 +6,14 @@
  * The followings are the available columns in table 'urgencias_medula_terminada':
  * @property integer $id_urgencia_medula_terminada
  * @property integer $cod_cm
+ * @property integer id_enfermedad_urgencia
  * @property string $rut
  * @property string $nombre_paciente
  * @property string $apellido_pat
  * @property string $apellido_mat
  * @property string $afiliacion
- * @property string $enfermedad
  * @property string $grado_urgencia
- * @property string $necesidad_transplante
+ * @property string $tipo_transplante
  * @property string $fecha_ini
  * @property string $fecha_fin
  *
@@ -38,18 +38,18 @@ class UrgenciasMedulaTerminada extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, fecha_ini', 'required'),
-			array('cod_cm', 'numerical', 'integerOnly'=>true),
+			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_transplante, fecha_ini', 'required'),
+			array('cod_cm, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>1),
-			array('necesidad_transplante', 'length', 'max'=>6),
+			array('tipo_transplante', 'length', 'max'=>6),
 			array('fecha_fin', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_medula_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, necesidad_transplante, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
+			array('id_urgencia_medula_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, id_enfermedad_urgencia, grado_urgencia,tipo_transplante , fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +62,7 @@ class UrgenciasMedulaTerminada extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codCm' => array(self::BELONGS_TO, 'Centrosmedicos', 'cod_cm'),
+			'idEnfermedadUrgencia' => array(self::BELONGS_TO, 'EnfermedadesUrgencia', 'id_enfermedad_urgencia'),
 		);
 	}
 
@@ -73,14 +74,14 @@ class UrgenciasMedulaTerminada extends CActiveRecord
 		return array(
 			'id_urgencia_medula_terminada' => 'Id Urgencia Medula Terminada',
 			'cod_cm' => 'Cod Cm',
+			'id_enfermedad_urgencia' => 'Enfermedad',
 			'rut' => 'Rut',
 			'nombre_paciente' => 'Nombre Paciente',
 			'apellido_pat' => 'Apellido Pat',
 			'apellido_mat' => 'Apellido Mat',
 			'afiliacion' => 'Afiliacion',
-			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
-			'necesidad_transplante' => 'Necesidad Transplante',
+			'tipo_transplante' => 'Tipo de Transplante',
 			'fecha_ini' => 'Fecha Ini',
 			'fecha_fin' => 'Fecha Fin',
 		);
@@ -106,14 +107,14 @@ class UrgenciasMedulaTerminada extends CActiveRecord
 
 		$criteria->compare('id_urgencia_medula_terminada',$this->id_urgencia_medula_terminada);
 		$criteria->compare('cod_cm',$this->cod_cm);
+		$criteria->compare('id_enfermedad_urgencia',$this->id_enfermedad_urgencia);
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('nombre_paciente',$this->nombre_paciente,true);
 		$criteria->compare('apellido_pat',$this->apellido_pat,true);
 		$criteria->compare('apellido_mat',$this->apellido_mat,true);
 		$criteria->compare('afiliacion',$this->afiliacion,true);
-		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
-		$criteria->compare('necesidad_transplante',$this->necesidad_transplante,true);
+		$criteria->compare('tipo_transplante',$this->tipo_transplante,true);
 		$criteria->compare('fecha_ini',$this->fecha_ini,true);
 		$criteria->compare('fecha_fin',$this->fecha_fin,true);
 
@@ -131,5 +132,17 @@ class UrgenciasMedulaTerminada extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function getUrgenciasMedula()
+	{
+		return array('Autologo'=>'Autologo', 'Alogeneico'=>'Alogeneico', 'Singeneico'=>'Singeneico');
+     	            
+	}
+
+	public function getGradoUrgencia()
+	{
+		return array(1=>'Muy Bajo', 2=>'Bajo', 3=>'Normal', 4=>'Alto', 5=>'Muy Alto');
+     	            
 	}
 }

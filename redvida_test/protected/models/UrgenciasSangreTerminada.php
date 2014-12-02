@@ -14,8 +14,10 @@
  * @property string $enfermedad
  * @property string $grado_urgencia
  * @property string $tipo_sangre
+ * @property integer $cantidad_sangre
  * @property string $fecha_ini
  * @property string $fecha_fin
+ * @property string $motivo
  *
  * The followings are the available model relations:
  * @property Centrosmedicos $codCm
@@ -38,18 +40,19 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini', 'required'),
-			array('cod_cm', 'numerical', 'integerOnly'=>true),
+			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, motivo', 'required'),
+			array('cod_cm, cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad', 'length', 'max'=>100),
-			array('grado_urgencia', 'length', 'max'=>1),
+			array('grado_urgencia', 'length', 'max'=>8),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('fecha_fin', 'safe'),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_sangre_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
+			array('id_urgencia_sangre_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, cantidad_sangre, fecha_ini, fecha_fin, motivo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,17 +75,19 @@ class UrgenciasSangreTerminada extends CActiveRecord
 	{
 		return array(
 			'id_urgencia_sangre_terminada' => 'Id Urgencia Sangre Terminada',
-			'cod_cm' => 'Cod Cm',
+			'cod_cm' => 'Centro Medico',
 			'rut' => 'Rut',
-			'nombre_paciente' => 'Nombre Paciente',
-			'apellido_pat' => 'Apellido Pat',
-			'apellido_mat' => 'Apellido Mat',
+			'nombre_paciente' => 'Nombres del Paciente',
+			'apellido_pat' => 'Apellido Paterno',
+			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
 			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
-			'tipo_sangre' => 'Tipo Sangre',
-			'fecha_ini' => 'Fecha Ini',
+			'tipo_sangre' => 'Tipo de Sangre',
+			'cantidad_sangre' => 'Cantidad de Sangre',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
+			'motivo' => 'Motivo',
 		);
 	}
 
@@ -114,9 +119,10 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
+		$criteria->compare('cantidad_sangre',$this->cantidad_sangre,true);
 		$criteria->compare('fecha_ini',$this->fecha_ini,true);
 		$criteria->compare('fecha_fin',$this->fecha_fin,true);
-
+		$criteria->compare('motivo',$this->motivo,true);	
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -131,5 +137,27 @@ class UrgenciasSangreTerminada extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function getGradoUrgencia()
+	{
+		return array(1=>'Muy Bajo', 2=>'Bajo', 3=>'Normal', 4=>'Alto', 5=>'Muy Alto');
+     	            
+	}
+
+
+	public function beforeSave() 
+	{
+	    if ($this->isNewRecord)
+	        $this->fecha_ini = new CDbExpression('NOW()');
+
+	    return parent::beforeSave();
+	}
+
+	public function getMenuSangre()
+	{
+		return array(
+      	'O+'=>'O+', 'O-'=>'O-', 'A-'=>'A-', 'A+'=>'A+', 'B-'=>'B-', 'B+'=>'B+', 'AB-'=>'AB-', 'AB+'=>'AB+'
+   		);
 	}
 }

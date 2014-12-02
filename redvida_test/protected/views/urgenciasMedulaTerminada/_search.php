@@ -25,7 +25,6 @@
 
                     <?php echo $form->textFieldControlGroup($model,'afiliacion',array('span'=>5,'maxlength'=>50)); ?>
 
-                    <?php echo $form->textFieldControlGroup($model,'enfermedad',array('span'=>5,'maxlength'=>100)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('span'=>5,'maxlength'=>1)); ?>
 

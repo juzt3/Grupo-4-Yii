@@ -45,7 +45,7 @@ class UrgenciasOrganos extends CActiveRecord
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
-			array('grado_urgencia', 'length', 'max'=>1),
+			array('grado_urgencia', 'length', 'max'=>8),
 			array('fecha_fin', 'safe'),
 			array('nombre_paciente', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),

@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'urgencias_medula':
  * @property integer $id_urgencia_medula
  * @property integer $cod_cm
+ * @property integer id_enfermedad_urgencia
  * @property string $rut
  * @property string $nombre_paciente
  * @property string $apellido_pat
@@ -38,7 +39,7 @@ class UrgenciasMedula extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_transplante', 'required'),
-			array('cod_cm', 'numerical', 'integerOnly'=>true),
+			array('cod_cm, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
 			array('rut, tipo_transplante', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
@@ -50,7 +51,7 @@ class UrgenciasMedula extends CActiveRecord
 			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_medula, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_transplante, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
+			array('id_urgencia_medula, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, id_enfermedad_urgencia, grado_urgencia, tipo_transplante, fecha_ini, fecha_fin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class UrgenciasMedula extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codCm' => array(self::BELONGS_TO, 'Centrosmedicos', 'cod_cm'),
+			'idEnfermedadUrgencia' => array(self::BELONGS_TO, 'EnfermedadesUrgencia', 'id_enfermedad_urgencia'),
 		);
 	}
 
@@ -74,6 +76,7 @@ class UrgenciasMedula extends CActiveRecord
 		return array(
 			'id_urgencia_medula' => 'Id Urgencia Medula',
 			'cod_cm' => 'Centro Medico',
+			'id_enfermedad_urgencia' => 'Enfermedad',
 			'rut' => 'Rut',
 			'nombre_paciente' => 'Nombres del Paciente',
 			'apellido_pat' => 'Apellido Paterno',
@@ -128,6 +131,7 @@ class UrgenciasMedula extends CActiveRecord
 
 		$criteria->compare('id_urgencia_medula',$this->id_urgencia_medula);
 		$criteria->compare('cod_cm',$this->cod_cm);
+		$criteria->compare('id_enfermedad_urgencia',$this->id_enfermedad_urgencia);
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('nombre_paciente',$this->nombre_paciente,true);
 		$criteria->compare('apellido_pat',$this->apellido_pat,true);

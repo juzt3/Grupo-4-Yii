@@ -30,7 +30,6 @@ $this->menu=array(
 		'apellido_pat',
 		'apellido_mat',
 		'afiliacion',
-		'enfermedad',
 		'grado_urgencia',
 		'necesidad_transplante',
 		'fecha_ini',

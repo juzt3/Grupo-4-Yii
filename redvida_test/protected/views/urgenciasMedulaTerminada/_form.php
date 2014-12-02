@@ -19,33 +19,55 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'cod_cm',array('span'=>5)); ?>
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad"));?>
+    </div>
+        
+    <div> 
+        <?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'nombre_paciente',array('span'=>5,'maxlength'=>30)); ?>
+            
+    <div >
+        <?php echo $form->textFieldControlGroup($model,'nombre_paciente',array('maxlength'=>30, 'placeholder'=>'Ej: Eduardo Roberto')); ?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'apellido_pat',array('span'=>5,'maxlength'=>50)); ?>
+    <div>
+        <div class="span3"> 
+            <?php echo $form->textFieldControlGroup($model,'apellido_pat',array('maxlength'=>50, 'placeholder'=>'Ej: Rojas')); ?>
+        </div>
 
-            <?php echo $form->textFieldControlGroup($model,'apellido_mat',array('span'=>5,'maxlength'=>50)); ?>
+        <div class='span9 last'>
+            <?php echo $form->textFieldControlGroup($model,'apellido_mat',array('maxlength'=>50, 'placeholder'=>'Ej: Beltran')); ?>
+        </div>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'afiliacion',array('span'=>5,'maxlength'=>50)); ?>
+    <div>
+            <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'enfermedad',array('span'=>5,'maxlength'=>100)); ?>
+    <div>
 
-            <?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('span'=>5,'maxlength'=>1)); ?>
+        <?php echo $form->dropDownListControlGroup($model,'tipo_transplante', $model->getUrgenciasMedula(), array("empty"=>"Seleccionar Transplante"));?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('span'=>5,'maxlength'=>6)); ?>
+    <div >
+        <?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>50, 'placeholder'=>'Ej: Fonasa')); ?>
+    </div>
 
-            <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('span'=>5)); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'fecha_fin',array('span'=>5)); ?>
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Grado Urgencia")); ?>
+    </div>
 
-        <div class="form-actions">
-        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
-		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
-		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
-		)); ?>
+    <div class="buttons">
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
+    </div>
+
     </div>
 
     <?php $this->endWidget(); ?>
