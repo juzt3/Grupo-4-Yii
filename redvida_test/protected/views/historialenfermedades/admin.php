@@ -49,6 +49,7 @@ or <b>=</b>) al principio de cada uno de tus valores de busqueda para especifica
 		'rut',
 		'idenfermedad',
 		'fecha',
+		'fecha_cura',
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -16,5 +16,6 @@ $this->menu=array(
 ?>
 
 <h1>Registrar Urgencia de Organo Terminada</h1>
+<h2>Rut: <?php echo $model->rut?></h2>
 
-<?php $this->renderPartial('_formmotivo', array('model'=>$model)); ?>
+<?php $this->renderPartial('_formmotivo', array('model'=>$model, 'organo'=>$organo)); ?>

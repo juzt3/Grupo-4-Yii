@@ -126,7 +126,8 @@ class Historialenfermedades extends CActiveRecord
 	{
 	    if ($this->isNewRecord){
 	        $this->fecha = new CDbExpression('NOW()');
-	        $donante = Donantes::model()->find(`$this->rut`);
+	        $donante = new Donantes;
+	        $donante = $donante->findByPk($this->rut);
 	        $donante->habilitado='No';
 	        $donante->save();
 	    }

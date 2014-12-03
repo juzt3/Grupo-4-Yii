@@ -23,11 +23,15 @@
         <?php echo $form->textAreaControlGroup($model,'motivo',array('rows'=>6, 'cols'=>50)); ?>
     </div>
 
+    <div>
+        <?php echo $form->radioButtonListControlGroup($organo,'rut', DTieneOrganos::getOrganosDisponibles($model->id_organo), array('label'=>'Organos Donables', 'multiple' => false)); ?>
+    </div>
+
     <div class="buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
     </div>
 
-    </div>
+</div>
 
     <?php $this->endWidget(); ?>
 

@@ -68,6 +68,7 @@ $this->menu=array(
 							<div class="tab-pane fade widget-tags " id="enfermedades">
 								<?php echo TbHtml::pills(array(
 								    array('label' => 'Asignar Enfermedad', 'url' =>array('historialenfermedades/create', 'id'=>$model->rut)),
+								    array('label' => 'Administrar Enfermedades', 'url' =>array('historialenfermedades/admin', 'id'=>$model->rut)),
 								)); ?>
 								<?php
 								 $this->widget('bootstrap.widgets.TbGridView',array(

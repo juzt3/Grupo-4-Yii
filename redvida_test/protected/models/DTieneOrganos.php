@@ -106,6 +106,20 @@ class DTieneOrganos extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public static function getOrganosDisponibles($id_organo) // devuelve una lista de organos disponibles filtrado por tipo de organo
+	{
+		$donantesmuertos = CHtml::listData(Donantes::model()->findAll(array('select'=>'rut',
+															'condition'=>'fecha_muerte IS NULL')), 'rut', 'rut');
+
+		$criteria = new CDbCriteria;
+		$criteria->addCondition('id_organo = :id_organo AND transplantado = "No"');
+		$criteria->params = array(':id_organo'=>$id_organo);
+		$criteria->addNotInCondition('rut', $donantesmuertos);
+
+		$organos_posibles = DTieneOrganos::model()->findAll($criteria);
+		return CHtml::listData($organos_posibles, 'rut', 'rut');
+	}
+
 	public function afterSave() 
 	{
 	    $donante = new Donantes;

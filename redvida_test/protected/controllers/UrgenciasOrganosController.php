@@ -111,17 +111,17 @@ class UrgenciasOrganosController extends Controller
 	public function actionDelete($id)
 	{
 		$urgencia_t = new UrgenciasOrganoTerminada;
-		if (isset($_POST['UrgenciasOrganoTerminada'])) {
+		$urgenciaorgano = $this->loadModel($id);
+		$urgencia_t->id_organo = $urgenciaorgano->id_organo;
+		$urgencia_t->rut = $urgenciaorgano->rut;
+		$organo = new DTieneOrganos;
+		if (isset($_POST['UrgenciasOrganoTerminada'], $_POST['DTieneOrganos'])) {
 			if (Yii::app()->request->isPostRequest) 
 			{
 			// we only allow deletion via POST request
-			$urgenciaorgano = $this->loadModel($id);
-
 			$urgencia_t->motivo = $_POST['UrgenciasOrganoTerminada']['motivo'];
 			$urgencia_t->cod_cm = $urgenciaorgano->cod_cm;
 			$urgencia_t->id_enfermedad_urgencia = $urgenciaorgano->id_enfermedad_urgencia;
-			$urgencia_t->id_organo = $urgenciaorgano->id_organo;
-			$urgencia_t->rut = $urgenciaorgano->rut;
 			$urgencia_t->nombre_paciente = $urgenciaorgano->nombre_paciente;
 			$urgencia_t->apellido_pat = $urgenciaorgano->apellido_pat;
 			$urgencia_t->apellido_mat = $urgenciaorgano->apellido_mat;
@@ -130,17 +130,22 @@ class UrgenciasOrganosController extends Controller
 			$urgencia_t->fecha_ini = $urgenciaorgano->fecha_ini;
 			$urgencia_t->fecha_fin = new CDbExpression('NOW()');
 
+			$organo = $organo->find(array('condition'=>'rut=:rut_donante AND id_organo = :id_organo_donante', 
+											'params'=>array(':rut_donante'=>$_POST['DTieneOrganos']['rut'], ':id_organo_donante'=>$urgencia_t->id_organo)));
+			$organo->transplantado ='Si'; 
+			$organo->save();
 			$urgencia_t->save();
+			$this->loadModel($id)->delete();
 			}
 
-			//$this->loadModel($id)->delete();
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if (!isset($_GET['ajax'])) {
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('urgenciasorganoterminada/admin'));
 			}
 		} 
 		$this->render('motivo',array(
 			'model'=>$urgencia_t,
+			'organo'=>$organo,
 		));
 	}
 
