@@ -132,8 +132,10 @@ class UrgenciasOrganosController extends Controller
 
 			$organo = $organo->find(array('condition'=>'rut=:rut_donante AND id_organo = :id_organo_donante', 
 											'params'=>array(':rut_donante'=>$_POST['DTieneOrganos']['rut'], ':id_organo_donante'=>$urgencia_t->id_organo)));
-			$organo->transplantado ='Si'; 
-			$organo->save();
+			if($organo !== NULL){
+				$organo->transplantado ='Si'; 
+				$organo->save();
+			}
 			$urgencia_t->save();
 			$this->loadModel($id)->delete();
 			}

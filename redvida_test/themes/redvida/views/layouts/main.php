@@ -104,7 +104,8 @@ Read usage license on for this template on http://www.bootstraptor.com
 							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contact', 'url'=>array('/site/contact')),
 							array('label' => 'Administrar', 'items' => array(
-								array('label'=>'Enfermedades', 'url'=>array('/enfermedades')),
+								array('label'=>'Enfermedades de Donantes', 'url'=>array('/enfermedades')),
+								array('label'=>'Enfermedades de Urgencias', 'url'=>array('/enfermedadesurgencia')),
 								array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
 								array('label' => 'Organos Donables', 'url'=>array('/organosdonables')),
 							),'visible'=>!Yii::app()->user->isGuest),
