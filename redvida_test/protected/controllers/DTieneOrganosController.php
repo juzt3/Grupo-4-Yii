@@ -60,22 +60,24 @@ class DTieneOrganosController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new DTieneOrganos;
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if (isset($_POST['DTieneOrganos'])) {
-			$model->attributes=$_POST['DTieneOrganos'];
-			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id_tiene_organos));
+			foreach ($_POST['DTieneOrganos']['id_organo'] as $id_organo) {
+				$model=new DTieneOrganos;
+				$model->rut=$id;
+				$model->id_organo=$id_organo;
+				$model->save();
 			}
+				$this->redirect(array('donantes/view','id'=>$id));
 		}
-
 		$this->render('create',array(
 			'model'=>$model,
+			'rut'=>$id,
 		));
 	}
 

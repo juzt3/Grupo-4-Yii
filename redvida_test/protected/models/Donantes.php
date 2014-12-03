@@ -276,27 +276,27 @@ class Donantes extends CActiveRecord
 	    return parent::afterFind();
 	}
         
-        public static function validaEdad($fecha_nac) {
-            
-            $sql = "SELECT DATEDIFF(NOW(),'$fecha_nac')/365 as edad";
-            
-            $edad = Yii::app()->db
-                    ->createCommand($sql)
-                    ->queryAll();
-            return $edad[0]['edad'];
-            
-        }
+    public static function validaEdad($fecha_nac) {
         
-        public static function donanteEdad($rut) {
-            
-            $sql = "SELECT fecha_nac as f FROM donantes WHERE rut='$rut'";
-            
-            $edad = Yii::app()->db
-                    ->createCommand($sql)
-                    ->queryAll();
-            return $edad[0]['f'];
-            
-        }
+        $sql = "SELECT DATEDIFF(NOW(),'$fecha_nac')/365 as edad";
+        
+        $edad = Yii::app()->db
+                ->createCommand($sql)
+                ->queryAll();
+        return $edad[0]['edad'];
+        
+    }
+    
+    public static function donanteEdad($rut) {
+        
+        $sql = "SELECT fecha_nac as f FROM donantes WHERE rut='$rut'";
+        
+        $edad = Yii::app()->db
+                ->createCommand($sql)
+                ->queryAll();
+        return $edad[0]['f'];
+        
+    }
         
         
         

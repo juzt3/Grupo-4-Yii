@@ -15,15 +15,13 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
+    <p class="help-block">Los campos con <span class="required">*</span> son obligatorios.</p>
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
+            <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>3,'maxlength'=>10,'readonly'=>true, 'value'=>$rut,)); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'id_organo',array('span'=>5)); ?>
-
-            <?php echo $form->textFieldControlGroup($model,'transplantado',array('span'=>5,'maxlength'=>2)); ?>
+            <?php echo $form->checkBoxListControlGroup($model,'id_organo', Organosdonables::getOrganosdonables(), array('label'=>'Organos Donables', 'checkAll' => 'Seleccionar Todos')); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(

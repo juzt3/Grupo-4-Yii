@@ -13,5 +13,9 @@
 	<?php echo CHtml::encode($data->nombre_organo); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('horas_duracion')); ?>:</b>
+	<?php echo CHtml::encode($data->horas_duracion); ?>
+	<br />
+
 
 </div>

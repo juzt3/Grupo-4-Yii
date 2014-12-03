@@ -105,4 +105,15 @@ class DTieneOrganos extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function afterSave() 
+	{
+	    $donante = new Donantes;
+	    $donante = $donante->findByPk($this->rut);
+	    $donante->fecha_muerte = new CDbExpression('NOW()');
+	    $donante->habilitado = 'No';
+	    $donante->save();
+
+	    return parent::afterSave();
+	}
 }

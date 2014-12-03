@@ -6,9 +6,10 @@
  * The followings are the available columns in table 'organos_donables':
  * @property integer $id_organo
  * @property string $nombre_organo
+ * @property integer $horas_duracion
  *
  * The followings are the available model relations:
- * @property Donantes[] $donantes
+ * @property DTieneOrganos[] $dTieneOrganoses
  * @property UrgenciasOrganoTerminada[] $urgenciasOrganoTerminadas
  * @property UrgenciasOrganos[] $urgenciasOrganoses
  */
@@ -30,11 +31,12 @@ class OrganosDonables extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre_organo', 'required'),
+			array('nombre_organo, horas_duracion', 'required'),
+			array('horas_duracion', 'numerical', 'integerOnly'=>true),
 			array('nombre_organo', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_organo, nombre_organo', 'safe', 'on'=>'search'),
+			array('id_organo, nombre_organo, horas_duracion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +48,7 @@ class OrganosDonables extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'donantes' => array(self::MANY_MANY, 'Donantes', 'd_tiene_organos(id_organo, rut)'),
+			'dTieneOrganoses' => array(self::HAS_MANY, 'DTieneOrganos', 'id_organo'),
 			'urgenciasOrganoTerminadas' => array(self::HAS_MANY, 'UrgenciasOrganoTerminada', 'id_organo'),
 			'urgenciasOrganoses' => array(self::HAS_MANY, 'UrgenciasOrganos', 'id_organo'),
 		);
@@ -60,6 +62,7 @@ class OrganosDonables extends CActiveRecord
 		return array(
 			'id_organo' => 'Id Organo',
 			'nombre_organo' => 'Nombre Organo',
+			'horas_duracion' => 'Horas Duracion',
 		);
 	}
 
@@ -83,6 +86,7 @@ class OrganosDonables extends CActiveRecord
 
 		$criteria->compare('id_organo',$this->id_organo);
 		$criteria->compare('nombre_organo',$this->nombre_organo,true);
+		$criteria->compare('horas_duracion',$this->horas_duracion);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -28,5 +28,6 @@ $this->menu=array(
     'attributes'=>array(
 		'id_organo',
 		'nombre_organo',
+		'horas_duracion',
 	),
 )); ?>

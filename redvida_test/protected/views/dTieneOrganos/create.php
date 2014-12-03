@@ -15,6 +15,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create DTieneOrganos</h1>
+<h1>Registrar Organos Donables del paciente Rut: <?php echo $rut?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'rut'=>$rut)); ?>

@@ -15,6 +15,8 @@
 
                     <?php echo $form->textFieldControlGroup($model,'nombre_organo',array('span'=>5,'maxlength'=>100)); ?>
 
+                    <?php echo $form->textFieldControlGroup($model,'horas_duracion',array('span'=>5)); ?>
+
         <div class="form-actions">
         <?php echo TbHtml::submitButton('Search',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
     </div>
