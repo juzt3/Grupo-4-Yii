@@ -115,24 +115,26 @@ class UrgenciasSangreController extends Controller
 		if (isset($_POST['UrgenciasSangreTerminada'])) {
 			if (Yii::app()->request->isPostRequest) 
 			{
-			// we only allow deletion via POST request
-			$urgenciasangre = $this->loadModel($id);
+				// we only allow deletion via POST request
+				$urgenciasangre = $this->loadModel($id);
 
-			$urgencia_t->motivo = $_POST['UrgenciasSangreTerminada']['motivo'];
-			$urgencia_t->cod_cm = $urgenciasangre->cod_cm;
-			$urgencia_t->id_enfermedad_urgencia = $urgenciasangre->id_enfermedad_urgencia;
-			$urgencia_t->rut = $urgenciasangre->rut;
-			$urgencia_t->nombre_paciente = $urgenciasangre->nombre_paciente;
-			$urgencia_t->apellido_pat = $urgenciasangre->apellido_pat;
-			$urgencia_t->apellido_mat = $urgenciasangre->apellido_mat;
-			$urgencia_t->afiliacion = $urgenciasangre->afiliacion;
-			$urgencia_t->grado_urgencia = $urgenciasangre->grado_urgencia;
-			$urgencia_t->tipo_sangre = $urgenciasangre->tipo_sangre;
-			$urgencia_t->cantidad_sangre = $urgenciasangre->cantidad_sangre;
-			$urgencia_t->fecha_ini = $urgenciasangre->fecha_ini;
-			$urgencia_t->fecha_fin = new CDbExpression('NOW()');
+				$urgencia_t->motivo = $_POST['UrgenciasSangreTerminada']['motivo'];
+				$urgencia_t->cod_cm = $urgenciasangre->cod_cm;
+				$urgencia_t->id_enfermedad_urgencia = $urgenciasangre->id_enfermedad_urgencia;
+				$urgencia_t->rut = $urgenciasangre->rut;
+				$urgencia_t->nombre_paciente = $urgenciasangre->nombre_paciente;
+				$urgencia_t->apellido_pat = $urgenciasangre->apellido_pat;
+				$urgencia_t->apellido_mat = $urgenciasangre->apellido_mat;
+				$urgencia_t->afiliacion = $urgenciasangre->afiliacion;
+				$urgencia_t->grado_urgencia = $urgenciasangre->grado_urgencia;
+				$urgencia_t->tipo_sangre = $urgenciasangre->tipo_sangre;
+				$urgencia_t->cantidad_sangre = $urgenciasangre->cantidad_sangre;
+				$urgencia_t->fecha_ini = $urgenciasangre->fecha_ini;
+				$urgencia_t->fecha_fin = new CDbExpression('NOW()');
 
-			$urgencia_t->save();
+				$
+
+				$urgencia_t->save();
 			}
 
 			//$this->loadModel($id)->delete();

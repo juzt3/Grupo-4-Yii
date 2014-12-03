@@ -138,7 +138,9 @@ class DonacionsangreController extends Controller
 	{
 		if (Yii::app()->request->isPostRequest) {
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$donacion = $this->loadModel($id);
+			$donacion->usada = "Si";
+			$donacion->save();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if (!isset($_GET['ajax'])) {
@@ -154,7 +156,11 @@ class DonacionsangreController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Donacionsangre');
+		$dataProvider=new CActiveDataProvider('Donacionsangre', array(
+			'criteria'=>array(
+					'condition'=>'t.usada="No" AND 0<(SELECT DATEDIFF(t.fecha_expiracion, NOW()))',
+				),
+		));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

@@ -102,6 +102,7 @@ class Donacionsangre extends CActiveRecord
 		$criteria->compare('fecha_donacionsangre',$this->fecha_donacionsangre,true);
 		$criteria->compare('fecha_expiracion',$this->fecha_expiracion,true);
 		$criteria->compare('usada',$this->usada,true);
+		$criteria->addCondition('t.usada = "No" AND 0<(SELECT DATEDIFF(t.fecha_expiracion, NOW()))');
 
 
 		return new CActiveDataProvider($this, array(
@@ -181,4 +182,13 @@ class Donacionsangre extends CActiveRecord
 	    $this->fecha_donacionsangre = Yii::app()->dateFormatter->format('dd-MM-yyyy', $this->fecha_donacionsangre);
 	    return parent::afterFind();
 	}
+
+	//public static function getCantidadPaquetes($tipo_sangre)
+	//{
+	//	$criteria = new CDbCriteria;
+	//	$criteria->addCondition('tipo_sangre = :tipo_sangre');
+	//	$criteria->params = array(':tipo_sangre' => $tipo_sangre);
+	//	$no_paquetes = Donacionsangre::model()->count($criteria);
+	//	return $no_paquetes;
+	//}
 }
