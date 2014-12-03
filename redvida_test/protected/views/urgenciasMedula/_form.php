@@ -25,7 +25,7 @@
     </div>
 
     <div >
-        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad"));?>
+        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad", 'help' => 'Seleccione la enfermedad que inhabilite a la persona de recibir medula', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
     </div>
         
     <div> 

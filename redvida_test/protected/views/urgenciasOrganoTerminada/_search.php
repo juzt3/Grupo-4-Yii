@@ -29,8 +29,6 @@
 
                     <?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('span'=>5,'maxlength'=>1)); ?>
 
-                    <?php echo $form->textFieldControlGroup($model,'necesidad_transplante',array('span'=>5,'maxlength'=>6)); ?>
-
                     <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('span'=>5)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'fecha_fin',array('span'=>5)); ?>

@@ -40,10 +40,6 @@
 	<?php echo CHtml::encode($data->grado_urgencia); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('necesidad_transplante')); ?>:</b>
-	<?php echo CHtml::encode($data->necesidad_transplante); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_ini')); ?>:</b>
 	<?php echo CHtml::encode($data->fecha_ini); ?>
 	<br />

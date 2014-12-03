@@ -15,6 +15,8 @@
 
                     <?php echo $form->textFieldControlGroup($model,'cod_cm',array('span'=>5)); ?>
 
+                    <?php echo $form->textFieldControlGroup($model,'id_enfermedad_urgencia',array('span'=>5)); ?>
+
                     <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'nombre_paciente',array('span'=>5,'maxlength'=>30)); ?>
@@ -24,8 +26,6 @@
                     <?php echo $form->textFieldControlGroup($model,'apellido_mat',array('span'=>5,'maxlength'=>50)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'afiliacion',array('span'=>5,'maxlength'=>50)); ?>
-
-                    <?php echo $form->textFieldControlGroup($model,'enfermedad',array('span'=>5,'maxlength'=>100)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'grado_urgencia',array('span'=>5,'maxlength'=>1)); ?>
 

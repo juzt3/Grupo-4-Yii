@@ -32,10 +32,9 @@ $this->menu=array(
 		'apellido_pat',
 		'apellido_mat',
 		'afiliacion',
-		'enfermedad',
 		'grado_urgencia',
 		'tipo_sangre',
-		'cantida_sangre',
+		'cantidad_sangre',
 		'fecha_ini',
 	),
 )); ?>

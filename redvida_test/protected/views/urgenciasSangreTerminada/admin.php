@@ -47,14 +47,13 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id_urgencia_sangre_terminada',
-		'cod_cm',
+		'codCm.nombre_cm',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',
 		'apellido_mat',
 		/*
 		'afiliacion',
-		'enfermedad',
 		'grado_urgencia',
 		'tipo_sangre',
 		'fecha_ini',

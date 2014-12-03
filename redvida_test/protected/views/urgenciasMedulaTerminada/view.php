@@ -24,15 +24,15 @@ $this->menu=array(
     'data'=>$model,
     'attributes'=>array(
 		'id_urgencia_medula_terminada',
-		'cod_cm',
+		'codCm.nombre_cm',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',
 		'apellido_mat',
 		'afiliacion',
 		'grado_urgencia',
-		'necesidad_transplante',
 		'fecha_ini',
 		'fecha_fin',
+		'motivo',
 	),
 )); ?>

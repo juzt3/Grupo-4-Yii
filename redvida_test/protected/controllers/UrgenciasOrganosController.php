@@ -110,17 +110,38 @@ class UrgenciasOrganosController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		if (Yii::app()->request->isPostRequest) {
+		$urgencia_t = new UrgenciasOrganoTerminada;
+		if (isset($_POST['UrgenciasOrganoTerminada'])) {
+			if (Yii::app()->request->isPostRequest) 
+			{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$urgenciaorgano = $this->loadModel($id);
 
+			$urgencia_t->motivo = $_POST['UrgenciasOrganoTerminada']['motivo'];
+			$urgencia_t->cod_cm = $urgenciaorgano->cod_cm;
+			$urgencia_t->id_enfermedad_urgencia = $urgenciaorgano->id_enfermedad_urgencia;
+			$urgencia_t->id_organo = $urgenciaorgano->id_organo;
+			$urgencia_t->rut = $urgenciaorgano->rut;
+			$urgencia_t->nombre_paciente = $urgenciaorgano->nombre_paciente;
+			$urgencia_t->apellido_pat = $urgenciaorgano->apellido_pat;
+			$urgencia_t->apellido_mat = $urgenciaorgano->apellido_mat;
+			$urgencia_t->afiliacion = $urgenciaorgano->afiliacion;
+			$urgencia_t->grado_urgencia = $urgenciaorgano->grado_urgencia;
+			$urgencia_t->fecha_ini = $urgenciaorgano->fecha_ini;
+			$urgencia_t->fecha_fin = new CDbExpression('NOW()');
+
+			$urgencia_t->save();
+			}
+
+			//$this->loadModel($id)->delete();
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if (!isset($_GET['ajax'])) {
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 			}
-		} else {
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-		}
+		} 
+		$this->render('motivo',array(
+			'model'=>$urgencia_t,
+		));
 	}
 
 	/**

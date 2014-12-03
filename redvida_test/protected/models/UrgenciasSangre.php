@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'urgencias_sangre':
  * @property integer $id_urgencia_sangre
  * @property integer $cod_cm
+ * @property integer id_enfermedad_urgencia
  * @property string $rut
  * @property string $nombre_paciente
  * @property string $apellido_pat
@@ -39,12 +40,11 @@ class UrgenciasSangre extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(' rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, cantidad_sangre ', 'required'),
-			array('id_urgencia_sangre, cod_cm, cantidad_sangre', 'numerical', 'integerOnly'=>true),
+			array(' rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_sangre, cantidad_sangre ', 'required'),
+			array('id_urgencia_sangre, cod_cm, cantidad_sangre, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
-			array('enfermedad', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>8),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('fecha_fin', 'safe'),
@@ -52,10 +52,10 @@ class UrgenciasSangre extends CActiveRecord
 			array('apellido_pat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('apellido_mat', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
 			array('afiliacion', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
-			array('enfermedad', 'ext.alpha', 'allAccentedLetters' => true, 'allowSpaces' => true),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_sangre, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, fecha_ini, cantidad_sangre, fecha_fin', 'safe', 'on'=>'search'),
+			array('id_urgencia_sangre, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion,id_enfermedad_urgencia, grado_urgencia, tipo_sangre, fecha_ini, cantidad_sangre, fecha_fin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +68,7 @@ class UrgenciasSangre extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codCm' => array(self::BELONGS_TO, 'Centrosmedicos', 'cod_cm'),
+			'idEnfermedadUrgencia' => array(self::BELONGS_TO, 'EnfermedadesUrgencia', 'id_enfermedad_urgencia'),
 		);
 	}
 
@@ -79,12 +80,12 @@ class UrgenciasSangre extends CActiveRecord
 		return array(
 			'id_urgencia_sangre' => 'Id Urgencia Sangre',
 			'cod_cm' => 'Centro Medico',
+			'id_enfermedad_urgencia' => 'Enfermedad',
 			'rut' => 'Rut',
 			'nombre_paciente' => 'Nombres del Paciente',
 			'apellido_pat' => 'Apellido Paterno',
 			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
-			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
 			'tipo_sangre' => 'Tipo Sangre',
 			'cantidad_sangre' => 'Cantidad de Sangre',
@@ -137,12 +138,12 @@ class UrgenciasSangre extends CActiveRecord
 
 		$criteria->compare('id_urgencia_sangre',$this->id_urgencia_sangre);
 		$criteria->compare('cod_cm',$this->cod_cm);
+		$criteria->compare('id_enfermedad_urgencia',$this->id_enfermedad_urgencia);	
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('nombre_paciente',$this->nombre_paciente,true);
 		$criteria->compare('apellido_pat',$this->apellido_pat,true);
 		$criteria->compare('apellido_mat',$this->apellido_mat,true);
 		$criteria->compare('afiliacion',$this->afiliacion,true);
-		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
 		$criteria->compare('cantidad_sangre',$this->cantidad_sangre,true);

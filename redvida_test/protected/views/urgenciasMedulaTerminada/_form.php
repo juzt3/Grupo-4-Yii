@@ -64,6 +64,10 @@
         <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Grado Urgencia")); ?>
     </div>
 
+    <div>
+        <?php echo $form->textAreaControlGroup($model,'motivo',array('rows'=>6, 'cols'=>50)); ?>
+    </div> 
+
     <div class="buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
     </div>

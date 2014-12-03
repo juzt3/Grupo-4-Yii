@@ -33,11 +33,6 @@
 	<?php echo CHtml::encode($data->afiliacion); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('enfermedad')); ?>:</b>
-	<?php echo CHtml::encode($data->enfermedad); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
 	<?php echo CHtml::encode($data->grado_urgencia); ?>
 	<br />
@@ -46,9 +41,13 @@
 	<?php echo CHtml::encode($data->tipo_sangre); ?>
 	<br />
 
-	<b>?php echo CHtml::encode($data->getAttributeLabel('cantidad_sangre')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_sangre')); ?>:</b>
 	<?php echo CHtml::encode($data->cantidad_sangre); ?>
-	<br />
+	<br /><br/>
+
+	<?php /*
+
+	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_ini')); ?>:</b>
 	<?php echo CHtml::encode($data->fecha_ini); ?>

@@ -35,6 +35,5 @@ $this->menu=array(
 		'grado_urgencia',
 		'tipo_transplante',
 		'fecha_ini',
-		'fecha_fin',
 	),
 )); ?>

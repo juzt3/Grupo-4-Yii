@@ -25,6 +25,9 @@
         <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
     </div>
             
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad", 'help' => 'Seleccione la enfermedad que inhabilite a la persona de recibir sangre', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
+    </div>       
 
     <div> 
         <?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>
@@ -60,10 +63,6 @@
 
     <div >
         <?php echo $form->dropDownListControlGroup($model,'grado_urgencia',$model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
-    </div>
-
-    <div >
-        <?php echo $form->textFieldControlGroup($model,'enfermedad',array('maxlength'=>100, 'placeholder'=>'Ej: Asma')); ?>
     </div>
 
     <div>

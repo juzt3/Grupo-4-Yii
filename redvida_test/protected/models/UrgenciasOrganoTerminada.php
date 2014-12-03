@@ -14,7 +14,6 @@
  * @property string $afiliacion
  * @property integer $id_enfermedad_urgencia
  * @property string $grado_urgencia
- * @property string $necesidad_transplante
  * @property string $fecha_ini
  * @property string $fecha_fin
  * @property string $motivo
@@ -41,18 +40,16 @@ class UrgenciasOrganoTerminada extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, necesidad_transplante, fecha_ini, motivo', 'required'),
+			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, fecha_ini, motivo', 'required'),
 			array('cod_cm, id_organo, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
-			array('enfermedad', 'length', 'max'=>100),
-			array('grado_urgencia', 'length', 'max'=>1),
-			array('necesidad_transplante', 'length', 'max'=>6),
+			array('grado_urgencia', 'length', 'max'=>8),
 			array('fecha_fin', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_organo, cod_cm, id_organo, id_enfermedad_urgencia, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, necesidad_transplante, fecha_ini, fecha_fin, motivo', 'safe', 'on'=>'search'),
+			array('id_urgencia_organo, cod_cm, id_organo, id_enfermedad_urgencia, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, fecha_ini, fecha_fin, motivo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,7 +73,7 @@ class UrgenciasOrganoTerminada extends CActiveRecord
 	{
 		return array(
 			'id_urgencia_organo' => 'Id Urgencia Organo',
-			'cod_cm' => 'Cod Cm',
+			'cod_cm' => 'Centro Medico',
 			'id_organo' => 'Id Organo',
 			'id_enfermedad_urgencia' => 'Enfermedad',
 			'rut' => 'Rut',
@@ -85,8 +82,7 @@ class UrgenciasOrganoTerminada extends CActiveRecord
 			'apellido_mat' => 'Apellido Mat',
 			'afiliacion' => 'Afiliacion',
 			'grado_urgencia' => 'Grado Urgencia',
-			'necesidad_transplante' => 'Necesidad Transplante',
-			'fecha_ini' => 'Fecha Ini',
+			'fecha_ini' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
 			'motivo' => 'Motivo',
 		);
@@ -120,7 +116,6 @@ class UrgenciasOrganoTerminada extends CActiveRecord
 		$criteria->compare('apellido_mat',$this->apellido_mat,true);
 		$criteria->compare('afiliacion',$this->afiliacion,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
-		$criteria->compare('necesidad_transplante',$this->necesidad_transplante,true);
 		$criteria->compare('fecha_ini',$this->fecha_ini,true);
 		$criteria->compare('fecha_fin',$this->fecha_fin,true);
 		$criteria->compare('motivo',$this->motivo,true);

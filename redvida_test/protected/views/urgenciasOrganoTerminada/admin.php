@@ -47,8 +47,8 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id_urgencia_organo',
-		'cod_cm',
-		'id_organo',
+		'codCm.nombre_cm',
+		'idOrgano.nombre_organo',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',
@@ -56,7 +56,6 @@ $('.search-form form').submit(function(){
 		'apellido_mat',
 		'afiliacion',
 		'grado_urgencia',
-		'necesidad_transplante',
 		'fecha_ini',
 		'fecha_fin',
 		'motivo',
