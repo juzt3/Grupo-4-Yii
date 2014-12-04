@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Manage Bancodesangre','url'=>array('admin')),
+	array('label'=>'Gestionar Donaciones de Sangre','url'=>array('donacionsangre/admin')),
 );
 ?>
 

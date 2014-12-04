@@ -31,13 +31,13 @@ class CentrosmedicosController extends Controller
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', 
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'roles'=>array('Administrador del Sistema'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('Administrador del Sistema'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),

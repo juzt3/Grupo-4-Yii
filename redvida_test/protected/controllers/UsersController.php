@@ -1,6 +1,6 @@
 <?php
 
-class OrganosDonablesController extends Controller
+class UsersController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,8 +32,12 @@ class OrganosDonablesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'delete', 'admin'),
-				'roles'=>array('Administrador del Sistema', 'Administrador de Donaciones y Necesitades Medicas', 'Jefe Area de Salud'),
+				'actions'=>array('create','update'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete', 'asignar'),
+				'users'=>array('felipe'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -58,15 +62,15 @@ class OrganosDonablesController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new OrganosDonables;
+		$model=new Users;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['OrganosDonables'])) {
-			$model->attributes=$_POST['OrganosDonables'];
+		if (isset($_POST['Users'])) {
+			$model->attributes=$_POST['Users'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id_organo));
+				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
 
@@ -87,10 +91,10 @@ class OrganosDonablesController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['OrganosDonables'])) {
-			$model->attributes=$_POST['OrganosDonables'];
+		if (isset($_POST['Users'])) {
+			$model->attributes=$_POST['Users'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id_organo));
+				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
 
@@ -124,7 +128,7 @@ class OrganosDonablesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('OrganosDonables');
+		$dataProvider=new CActiveDataProvider('Users');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -135,10 +139,10 @@ class OrganosDonablesController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new OrganosDonables('search');
+		$model=new Users('search');
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['OrganosDonables'])) {
-			$model->attributes=$_GET['OrganosDonables'];
+		if (isset($_GET['Users'])) {
+			$model->attributes=$_GET['Users'];
 		}
 
 		$this->render('admin',array(
@@ -146,16 +150,25 @@ class OrganosDonablesController extends Controller
 		));
 	}
 
+	public function actionAsignar($id)
+	{
+		if(Yii::app()->authManager->checkAccess($_GET["item"], $id))
+			Yii::app()->authManager->revoke($_GET["item"], $id);
+		else
+			yii::app()->authManager->assign($_GET["item"], $id);
+		$this->redirect(array('view', 'id'=>$id));
+	}
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return OrganosDonables the loaded model
+	 * @return Users the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=OrganosDonables::model()->findByPk($id);
+		$model=Users::model()->findByPk($id);
 		if ($model===null) {
 			throw new CHttpException(404,'The requested page does not exist.');
 		}
@@ -164,11 +177,11 @@ class OrganosDonablesController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param OrganosDonables $model the model to be validated
+	 * @param Users $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if (isset($_POST['ajax']) && $_POST['ajax']==='organos-donables-form') {
+		if (isset($_POST['ajax']) && $_POST['ajax']==='users-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

@@ -108,6 +108,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 								array('label'=>'Enfermedades de Urgencias', 'url'=>array('/enfermedadesurgencia')),
 								array('label'=>'Centros Medicos', 'url'=>array('/centrosmedicos')),
 								array('label' => 'Organos Donables', 'url'=>array('/organosdonables')),
+								array('label' => 'Usuarios', 'url'=>array('/users')),
 							),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
