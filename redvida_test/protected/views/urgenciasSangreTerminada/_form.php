@@ -24,7 +24,7 @@
     </div>
             
     <div >
-        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad"));?>
+        <?php echo $form->dropDownListControlGroup($model,'enfermedad', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad"));?>
     </div>          
 
     <div> 

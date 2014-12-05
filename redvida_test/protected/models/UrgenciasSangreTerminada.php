@@ -11,6 +11,7 @@
  * @property string $apellido_pat
  * @property string $apellido_mat
  * @property string $afiliacion
+ * @property string $enfermedad
  * @property string $grado_urgencia
  * @property string $tipo_sangre
  * @property integer $cantidad_sangre
@@ -44,6 +45,7 @@ class UrgenciasSangreTerminada extends CActiveRecord
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
+			array('enfermedad', 'length', 'max'=>100),
 			array('grado_urgencia', 'length', 'max'=>8),
 			array('tipo_sangre', 'length', 'max'=>3),
 			array('fecha_fin', 'safe'),
@@ -74,12 +76,12 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		return array(
 			'id_urgencia_sangre_terminada' => 'Id Urgencia Sangre Terminada',
 			'cod_cm' => 'Centro Medico',
-			'enfermedad' => 'Enfermedad',
 			'rut' => 'Rut',
 			'nombre_paciente' => 'Nombres del Paciente',
 			'apellido_pat' => 'Apellido Paterno',
 			'apellido_mat' => 'Apellido Materno',
 			'afiliacion' => 'Afiliacion',
+			'enfermedad' => 'Enfermedad',
 			'grado_urgencia' => 'Grado Urgencia',
 			'tipo_sangre' => 'Tipo de Sangre',
 			'cantidad_sangre' => 'Cantidad de Sangre',
@@ -114,6 +116,7 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		$criteria->compare('apellido_pat',$this->apellido_pat,true);
 		$criteria->compare('apellido_mat',$this->apellido_mat,true);
 		$criteria->compare('afiliacion',$this->afiliacion,true);
+		$criteria->compare('enfermedad',$this->enfermedad,true);
 		$criteria->compare('grado_urgencia',$this->grado_urgencia,true);
 		$criteria->compare('tipo_sangre',$this->tipo_sangre,true);
 		$criteria->compare('cantidad_sangre',$this->cantidad_sangre,true);
