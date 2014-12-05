@@ -120,7 +120,7 @@ class UrgenciasSangreController extends Controller
 
 				$urgencia_t->motivo = $_POST['UrgenciasSangreTerminada']['motivo'];
 				$urgencia_t->cod_cm = $urgenciasangre->cod_cm;
-				$urgencia_t->id_enfermedad_urgencia = $urgenciasangre->id_enfermedad_urgencia;
+				$urgencia_t->enfermedad = $urgenciasangre->enfermedad;
 				$urgencia_t->rut = $urgenciasangre->rut;
 				$urgencia_t->nombre_paciente = $urgenciasangre->nombre_paciente;
 				$urgencia_t->apellido_pat = $urgenciasangre->apellido_pat;

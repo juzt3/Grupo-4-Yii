@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear Enfermedades', 'url'=>array('create')),
+	array('label'=>'Registrar Enfermedades', 'url'=>array('create')),
 	array('label'=>'Administrar Enfermedades', 'url'=>array('admin')),
 );
 ?>

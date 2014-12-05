@@ -87,20 +87,21 @@ Read usage license on for this template on http://www.bootstraptor.com
 						'items'=>array(
 							array('label'=>'<i class="icon icon-home"></i><span> Inicio</span>', 'url'=>array('/site/index')),
 							array('label' => 'Donantes', 'items' => array(
-								array('label'=>'Donantes Habilitados', 'url'=>array('/donantes'), 'visible'=>!Yii::app()->user->isGuest),
+								array('label'=>'Donantes Habilitados', 'url'=>array('/donantes')),
 								array('label'=>'Donantes Muertos','url'=>array('/donantes/Indexmuertos')),
 								array('label'=>'Donantes Desactivados','url'=>array('/donantes/Indexdesactivados')),
-							),'visible'=>!Yii::app()->user->isGuest),
+							)),
 							array('label'=>'Urgencias', 'items' => array(
 								array('label' => 'Urgencias Sangre', 'url' => array('/urgenciassangre')),
 								array('label' => 'Urgencias Organos', 'url' => array('/urgenciasorganos')),
 								array('label' => 'Urgencias Medula', 'url' => array('/urgenciasmedula')),
-								),'visible'=>!Yii::app()->user->isGuest),
+								)),
 							array('label' => 'Donaciones', 'items' => array(
 								array('label' => 'Donación Sangre', 'url' => array('/donacionsangre')),
 								array('label' => 'Donación Medula', 'url' => array('/donacionmedula')),
 							),'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre'), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
+							array('label'=>'Organos Disponibles', 'url'=>array('/dtieneorganos')),
 							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contact', 'url'=>array('/site/contact')),
 							array('label' => 'Administrar', 'items' => array(
@@ -110,6 +111,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 								array('label' => 'Organos Donables', 'url'=>array('/organosdonables')),
 								array('label' => 'Usuarios', 'url'=>array('/users')),
 							),'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Enfermedades Inhabilitantes', 'url'=>array('/enfermedades'),'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),

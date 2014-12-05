@@ -6,15 +6,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Organos Donables'=>array('index'),
-	'Create',
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List OrganosDonables', 'url'=>array('index')),
-	array('label'=>'Manage OrganosDonables', 'url'=>array('admin')),
+	array('label'=>'Listar Organos Donables', 'url'=>array('index')),
+	array('label'=>'Administrar Organos Donables', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create OrganosDonables</h1>
+<h1>Registrar Organos Donables</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

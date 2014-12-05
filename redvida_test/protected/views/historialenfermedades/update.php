@@ -3,9 +3,9 @@
 /* @var $model Historialenfermedades */
 
 $this->breadcrumbs=array(
-	'Historialenfermedades'=>array('index'),
+	'Historial de Enfermedades'=>array('index'),
 	$model->idhistorial=>array('view','id'=>$model->idhistorial),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(

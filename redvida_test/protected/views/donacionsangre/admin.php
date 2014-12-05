@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Mostrar Donaciones de Sangre', 'url'=>array('index')),
+	array('label'=>'Listar Donaciones de Sangre', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

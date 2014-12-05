@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar', array('class'=>'btn btn-primary btn-large')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

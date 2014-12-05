@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->comuna); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('celular')); ?>:</b>
+	<?php echo CHtml::encode($data->celular); ?>
+	<br />
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tiposangre')); ?>:</b>
 	<?php echo CHtml::encode($data->tiposangre); ?>
 	<br />
@@ -29,8 +33,8 @@
 	<?php echo CHtml::encode($data->donanteorganos); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('celular')); ?>:</b>
-	<?php echo CHtml::encode($data->celular); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('donantemedula')); ?>:</b>
+	<?php echo CHtml::encode($data->donantemedula); ?>
 	<br />
 	<br>
 
@@ -73,9 +77,6 @@
 	<?php echo CHtml::encode($data->afiliacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('donantemedula')); ?>:</b>
-	<?php echo CHtml::encode($data->donantemedula); ?>
-	<br />
 
 	*/ ?>
 

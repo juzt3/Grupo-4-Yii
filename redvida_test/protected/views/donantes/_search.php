@@ -102,7 +102,7 @@
         </div>
     </div>
 
-        <div>
+    <div>
         <?php echo TbHtml::submitButton('Buscar',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
     </div>
 

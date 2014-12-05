@@ -11,24 +11,24 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
+	<div>
 		<?php echo $form->label($model,'idenfermedad'); ?>
 		<?php echo $form->textField($model,'idenfermedad'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->label($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->label($model,'descripcion'); ?>
 		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Buscar'); ?>
-	</div>
+	<div>
+        <?php echo TbHtml::submitButton('Buscar',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 
 <?php $this->endWidget(); ?>
 

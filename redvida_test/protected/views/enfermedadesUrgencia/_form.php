@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
+    <p class="help-block">Los Campos con <span class="required">*</span> son obligatorios.</p>
 
     <?php echo $form->errorSummary($model); ?>
 
@@ -24,7 +24,7 @@
             <?php echo $form->textAreaControlGroup($model,'descripcion',array('rows'=>6,'span'=>8)); ?>
 
         <div class="form-actions">
-        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
+        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Guardar',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
 		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
 		)); ?>

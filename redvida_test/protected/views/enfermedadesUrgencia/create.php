@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Enfermedades Urgencias'=>array('index'),
-	'Create',
+	'Enfermedades de Urgencias'=>array('index'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List EnfermedadesUrgencia', 'url'=>array('index')),
-	array('label'=>'Manage EnfermedadesUrgencia', 'url'=>array('admin')),
+	array('label'=>'Listar Enfermedades de Urgencia', 'url'=>array('index')),
+	array('label'=>'Admimnistrar Enfermedades de Urgencia', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create EnfermedadesUrgencia</h1>
+<h1>Registrar Enfermedades de Urgencia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

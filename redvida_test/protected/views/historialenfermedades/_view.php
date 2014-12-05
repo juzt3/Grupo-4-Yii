@@ -20,6 +20,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha')); ?>:</b>
 	<?php echo CHtml::encode($data->fecha); ?>
 	<br />
+	<br>
 
 
 </div>

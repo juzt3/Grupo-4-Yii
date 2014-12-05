@@ -10,15 +10,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List OrganosDonables', 'url'=>array('index')),
-	array('label'=>'Create OrganosDonables', 'url'=>array('create')),
-	array('label'=>'Update OrganosDonables', 'url'=>array('update', 'id'=>$model->id_organo)),
-	array('label'=>'Delete OrganosDonables', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_organo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage OrganosDonables', 'url'=>array('admin')),
+	array('label'=>'Listar Organos Donables', 'url'=>array('index')),
+	array('label'=>'Registrar Organos Donables', 'url'=>array('create')),
+	array('label'=>'Modificar Organos Donables', 'url'=>array('update', 'id'=>$model->id_organo)),
+	array('label'=>'Borrar Organos Donables', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_organo),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Organos Donables', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View OrganosDonables #<?php echo $model->id_organo; ?></h1>
+<h1>Ver Organo Donable #<?php echo $model->id_organo; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView',array(
     'htmlOptions' => array(

@@ -5,19 +5,19 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Usuarios'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
-	array('label'=>'List Users', 'url'=>array('index')),
-	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'View Users', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
+	array('label'=>'Listar Usuarios', 'url'=>array('index')),
+	array('label'=>'Registrar Usuarios', 'url'=>array('create')),
+	array('label'=>'Ver Usuario', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar Usuarios', 'url'=>array('admin')),
 );
 ?>
 
-    <h1>Update Users <?php echo $model->id; ?></h1>
+    <h1>Modificar Usuarios <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

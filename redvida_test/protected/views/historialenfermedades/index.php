@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Historialenfermedades',
+	'Historial de Enfermedades',
 );
 
 $this->menu=array(

@@ -15,7 +15,7 @@
 
                     <?php echo $form->textFieldControlGroup($model,'cod_cm',array('span'=>5)); ?>
 
-                    <?php echo $form->textFieldControlGroup($model,'id_enfermedad_urgencia',array('span'=>5)); ?>
+                    <?php echo $form->textFieldControlGroup($model,'enfermedad',array('span'=>5)); ?>
 
                     <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>5,'maxlength'=>10)); ?>
 

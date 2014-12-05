@@ -58,7 +58,6 @@ $('.search-form form').submit(function(){
 		'cantidad_sangre',
 		/*
 		'afiliacion',
-		
 		'fecha_ini',
 		'fecha_fin',
 		*/

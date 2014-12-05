@@ -5,19 +5,19 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Enfermedades Urgencias'=>array('index'),
+	'Enfermedades de Urgencias'=>array('index'),
 	$model->id_enfermedad_urgencia=>array('view','id'=>$model->id_enfermedad_urgencia),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List EnfermedadesUrgencia', 'url'=>array('index')),
-	array('label'=>'Create EnfermedadesUrgencia', 'url'=>array('create')),
-	array('label'=>'View EnfermedadesUrgencia', 'url'=>array('view', 'id'=>$model->id_enfermedad_urgencia)),
-	array('label'=>'Manage EnfermedadesUrgencia', 'url'=>array('admin')),
+	array('label'=>'Listar Enfermedades de Urgencia', 'url'=>array('index')),
+	array('label'=>'Registrar Enfermedades de Urgencia', 'url'=>array('create')),
+	array('label'=>'Ver Enfermedad de Urgencia', 'url'=>array('view', 'id'=>$model->id_enfermedad_urgencia)),
+	array('label'=>'Administrar Enfermedades de Urgencia', 'url'=>array('admin')),
 );
 ?>
 
-    <h1>Update EnfermedadesUrgencia <?php echo $model->id_enfermedad_urgencia; ?></h1>
+    <h1>Modificar Enfermedad de Urgencia <?php echo $model->id_enfermedad_urgencia; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

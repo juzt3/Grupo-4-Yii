@@ -6,7 +6,6 @@
  * The followings are the available columns in table 'urgencias_sangre_terminada':
  * @property integer $id_urgencia_sangre_terminada
  * @property integer $cod_cm
- * @property integer id_enfermedad_urgencia
  * @property string $rut
  * @property string $nombre_paciente
  * @property string $apellido_pat
@@ -41,7 +40,7 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_sangre, fecha_ini, motivo', 'required'),
-			array('cod_cm, cantidad_sangre, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
+			array('cod_cm, cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
@@ -51,7 +50,7 @@ class UrgenciasSangreTerminada extends CActiveRecord
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_urgencia_sangre_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, id_enfermedad_urgencia, grado_urgencia, tipo_sangre, cantidad_sangre, fecha_ini, fecha_fin, motivo', 'safe', 'on'=>'search'),
+			array('id_urgencia_sangre_terminada, cod_cm, rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad,grado_urgencia, tipo_sangre, cantidad_sangre, fecha_ini, fecha_fin, motivo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,7 +74,7 @@ class UrgenciasSangreTerminada extends CActiveRecord
 		return array(
 			'id_urgencia_sangre_terminada' => 'Id Urgencia Sangre Terminada',
 			'cod_cm' => 'Centro Medico',
-			'id_enfermedad_urgencia' => 'Enfermedad',
+			'enfermedad' => 'Enfermedad',
 			'rut' => 'Rut',
 			'nombre_paciente' => 'Nombres del Paciente',
 			'apellido_pat' => 'Apellido Paterno',
@@ -110,7 +109,6 @@ class UrgenciasSangreTerminada extends CActiveRecord
 
 		$criteria->compare('id_urgencia_sangre_terminada',$this->id_urgencia_sangre_terminada);
 		$criteria->compare('cod_cm',$this->cod_cm);
-		$criteria->compare('id_enfermedad_urgencia',$this->id_enfermedad_urgencia);
 		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('nombre_paciente',$this->nombre_paciente,true);
 		$criteria->compare('apellido_pat',$this->apellido_pat,true);

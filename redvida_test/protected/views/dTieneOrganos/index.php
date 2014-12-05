@@ -5,16 +5,15 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Dtiene Organoses',
+	'Organos Disponibles',
 );
 
 $this->menu=array(
-	array('label'=>'Create DTieneOrganos','url'=>array('create')),
-	array('label'=>'Manage DTieneOrganos','url'=>array('admin')),
+	array('label'=>'Administrar Organos Disponibles','url'=>array('admin')),
 );
 ?>
 
-<h1>Dtiene Organoses</h1>
+<h1>Organos Disponibles</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

@@ -4,13 +4,12 @@
 
 
 $this->breadcrumbs=array(
-	'Dtiene Organoses'=>array('index'),
-	'Manage',
+	'Organos Disponibles'=>array('index'),
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List DTieneOrganos', 'url'=>array('index')),
-	array('label'=>'Create DTieneOrganos', 'url'=>array('create')),
+	array('label'=>'Listar Organos Disponibles', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -27,15 +26,15 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Dtiene Organoses</h1>
+<h1>Administrar Organos Disponibles</h1>
 
 <p>
-    You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
+Opcionalmente puedes introducir operadores de comparacion (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
         &lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+o <b>=</b>) al principio de cada uno de tus valores de busqueda para especificar como debe efectuarse la comparacion.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -47,9 +46,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id_tiene_organos',
 		'rut',
 		'id_organo',
+		'idOrgano.nombre_organo',
 		'transplantado',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',

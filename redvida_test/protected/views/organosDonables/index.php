@@ -9,8 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create OrganosDonables','url'=>array('create')),
-	array('label'=>'Manage OrganosDonables','url'=>array('admin')),
+	array('label'=>'Registrar Organos Donables','url'=>array('create')),
+	array('label'=>'Administrar Organos Donables','url'=>array('admin')),
 );
 ?>
 

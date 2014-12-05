@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Enfermedades Urgencias',
+	'Enfermedades de Urgencias',
 );
 
 $this->menu=array(
-	array('label'=>'Create EnfermedadesUrgencia','url'=>array('create')),
-	array('label'=>'Manage EnfermedadesUrgencia','url'=>array('admin')),
+	array('label'=>'Registrar Enfermedades de Urgencia','url'=>array('create')),
+	array('label'=>'Administrar Enfermedades de Urgencia','url'=>array('admin')),
 );
 ?>
 
-<h1>Enfermedades Urgencias</h1>
+<h1>Enfermedades de Urgencias</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

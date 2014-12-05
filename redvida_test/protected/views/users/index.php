@@ -5,16 +5,16 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Users',
+	'Usuarios',
 );
 
 $this->menu=array(
-	array('label'=>'Create Users','url'=>array('create')),
-	array('label'=>'Manage Users','url'=>array('admin')),
+	array('label'=>'Registrar Usuarios','url'=>array('create')),
+	array('label'=>'Administrar Usuarios','url'=>array('admin')),
 );
 ?>
 
-<h1>Users</h1>
+<h1>Usuarios</h1>
 <?php 
 //	Yii::app()->authManager->createRole("Secretaria");
 //	Yii::app()->authManager->createRole("Administrador del Sistema");

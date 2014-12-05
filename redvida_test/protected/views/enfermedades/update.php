@@ -5,13 +5,13 @@
 $this->breadcrumbs=array(
 	'Enfermedades'=>array('index'),
 	$model->idenfermedad=>array('view','id'=>$model->idenfermedad),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(
 	array('label'=>'Listar Enfermedades', 'url'=>array('index')),
-	array('label'=>'Crear Enfermedades', 'url'=>array('create')),
-	array('label'=>'Ver Enfermedades', 'url'=>array('view', 'id'=>$model->idenfermedad)),
+	array('label'=>'Registrar Enfermedades', 'url'=>array('create')),
+	array('label'=>'Ver Enfermedad', 'url'=>array('view', 'id'=>$model->idenfermedad)),
 	array('label'=>'Administrar Enfermedades', 'url'=>array('admin')),
 );
 ?>

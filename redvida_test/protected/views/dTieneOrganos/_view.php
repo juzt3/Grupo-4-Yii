@@ -20,6 +20,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('transplantado')); ?>:</b>
 	<?php echo CHtml::encode($data->transplantado); ?>
 	<br />
+	<br>
 
 
 </div>

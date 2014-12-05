@@ -3,8 +3,8 @@
 /* @var $model Historialenfermedades */
 
 $this->breadcrumbs=array(
-	'Historialenfermedades'=>array('index'),
-	'Create',
+	'Historial de Enfermedades'=>array('index'),
+	'Asignar',
 );
 
 $this->menu=array(

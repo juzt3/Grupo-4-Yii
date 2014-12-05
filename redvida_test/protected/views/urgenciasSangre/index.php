@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Urgencias Sangres</h1>
+<h1>Urgencias de Sangres</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

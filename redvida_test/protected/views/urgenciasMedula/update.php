@@ -7,7 +7,7 @@
 $this->breadcrumbs=array(
 	'Urgencias Medulas'=>array('index'),
 	$model->id_urgencia_medula=>array('view','id'=>$model->id_urgencia_medula),
-	'Update',
+	'Modificar',
 );
 
 $this->menu=array(

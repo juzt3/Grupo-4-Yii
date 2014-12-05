@@ -16,6 +16,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
 	<?php echo CHtml::encode($data->descripcion); ?>
 	<br />
+	<br>
 
 
 </div>

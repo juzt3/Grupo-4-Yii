@@ -33,6 +33,10 @@
 	<?php echo CHtml::encode($data->afiliacion); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('enfermedad')); ?>:</b>
+	<?php echo CHtml::encode($data->enfermedad); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
 	<?php echo CHtml::encode($data->grado_urgencia); ?>
 	<br />

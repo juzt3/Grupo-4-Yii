@@ -32,6 +32,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('afiliacion')); ?>:</b>
 	<?php echo CHtml::encode($data->afiliacion); ?>
 	<br />
+	<br>
 
 	<?php /*
 	
