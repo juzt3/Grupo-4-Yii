@@ -41,6 +41,8 @@ class UrgenciasMedula extends CActiveRecord
 			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_transplante', 'required'),
 			array('cod_cm, id_enfermedad_urgencia', 'numerical', 'integerOnly'=>true),
 			array('rut, tipo_transplante', 'length', 'max'=>10),
+			array('rut', 'validateRut'),
+			array('rut', 'validatePaciente'),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('grado_urgencia', 'length', 'max'=>8),
@@ -109,6 +111,13 @@ class UrgenciasMedula extends CActiveRecord
             $result = 0;
         if ($verifyCode != $result)
             $this->addError('rut', 'Rut inválido.');
+    }
+
+    public function validatePaciente()
+    {
+    	$donante = Donantes::model()->findByPk($this->rut);
+    	if($donante !== NULL && $donante->fecha_muerte !== NULL)
+    		$this->addError('rut', 'Este paciente ya existe en nuestros registro como muerto');
     }
 
 	/**

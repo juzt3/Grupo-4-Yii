@@ -39,9 +39,11 @@ class UrgenciasSangre extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, enfermedad, grado_urgencia, tipo_sangre, cantidad_sangre ', 'required'),
+			array('rut, nombre_paciente, apellido_pat, apellido_mat, afiliacion, grado_urgencia, tipo_sangre, cantidad_sangre ', 'required'),
 			array('cod_cm, cantidad_sangre', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>10),
+			array('rut', 'validateRut'),
+			array('rut', 'validatePaciente'),
 			array('nombre_paciente', 'length', 'max'=>30),
 			array('apellido_pat, apellido_mat, afiliacion', 'length', 'max'=>50),
 			array('enfermedad', 'length', 'max'=>100),
@@ -114,6 +116,14 @@ class UrgenciasSangre extends CActiveRecord
             $result = 0;
         if ($verifyCode != $result)
             $this->addError('rut', 'Rut inválido.');
+    }
+
+    public function validatePaciente()
+    {
+    	$donante = Donantes::model()->findByPk($this->rut);
+    	if($donante !== NULL && $donante->fecha_muerte !== NULL){
+    		$this->addError('rut', 'Este paciente ya existe en nuestros registro como muerto');
+    	}
     }
 
 
