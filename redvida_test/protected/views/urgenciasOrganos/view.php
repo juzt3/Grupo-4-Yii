@@ -13,7 +13,7 @@ $this->menu=array(
 	array('label'=>'Lista de Urgencias de Organos', 'url'=>array('index')),
 	array('label'=>'Registrar Urgencia de Organos', 'url'=>array('create')),
 	array('label'=>'Modificar Urgencia de Organos', 'url'=>array('update', 'id'=>$model->id_urgencia_organo)),
-	array('label'=>'Finalizar Urgencia de Organos', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_organo),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Finalizar Urgencia de Organos', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_organo),'confirm'=>'¿Esta seguro que quiere dar por terminada esta urgencia?')),
 	array('label'=>'Administrar Urgencias de Organos', 'url'=>array('admin')),
 );
 ?>

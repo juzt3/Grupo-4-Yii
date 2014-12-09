@@ -13,7 +13,7 @@ $this->menu=array(
 	array('label'=>'Lista de Urgencias de Medula', 'url'=>array('index')),
 	array('label'=>'Registrar Urgencia de Medula', 'url'=>array('create')),
 	array('label'=>'Modificar Urgencia de Medula', 'url'=>array('update', 'id'=>$model->id_urgencia_medula)),
-	array('label'=>'Finalizar Urgencia de Medula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_medula),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Finalizar Urgencia de Medula', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_medula),'confirm'=>'¿Esta seguro que quiere dar por terminada esta urgencia?')),
 	array('label'=>'Administrar Urgencias de Medula', 'url'=>array('admin')),
 );
 ?>

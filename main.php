@@ -10,19 +10,16 @@ return array(
 	'name'=>'REDVIDA',
 	'language'=>'es',
 	'theme'=>'redvida',
-
+	
 	//path aliases
 	'aliases' => array(
 			'bootstrap' => realpath(__DIR__.'/../extensions/bootstrap'), //change this if necessary
 			'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels'), // change if necessary
-		//	'booster' =>realpath(__DIR__ . '/../extensions/yiibooster'),
 		),
 
+
 	// preloading 'log' component
-	'preload'=>array(
-		'log',
-		//'booster',
-	),
+	'preload'=>array('log'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -59,17 +56,18 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		
+		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
+			'caseSensitive'=>false,			
 			'rules'=>array(
 				'<controller:\d+>/<id:\w+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/id/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
-
 		),
+*/
 
 		// yiistrap configuration
         'bootstrap' => array(
@@ -78,12 +76,8 @@ return array(
         // yiiwheels configuration
         'yiiwheels' => array(
             'class' => 'yiiwheels.YiiWheels',
-         ), 
-        // yiibooster configuration
-       // 'booster' => array(
-    	//	'class' => 'booster.components.Booster',
-		//),
-
+         ),
+          
 		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
@@ -91,10 +85,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=redvida_test',
+			'connectionString' => 'mysql:host=localhost;dbname=TISW_GRUPO4',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'Res99',
+			'username' => 'TISW_GRUPO4',
+			'password' => 'Grupo4ubb',
 			'charset' => 'utf8',
 		),
 		
@@ -123,6 +117,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'fegatica@alumnos.ubiobio.cl',
+		'adminEmail'=>'webmaster@example.com',
 	),
 );

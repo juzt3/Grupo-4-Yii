@@ -176,7 +176,7 @@ class Donantes extends CActiveRecord
 		$criteria->compare('afiliacion',$this->afiliacion,true);
 		$criteria->compare('donantemedula',$this->donantemedula,true);
 		$criteria->compare('fecha_muerte',$this->fecha_muerte,true);
-		$criteria->addCondition('t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM HistorialEnfermedades)');
+		$criteria->addCondition('t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM historialenfermedades)');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

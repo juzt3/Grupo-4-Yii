@@ -13,7 +13,7 @@ $this->menu=array(
 	array('label'=>'Lista de Urgencias de Sangre', 'url'=>array('index')),
 	array('label'=>'Registrar Urgencia de Sangre', 'url'=>array('create')),
 	array('label'=>'Modificar Urgencia de Sangre', 'url'=>array('update', 'id'=>$model->id_urgencia_sangre)),
-	array('label'=>'Finalizar Urgencia de Sangre', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_sangre),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Finalizar Urgencia de Sangre', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_urgencia_sangre),'confirm'=>'¿Esta seguro que quiere dar por terminada esta urgencia?')),
 	array('label'=>'Administrar Urgencias deSangre', 'url'=>array('admin')),
 );
 ?>

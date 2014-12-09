@@ -28,13 +28,54 @@ class BancodesangreController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('mailmasivo'),
+				'roles'=>array('Administrador del Sistema', 'Administrador de Donaciones y Necesitades Medicas', 'Secretaria', 'Jefe Area de Salud'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	/**
+	* accion para mandar correo masivo a los donantes del tipo de sangre seleccionado.
+	*/
+	public function actionMailmasivo($tipo_sangre)
+	{
+		$mails_donantes = Donantes::model()->findAll(array(
+										'select'=>'email',
+										'condition'=>'tiposangre = :tipo_sangre AND fecha_muerte IS NOT NULL',
+										'params'=>array(':tipo_sangre'=>$tipo_sangre),
+					));
+		$nombre = base64_encode('Felipe Gatica Cea');
+		if ($tipo_sangre !== 'O+' || $tipo_sangre !== 'AB+') {
+			$subject = base64_encode('Se necesitan donantes de sangre tipo '.$tipo_sangre.' u O+, donador universal.');
+			$body = 'Se solicita a todos los donantes de sangre voluntarios de tipo '.$tipo_sangre.' u O+, donador universal, a concurrir a donar urgentemene.';
+		}
+		else{
+			if ($tipo_sangre === 'O+') {
+				$subject = base64_encode('Se necesitan donantes de sangre tipo '.$tipo_sangre.'.');
+				$body = 'Se solicita a todos los donantes de sangre voluntarios de tipo '.$tipo_sangre.' a concurrir a donar urgentemene.';
+			}
+			if($tipo_sangre === 'AB+'){
+				$subject = base64_encode('Se necesitan donantes de sangre de todo tipo');
+				$body = 'Se solicita a todos los donantes de sangre voluntarios de cualquier tipo a concurrir a donar urgentemene.';	
+			}
+		}
+
+		$headers = "From: $nombre <{fegatica@alumnos.ubiobio.cl}>\r\n".
+				"Reply-To: {fegatica@alumnos.ubiobio.cl}\r\n".
+				"MIME-Version: 1.0\r\n".
+				"Content-Type: text/plain; charset=UTF-8";
+		
+		foreach ($mails_donantes as $email) {
+			echo "Entro";
+			mail($email,$subject,$body,$headers);
+		}
 	}
 
 	/**

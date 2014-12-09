@@ -135,7 +135,7 @@ class DonantesController extends Controller
 		//solo carga los donantes vivos, sin enfermedades y activos.
 		$dataProvider=new CActiveDataProvider('Donantes', array(
 			'criteria'=>array(
-					'condition'=>'t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM HistorialEnfermedades WHERE fecha_cura IS NULL)',
+					'condition'=>'t.habilitado="Si" AND t.fecha_muerte IS NULL AND rut NOT IN (SELECT rut FROM historialenfermedades WHERE fecha_cura IS NULL)',
 				),
 		));
 		$this->render('index',array(
