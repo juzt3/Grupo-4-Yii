@@ -5,9 +5,9 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Urgencias Sangres'=>array('index'),
+	'Modificar Urgencias de Sangre'=>array('index'),
 	$model->id_urgencia_sangre=>array('view','id'=>$model->id_urgencia_sangre),
-	'Update',
+	'Modificar Urgencia de Sangre',
 );
 
 $this->menu=array(

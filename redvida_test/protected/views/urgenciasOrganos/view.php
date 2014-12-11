@@ -28,7 +28,6 @@ $this->menu=array(
     'attributes'=>array(
 		'codCm.nombre_cm',
 		'idOrgano.nombre_organo',
-		'idEnfermedadUrgencia.nombre',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',

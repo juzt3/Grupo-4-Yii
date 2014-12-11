@@ -5,13 +5,13 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Urgencias Sangres'=>array('index'),
-	'Registrar',
+	'Urgencias de Sangre'=>array('index'),
+	'Registrar Urgencias de Sangre',
 );
 
 $this->menu=array(
 	array('label'=>'Lista Urgencias de Sangre', 'url'=>array('index')),
-	array('label'=>'Administrar Urgencias de Sangre', 'url'=>array('admin')),
+	array('label'=>'Gestionar Urgencias de Sangre', 'url'=>array('admin')),
 );
 ?>
 

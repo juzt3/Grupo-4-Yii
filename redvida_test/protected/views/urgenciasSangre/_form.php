@@ -15,15 +15,11 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
+    <p class="help-block">Los campos con <span class="required">*</span> son obligatorios.</p>
 
     <?php echo $form->errorSummary($model); ?>
 
-        
-
-    <div >
-        <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
-    </div>      
+             
 
     <div> 
         <?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>
@@ -45,11 +41,11 @@
     </div>
 
     <div>
-            <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
-    </div>
+        <?php echo $form->dropDownListControlGroup($model,'tipo_sangre', $model->getMenuSangre(), array("empty"=>"Seleccionar Tipo de Sangre")); ?>
+    </div> 
 
     <div>
-          <?php echo  $form->textFieldControlGroup($model,'cantidad_sangre',array('span'=>2)); ?>
+          <?php echo  $form->textFieldControlGroup($model,'cantidad_sangre',array( 'append'=>'Paquetes','help' => 'Indique la cantidad de paquetes de sangre a utilizar (450cc)', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
     </div>
 
     <div >
@@ -62,8 +58,16 @@
     </div>
 
     <div>
-        <?php echo $form->dropDownListControlGroup($model,'tipo_sangre', $model->getMenuSangre(), array("empty"=>"Seleccionar Tipo de Sangre")); ?>
+            <?php echo $form->textFieldControlGroup($model,'fecha_ini',array('value'=>date("d-m-Y"), 'disabled'=>true)); ?>
     </div>
+
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad", 'help' => 'Seleccione la enfermedad que inhabilite a la persona de recibir sangre', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
+    </div>
+
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
+    </div> 
 
     <div class="buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>

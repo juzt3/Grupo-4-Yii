@@ -5,7 +5,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Urgencias Sangres'=>array('index'),
+	'Urgencias de Sangre'=>array('index'),
 	$model->id_urgencia_sangre,
 );
 
@@ -26,7 +26,7 @@ $this->menu=array(
     ),
     'data'=>$model,
     'attributes'=>array(
-		'codCm.nombre_cm',
+		
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',
@@ -36,5 +36,6 @@ $this->menu=array(
 		'tipo_sangre',
 		'cantidad_sangre',
 		'fecha_ini',
+		'codCm.nombre_cm',
 	),
 )); ?>

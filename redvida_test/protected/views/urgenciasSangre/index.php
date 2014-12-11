@@ -5,7 +5,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Urgencias Sangres',
+	'Urgencias de Sangre',
 );
 
 $this->menu=array(
@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Urgencias de Sangres</h1>
+<h1>Urgencias de Sangre</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,
