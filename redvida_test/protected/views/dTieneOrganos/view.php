@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Organos Disponibles', 'url'=>array('index')),
+	array('label'=>'Mostrar Organos Disponibles', 'url'=>array('index')),
 	array('label'=>'Administrar Organos Disponibles', 'url'=>array('admin')),
 );
 ?>

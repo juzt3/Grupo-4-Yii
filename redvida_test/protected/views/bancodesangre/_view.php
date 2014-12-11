@@ -17,7 +17,7 @@
 			</div>	  
 			<div class="panel panel-body">
 				<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>
-				<?php echo CHtml::encode($data->cantidad); ?><span> ml</span>
+				<?php echo CHtml::encode($data->cantidad); ?><span> CC</span>
 			</div>
 		</div>
 	</div>

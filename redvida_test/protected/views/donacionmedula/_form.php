@@ -20,7 +20,7 @@
     <?php echo $form->errorSummary($model); ?>
 
         <div>
-        	<?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('append'=>'cc')); ?>
+        	<?php echo $form->textFieldControlGroup($model,'cantidad_medula',array('append'=>'CC')); ?>
         </div>
 
         <?php echo $form->textAreaControlGroup($model,'d_medula_observaciones',array('rows'=>5,'span'=>5)); ?>

@@ -24,7 +24,7 @@
 				<?php echo CHtml::encode($data->rut); ?>
 				<br>
 				<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_sangre')); ?>:</b>
-				<?php echo CHtml::encode($data->cantidad_sangre); ?><span> ml</span>
+				<?php echo CHtml::encode($data->cantidad_sangre); ?><span> CC</span>
 				<br>
 				<b><?php echo CHtml::encode($data->getAttributeLabel('dsangre_observaciones')); ?>:</b>
 				<?php echo CHtml::encode($data->dsangre_observaciones); ?>

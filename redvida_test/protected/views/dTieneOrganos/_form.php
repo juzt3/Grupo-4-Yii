@@ -24,7 +24,7 @@
             <?php echo $form->checkBoxListControlGroup($model,'id_organo', Organosdonables::getOrganosdonables(), array('label'=>'Organos Donables', 'checkAll' => 'Seleccionar Todos')); ?>
 
         <div class="form-actions">
-        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
+        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
 		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
 		)); ?>

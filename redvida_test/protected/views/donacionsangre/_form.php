@@ -19,7 +19,7 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('value'=>'450', 'disabled'=>true, 'append'=>'ml')); ?>
+            <?php echo $form->textFieldControlGroup($model,'cantidad_sangre',array('value'=>'450', 'disabled'=>true, 'append'=>'CC')); ?>
 
             <?php echo $form->textAreaControlGroup($model,'dsangre_observaciones',array('rows'=>5,'span'=>5)); ?>
 

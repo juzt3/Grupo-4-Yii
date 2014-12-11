@@ -5,7 +5,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Banco de Sangres',
+	'Banco de Sangre',
 );
 
 $this->menu=array(
@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Banco de Sangres</h1>
+<h1>Banco de Sangre</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

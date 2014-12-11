@@ -23,7 +23,7 @@
 				<?php echo CHtml::encode($data->rut); ?>
 				<br>
 				<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_medula')); ?>:</b>
-				<?php echo CHtml::encode($data->cantidad_medula); ?><span> cc</span>
+				<?php echo CHtml::encode($data->cantidad_medula); ?><span> CC</span>
 				<br>
 				<b><?php echo CHtml::encode($data->getAttributeLabel('d_medula_observaciones')); ?>:</b>
 				<?php echo CHtml::encode($data->d_medula_observaciones); ?>
