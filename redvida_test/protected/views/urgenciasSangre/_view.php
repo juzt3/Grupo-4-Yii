@@ -56,7 +56,7 @@
 
                                 <b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_sangre')); ?>:</b>
                                    <?php echo CHtml::encode($data->cantidad_sangre); ?>
-                                <br /><br/>
+                                <br />
 
                                 <?php /*
 
