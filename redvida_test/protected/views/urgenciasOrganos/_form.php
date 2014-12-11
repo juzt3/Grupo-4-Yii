@@ -26,7 +26,7 @@
 
 
     <div >
-        <?php echo $form->dropDownListControlGroup($model,'id_organo', Organosdonables::getOrganosdonables(), array("empty"=>"Seleccionar Organo"));?>
+        <?php echo $form->dropDownListControlGroup($model,'id_organo', OrganosDonables::getOrganosdonables(), array("empty"=>"Seleccionar Organo"));?>
     </div>
 
 
