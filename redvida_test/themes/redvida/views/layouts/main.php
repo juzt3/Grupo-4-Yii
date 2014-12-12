@@ -29,19 +29,23 @@ Read usage license on for this template on http://www.bootstraptor.com
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">
 	<![endif]-->
 
+<?php Yii::app()->bootstrap->register(); ?>
 
 <style type="text/css">
-      body {
-        padding-top: 50px 0 0 0;
-        padding-bottom: 40px;
+      body { 
+      	padding-top: 40px; 
       }
+	@media screen and (max-width: 768px) {
+    	body { padding-top: 0px;
+    	}
+	}
 	.hero-unit{
 		background:#358cce;
 		color:#fff;
 	  }
 	  
 	  footer{
-		maring-top:30px;
+		margin-top:30px;
 		display:block;
 	  }
 	  .thumbnail{
@@ -53,10 +57,10 @@ Read usage license on for this template on http://www.bootstraptor.com
 	  }
 	  
 	  .nav-tabs{
-		margin-bottom:15px;
+		margin-bottom: 15px;
 	}
+
     </style>
-<?php Yii::app()->bootstrap->register(); ?>
 
 
 
@@ -75,7 +79,6 @@ Read usage license on for this template on http://www.bootstraptor.com
   <body>
 
 
-  	<nav class="mainmenu fixed-top" role="navigation">
 			<?php $this->widget('bootstrap.widgets.TbNavbar',array(
 				'color'=>'inverse',
 				'brandLabel'=>'REDVIDA',
@@ -116,7 +119,6 @@ Read usage license on for this template on http://www.bootstraptor.com
 					)
 			),
 		)); ?>
-	</nav>
 
 <div class="container">
 	<div class="row-fluid">
