@@ -49,7 +49,6 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id_urgencia_sangre',
 		'codCm.nombre_cm',
-		'id_enfermedad_urgencia',
 		'rut',
 		'nombre_paciente',
 		'apellido_pat',

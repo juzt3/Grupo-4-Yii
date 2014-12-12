@@ -21,11 +21,7 @@
 
     <div >
         <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
-    </div>
-            
-    <div >
-        <?php echo $form->dropDownListControlGroup($model,'enfermedad', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad"));?>
-    </div>          
+    </div>         
 
     <div> 
         <?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>

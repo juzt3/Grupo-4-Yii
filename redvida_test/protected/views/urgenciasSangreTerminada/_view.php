@@ -41,10 +41,7 @@
                             <b><?php echo CHtml::encode($data->getAttributeLabel('afiliacion')); ?>:</b>
                             <?php echo CHtml::encode($data->afiliacion); ?>
                             <br />
-
-                            <?php /*
-
-
+                            
                             <b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
                             <?php echo CHtml::encode($data->grado_urgencia); ?>
                             <br />
@@ -60,6 +57,10 @@
                             <b><?php echo CHtml::encode($data->getAttributeLabel('fecha_fin')); ?>:</b>
                             <?php echo CHtml::encode($data->fecha_fin); ?>
                             <br />
+                            <?php /*
+
+
+                            
 
                             */ ?>
 

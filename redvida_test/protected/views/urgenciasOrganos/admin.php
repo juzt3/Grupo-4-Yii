@@ -48,14 +48,14 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id_urgencia_organo',
-		'cod_cm',
-		'id_organo',
-		'id_enfermedad_urgencia',
+		'codCm.nombre_cm',
+		'idOrgano.nombre_organo',
 		'rut',
 		'nombre_paciente',
-		/*
 		'apellido_pat',
 		'apellido_mat',
+		/*
+		
 		'afiliacion',
 		'grado_urgencia',
 		'fecha_ini',

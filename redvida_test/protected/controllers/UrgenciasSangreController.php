@@ -69,10 +69,13 @@ class UrgenciasSangreController extends Controller
 
 		if (isset($_POST['UrgenciasSangre'])) {
 			$model->attributes=$_POST['UrgenciasSangre'];
-
+			if(empty($model->id_enfermedad_urgencia)==TRUE){
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_urgencia_sangre));
-			}
+			}}
+			else
+				//throw new CHttpException('El Donante no puede registrar enfermedades que lo inhabiliten.');
+			$model->addError('id_enfermedad_urgencia', "El paciente no puede registrar enfermedades que lo inhabiliten de recibir donaciones");
 		}
 
 		$this->render('create',array(
@@ -94,9 +97,13 @@ class UrgenciasSangreController extends Controller
 
 		if (isset($_POST['UrgenciasSangre'])) {
 			$model->attributes=$_POST['UrgenciasSangre'];
+			if(empty($model->id_enfermedad_urgencia)==TRUE){
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_urgencia_sangre));
-			}
+			}}
+			else
+				//throw new CHttpException('El Donante no puede registrar enfermedades que lo inhabiliten.');
+			$model->addError('id_enfermedad_urgencia', "El paciente no puede registrar enfermedades que lo inhabiliten de recibir donaciones");
 		}
 
 		$this->render('update',array(
@@ -132,15 +139,13 @@ class UrgenciasSangreController extends Controller
 				$urgencia_t->fecha_ini = $urgenciasangre->fecha_ini;
 				$urgencia_t->fecha_fin = new CDbExpression('NOW()');
 
-				$
-
 				$urgencia_t->save();
 			}
 
-			//$this->loadModel($id)->delete();
+			$this->loadModel($id)->delete();
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if (!isset($_GET['ajax'])) {
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('urgenciassangreterminada/admin'));
 			}
 		} 
 		$this->render('motivo',array(

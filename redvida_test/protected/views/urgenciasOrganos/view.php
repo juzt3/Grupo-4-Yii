@@ -35,6 +35,5 @@ $this->menu=array(
 		'afiliacion',
 		'grado_urgencia',
 		'fecha_ini',
-		'fecha_fin',
 	),
 )); ?>

@@ -19,20 +19,7 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-
-    <div >
-        <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
-    </div>
-
-
-    <div >
-        <?php echo $form->dropDownListControlGroup($model,'id_organo', OrganosDonables::getOrganosdonables(), array("empty"=>"Seleccionar Organo"));?>
-    </div>
-
-
-    <div >
-        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad", 'help' => 'Seleccione la enfermedad que inhabilite a la persona de recibir el organo', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
-    </div>
+       
 
     <div> 
         <?php echo $form->textFieldControlGroup($model,'rut',array('maxlength'=>100, 'placeholder'=>'Ej: 15876395-6')); ?>
@@ -61,12 +48,22 @@
         <?php echo $form->textFieldControlGroup($model,'afiliacion',array('maxlength'=>50, 'placeholder'=>'Ej: Fonasa')); ?>
     </div>
 
-
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'id_organo', OrganosDonables::getOrganosdonables(), array("empty"=>"Seleccionar Organo"));?>
+    </div>
+    
     <div >
         <?php echo $form->dropDownListControlGroup($model,'grado_urgencia', $model->getGradoUrgencia(), array("empty"=>"Seleccione Tipo de Urgencia")); ?>
     </div>
 
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'id_enfermedad_urgencia', EnfermedadesUrgencia::getEnfermedadesUrgencia(), array("empty"=>"Seleccionar Enfermedad", 'help' => 'Seleccione la enfermedad que inhabilite a la persona de recibir el organo', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK)));?>
+    </div>
 
+    <div >
+        <?php echo $form->dropDownListControlGroup($model,'cod_cm', Centrosmedicos::getCentrosmedicos(), array("empty"=>"Seleccionar Centro Medico"));?>
+    </div>
+    
     <div class="buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-primary')); ?>
     </div>

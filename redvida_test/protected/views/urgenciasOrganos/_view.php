@@ -26,10 +26,6 @@
                            <?php echo CHtml::encode($data->id_organo); ?>
                         <br />
 
-                        <b><?php echo CHtml::encode($data->getAttributeLabel('id_enfermedad_urgencia')); ?>:</b>
-                           <?php echo CHtml::encode($data->id_enfermedad_urgencia); ?>
-                        <br />
-
                         <b><?php echo CHtml::encode($data->getAttributeLabel('rut')); ?>:</b>
                            <?php echo CHtml::encode($data->rut); ?>
                         <br />
@@ -41,8 +37,7 @@
                         <b><?php echo CHtml::encode($data->getAttributeLabel('apellido_pat')); ?>:</b>
                            <?php echo CHtml::encode($data->apellido_pat); ?>
                         <br />
-
-                        <?php /*
+                        
                         <b><?php echo CHtml::encode($data->getAttributeLabel('apellido_mat')); ?>:</b>
                         <?php echo CHtml::encode($data->apellido_mat); ?>
                         <br />
@@ -54,6 +49,8 @@
                         <b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
                         <?php echo CHtml::encode($data->grado_urgencia); ?>
                         <br />
+                        <?php /*
+                        
 
                         <b><?php echo CHtml::encode($data->getAttributeLabel('fecha_ini')); ?>:</b>
                         <?php echo CHtml::encode($data->fecha_ini); ?>

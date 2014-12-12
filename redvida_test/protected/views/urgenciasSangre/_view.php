@@ -42,10 +42,6 @@
                                    <?php echo CHtml::encode($data->afiliacion); ?>
                                 <br />
 
-                                <b><?php echo CHtml::encode($data->getAttributeLabel('id_enfermedad_urgencia')); ?>:</b>
-                                   <?php echo CHtml::encode($data->id_enfermedad_urgencia); ?>
-                                <br />
-
                                 <b><?php echo CHtml::encode($data->getAttributeLabel('grado_urgencia')); ?>:</b>
                                    <?php echo CHtml::encode($data->grado_urgencia); ?>
                                 <br />

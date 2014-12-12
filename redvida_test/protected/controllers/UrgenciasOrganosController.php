@@ -69,9 +69,13 @@ class UrgenciasOrganosController extends Controller
 
 		if (isset($_POST['UrgenciasOrganos'])) {
 			$model->attributes=$_POST['UrgenciasOrganos'];
+			if(empty($model->id_enfermedad_urgencia)==TRUE){
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_urgencia_organo));
-			}
+			}}
+			else
+				//throw new CHttpException('El Donante no puede registrar enfermedades que lo inhabiliten.');
+			$model->addError('id_enfermedad_urgencia', "El paciente no puede registrar enfermedades que lo inhabiliten de recibir donaciones");
 		}
 
 		$this->render('create',array(
@@ -93,9 +97,13 @@ class UrgenciasOrganosController extends Controller
 
 		if (isset($_POST['UrgenciasOrganos'])) {
 			$model->attributes=$_POST['UrgenciasOrganos'];
+			if(empty($model->id_enfermedad_urgencia)==TRUE){
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_urgencia_organo));
-			}
+			}}
+			else
+				//throw new CHttpException('El Donante no puede registrar enfermedades que lo inhabiliten.');
+			$model->addError('id_enfermedad_urgencia', "El paciente no puede registrar enfermedades que lo inhabiliten de recibir donaciones");
 		}
 
 		$this->render('update',array(
