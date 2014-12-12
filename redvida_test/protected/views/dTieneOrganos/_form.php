@@ -21,7 +21,7 @@
 
             <?php echo $form->textFieldControlGroup($model,'rut',array('span'=>3,'maxlength'=>10,'readonly'=>true, 'value'=>$rut,)); ?>
 
-            <?php echo $form->checkBoxListControlGroup($model,'id_organo', Organosdonables::getOrganosdonables(), array('label'=>'Organos Donables', 'checkAll' => 'Seleccionar Todos')); ?>
+            <?php echo $form->checkBoxListControlGroup($model,'id_organo', OrganosDonables::getOrganosdonables(), array('label'=>'Organos Donables', 'checkAll' => 'Seleccionar Todos')); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar',array(

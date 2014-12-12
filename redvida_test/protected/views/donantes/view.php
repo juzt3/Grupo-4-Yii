@@ -33,7 +33,7 @@ $this->menu=array(
 							<div class="tab-pane fade in active" id="datos">
 								<?php if($model->fecha_muerte === NULL || $model->habilitado === 'Si'){
 										echo TbHtml::pills(array(
-											array('label'=>'Registrar Muerte', 'url'=>array('dtieneorganos/create','id'=>$model->rut), 'linkOptions'=>array('confirm'=>'La fecha de muerte sera registrada al dia actual ¿Esta seguro de registrar esta muerte?')),
+											array('label'=>'Registrar Muerte', 'url'=>array('dTieneOrganos/create','id'=>$model->rut), 'linkOptions'=>array('confirm'=>'La fecha de muerte sera registrada al dia actual ¿Esta seguro de registrar esta muerte?')),
 									    	array('label'=>'Deshabilitar/Activar Donante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rut),'confirm'=>'¿Esta seguro de deshabilitar al donante?')),
 										));
 								}
