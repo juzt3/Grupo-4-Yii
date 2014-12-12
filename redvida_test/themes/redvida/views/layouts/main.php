@@ -32,7 +32,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 
 <style type="text/css">
       body {
-        padding-top: 50px;
+        padding-top: 50px 0 0 0;
         padding-bottom: 40px;
       }
 	.hero-unit{
@@ -75,7 +75,7 @@ Read usage license on for this template on http://www.bootstraptor.com
   <body>
 
 
-  <nav class="mainmenu fixed-top" role="navigation">
+  	<nav class="mainmenu fixed-top" role="navigation">
 			<?php $this->widget('bootstrap.widgets.TbNavbar',array(
 				'color'=>'inverse',
 				'brandLabel'=>'REDVIDA',
@@ -102,8 +102,6 @@ Read usage license on for this template on http://www.bootstraptor.com
 							),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Banco de Sangre', 'url'=>array('/bancodesangre')),
 							array('label'=>'Organos Disponibles', 'url'=>array('/dTieneOrganos')),
-							//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-							//array('label'=>'Contact', 'url'=>array('/site/contact')),
 							array('label' => 'Administrar', 'items' => array(
 								array('label'=>'Enfermedades de Donantes', 'url'=>array('/enfermedades')),
 								array('label'=>'Enfermedades de Urgencias', 'url'=>array('/enfermedadesUrgencia')),
@@ -118,9 +116,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 					)
 			),
 		)); ?>
-		</div><!-- /.navbar-collapse --> 
-	</div>	
-</nav>
+	</nav>
 
 <div class="container">
 	<div class="row-fluid">
