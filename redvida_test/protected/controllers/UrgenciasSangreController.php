@@ -97,7 +97,7 @@ class UrgenciasSangreController extends Controller
 
 		if (isset($_POST['UrgenciasSangre'])) {
 			$model->attributes=$_POST['UrgenciasSangre'];
-			if(empty($model->id_enfermedad_urgencia)==TRUE){
+			if(empty($model->id_enfermedad_urgencia)){
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id_urgencia_sangre));
 			}}
@@ -145,7 +145,7 @@ class UrgenciasSangreController extends Controller
 			$this->loadModel($id)->delete();
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if (!isset($_GET['ajax'])) {
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('urgenciassangreterminada/admin'));
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('urgenciasSangreTerminada/admin'));
 			}
 		} 
 		$this->render('motivo',array(
